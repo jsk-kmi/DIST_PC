@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Layout Guide</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- guide css -->
+    <link rel="stylesheet" href="../css/base.css" />
+
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script src="../../lib/jquery/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="wrap" class="coding_guide">
+      <h1 class="h1_guide">Popup</h1>
+
+      <!-- [Tab - 페이지 이동 ] -->
+      <div class="title-box">
+        <h2 class="h2_guide">Popup</h2>
+      </div>
+
+      <div class="guide_descbox">
+        <h3 class="g-title"></h3>
+        <div class="inner_desc">
+          <ul>
+            <li>동일 속성값 매칭 <br />1. 팝업 연결 button [data-target] - .c-layer-popup [id] <br />.c-layer-popup [aria-labelledby] - .c-modal-title-field > .c-title 동일 속성값 부여</li>
+            <li>버튼 - 팝업 연동 script 이벤트 제어 [class="btn-open-popup"]</li>
+            <li>버튼 없이 팝업 제어할 경우 - .c-layer-popup 의 show 클래스 add/remove를 통한 제어 (common.js - popup function 참고)</li>
+          </ul>
+        </div>
+      </div>
+      <!-- [ TYPE01] -->
+      <h3 class="h3_guide">Type01</h3>
+      <div class="d_desc code">
+        <!-- ? view -->
+
+        <!-- [TYPE01 - Basic] -->
+        <button type="button" class="btn-open-popup" data-toggle="modal" data-target="#popupType01_01"><span>button</span></button>
+
+        <div class="c-layer-popup type01" id="popupType01_01" role="dialog" aria-labelledby="popupType01_Label01" aria-modal="true" aria-hidden="true">
+          <div class="modal-wrap">
+            <div class="modal-field" tabindex="0">
+              <div class="c-modal-body">
+                <div class="c-modal-inner">
+                  <h4 class="c-title skip" id="popupType01_Label01">퇴직처리</h4>
+                  <p>해당 회사에서 퇴직처리 하시겠습니까 ?</p>
+                </div>
+              </div>
+
+              <div class="c-modal-footer">
+                <div class="inner">
+                  <div class="buttons">
+                    <button class="co-btn is-outline-navy-1 popup-cls-btn"><span>닫기</span></button>
+                    <button class="co-btn bg-navy-1 popup-cls-btn"><span>확인</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [TYPE02 - Text 구분] -->
+        <button type="button" class="btn-open-popup" data-toggle="modal" data-target="#popupType01_02"><span>Text 구분</span></button>
+
+        <div class="c-layer-popup type01" id="popupType01_02" role="dialog" aria-labelledby="popupType01_Label02" aria-modal="true" aria-hidden="true">
+          <div class="modal-wrap">
+            <div class="modal-field" tabindex="0">
+              <div class="c-modal-body">
+                <div class="c-modal-inner">
+                  <h4 class="c-title skip" id="popupType01_Label02">Title</h4>
+                  <div class="in-cont">
+                    <p>
+                      2021.5.15 AM 9시에 출장검진이 <br />
+                      예정되어 있습니다.
+                    </p>
+                    <p>
+                      내원 검진예약으로 변경하시거나<br />
+                      다른 검진상품으로 변경하여 내원검진으로 <br />
+                      예약하시겠습니까?
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="c-modal-footer">
+                <div class="inner">
+                  <div class="buttons">
+                    <button class="co-btn is-outline-navy-1 popup-cls-btn"><span>취소</span></button>
+                    <button class="co-btn bg-navy-1 popup-cls-btn"><span>확인</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ? // view -->
+        <!-- ! code -->
+        <xmp class="prettyprint linenums javascript"></xmp>
+        <!-- ! // code -->
+      </div>
+      <!-- // [ TYPE01] -->
+      <!-- [ TYPE02] -->
+      <h3 class="h3_guide">Type02</h3>
+      <div class="d_desc code">
+        <!-- ? view -->
+
+        <!-- [Type02 - button01] -->
+        <button type="button" class="btn-open-popup" data-toggle="modal" data-target="#popupType02"><span>button</span></button>
+
+        <div class="c-layer-popup type02" id="popupType02" role="dialog" aria-labelledby="popupJoin01_Label" aria-modal="true" aria-hidden="true">
+          <div class="modal-wrap">
+            <div class="modal-field" tabindex="0">
+              <div class="c-modal-header">
+                <div class="c-modal-title-field">
+                  <h4 class="c-title" id="popupJoin01_Label">TITLE</h4>
+                </div>
+                <button type="button" class="popup-cls-btn"><span class="skip">팝업 닫기</span></button>
+              </div>
+              <div class="c-modal-body">
+                <div class="c-modal-inner">
+                  <p>해당 회사에서 퇴직처리 하시겠습니까 ?</p>
+                </div>
+              </div>
+              <div class="c-modal-footer">
+                <div class="inner">
+                  <div class="buttons">
+                    <button class="co-btn is-outline-navy-1 popup-cls-btn"><span>취소</span></button>
+                    <button class="co-btn bg-navy-1 popup-cls-btn"><span>확인</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ? // view -->
+        <!-- ! code -->
+        <xmp class="prettyprint linenums javascript"></xmp>
+        <!-- ! // code -->
+      </div>
+      <!-- // [ TYPE02] -->
+      <!-- [ TYPE03] -->
+      <h3 class="h3_guide">Type03</h3>
+      <div class="d_desc code">
+        <!-- ? view -->
+
+        <button type="button" class="btn-open-popup" data-toggle="modal" data-target="#popupJoin01"><span>open popup</span></button>
+
+        <div class="c-layer-popup type03" id="popupJoin01" role="dialog" aria-labelledby="popupJoin03_Label" aria-modal="true" aria-hidden="true">
+          <div class="modal-wrap">
+            <div class="modal-field">
+              <!-- modal Header -->
+              <div class="c-modal-header">
+                <div class="c-modal-title-field">
+                  <h4 class="c-title" id="popupJoin03_Label">회원 가입 및 확인 <span>(1/4)</span></h4>
+                </div>
+                <button type="button" class="popup-cls-btn"><span class="skip">팝업 닫기</span></button>
+              </div>
+
+              <div class="c-modal-body">
+                <div class="c-modal-inner">
+                  <div class="join-login-field step01">
+                    <div class="cont-box">
+                      <h5 class="title">이용약관 개인정보처리방침 동의</h5>
+                      <div class="cont">
+                        서비스의 처리기준이 상세히 기술된 이용약관과 개인정보 처리 방침입니다.<br />
+                        서비스 사용을 위해 반드시 읽어보시기 바라며 본 약관에 동의하시면 ‘동의’버튼을 클릭해 주시기 바랍니다.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- // modal body -->
+
+              <!-- modal-footer -->
+              <div class="c-modal-footer">
+                <div class="inner">
+                  <div class="buttons">
+                    <button type="button" class="co-btn is-outline-navy-1 popup-cls-btn"><span>취소</span></button>
+                    <button type="button" class="co-btn bg-navy-1"><span>다음</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- = type03  -->
+          <!-- [ // layer popup] -->
+        </div>
+        <!-- ? // view -->
+        <!-- ! code -->
+        <xmp class="prettyprint linenums javascript"></xmp>
+        <!-- ! // code -->
+      </div>
+      <!-- // [ TYPE03] -->
+      <!-- [ TYPE04] -->
+      <h3 class="h3_guide">Type04</h3>
+      <button type="button" class="btn-open-popup" data-toggle="modal" data-target="#popupType04"><span>open popup</span></button>
+
+      <div class="c-layer-popup type04" id="popupType04" role="dialog" aria-labelledby="popupType04_Label01" aria-modal="true" aria-hidden="true">
+        <div class="modal-wrap">
+          <div class="modal-field" tabindex="0">
+            <div class="c-modal-header">
+              <div class="c-modal-title-field">
+                <h4 class="c-title" id="popupType04_Label01">TITLE</h4>
+              </div>
+              <button type="button" class="popup-cls-btn"><span class="skip">팝업 닫기</span></button>
+            </div>
+            <!-- c-modal-body -->
+            <div class="c-modal-body">
+              <div class="c-modal-inner">
+                <div class="join-login-field">
+                  <div class="cont-box">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid tenetur aliquam doloribus harum nemo dolor dicta placeat, distinctio quos, eveniet cumque quibusdam delectus nesciunt corporis saepe rerum. Ex labore corrupti voluptates est soluta laudantium, sequi magni aut fuga
+                    dolores itaque sed aliquid placeat cumque quidem veniam dolorum nam officiis reiciendis dolor? Aliquam molestiae dolores doloremque, sunt vel magnam ad adipisci modi beatae, laborum commodi sint cum dolorem. Est expedita doloremque ipsum dolores modi quo deleniti eligendi
+                    cupiditate libero corporis, exercitationem tenetur consequatur nulla? Distinctio ducimus libero iste, autem odio dolores laudantium obcaecati qui vitae dolore consectetur reiciendis incidunt, quaerat quos fugiat harum ullam aut provident facere cupiditate quas! Accusantium
+                    nesciunt quod numquam, repellendus praesentium, ducimus alias consequatur, adipisci modi minima rerum officia libero temporibus repellat molestiae tempora! Vitae, autem. Facere, repellendus? Voluptas debitis, dolorem, ipsum minima delectus enim fugiat in ipsam saepe deleniti,
+                    maxime provident tenetur quaerat iste. Mollitia debitis, fugit necessitatibus id illo quod iste. Ullam nemo exercitationem pariatur voluptatem repellat assumenda neque quisquam dolorum nesciunt, commodi nobis fuga culpa molestias sequi amet fugit iure consequatur. Culpa ducimus,
+                    dolorem quae aliquam temporibus ipsum ipsam error possimus officia ex voluptatem corporis laborum? Facilis quo non pariatur molestiae obcaecati rerum vel nam officia deserunt sint modi, quae ipsum sunt provident repudiandae sapiente iste inventore veritatis voluptatem illo
+                    perferendis eos iusto. Debitis esse incidunt ducimus ea iusto aperiam excepturi veritatis ullam amet, qui labore explicabo asperiores fuga perferendis deleniti eaque inventore nihil odio itaque? Modi vitae suscipit amet molestias quisquam ut obcaecati enim dolorem officiis, id
+                    consequuntur voluptatem animi eum iusto incidunt numquam aut unde reiciendis ducimus veritatis delectus consectetur labore dolores. Ut, molestiae optio. Aspernatur, eius. Nulla eveniet cum vel, itaque, id ipsum nisi debitis modi facere aliquam perspiciatis vero! Eius saepe ab eum
+                    incidunt ipsa eligendi sit, vitae aliquid debitis assumenda facilis suscipit nostrum. Saepe repudiandae reiciendis totam temporibus numquam explicabo iure maiores qui cum, praesentium officia veniam. Et consequuntur repellat enim hic, consequatur, laudantium est in fuga molestiae
+                    expedita totam nihil earum minima. Ipsum perspiciatis voluptate incidunt libero accusantium molestiae
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //  c-modal-body -->
+
+            <div class="c-modal-footer">
+              <div class="inner">
+                <div class="buttons">
+                  <button type="button" class="co-btn is-outline-navy-1 popup-cls-btn"><span>취소</span></button>
+                  <button type="button" class="co-btn bg-navy-1"><span>확인</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- = type04  -->
+        <!-- [ // layer popup] -->
+      </div>
+      <!-- // [ TYPE04] -->
+      <!-- [ Type05] -->
+      <h3 class="h3_guide">Type05</h3>
+      <button type="button" class="btn-open-popup" data-toggle="modal" data-target="#popupType05"><span>open popup</span></button>
+
+      <div class="c-layer-popup type05" id="popupType05" role="dialog" aria-labelledby="popupType05_Label01" aria-modal="true" aria-hidden="true">
+        <div class="modal-wrap">
+          <div class="modal-field" tabindex="0">
+            <div class="c-modal-header">
+              <div class="c-modal-title-field">
+                <h4 class="c-title" id="popupType05_Label01">TITLE</h4>
+              </div>
+              <button type="button" class="popup-cls-btn"><span class="skip">팝업 닫기</span></button>
+            </div>
+            <!-- c-modal-body -->
+            <div class="c-modal-body">
+              <div class="c-modal-inner">
+                <div class="join-login-field">
+                  <div class="cont-box">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid tenetur aliquam doloribus harum nemo dolor dicta placeat, distinctio quos, eveniet cumque quibusdam delectus nesciunt corporis saepe rerum. Ex labore corrupti voluptates est soluta laudantium, sequi magni aut fuga
+                    dolores itaque sed aliquid placeat cumque quidem veniam dolorum nam officiis reiciendis dolor? Aliquam molestiae dolores doloremque, sunt vel magnam ad adipisci modi beatae, laborum commodi sint cum dolorem. Est expedita doloremque ipsum dolores modi quo deleniti eligendi
+                    cupiditate libero corporis, exercitationem tenetur consequatur nulla? Distinctio ducimus libero iste, autem odio dolores laudantium obcaecati qui vitae dolore consectetur reiciendis incidunt, quaerat quos fugiat harum ullam aut provident facere cupiditate quas! Accusantium
+                    nesciunt quod numquam, repellendus praesentium, ducimus alias consequatur, adipisci modi minima rerum officia libero temporibus repellat molestiae tempora! Vitae, autem. Facere, repellendus? Voluptas debitis, dolorem, ipsum minima delectus enim fugiat in ipsam saepe deleniti,
+                    maxime provident tenetur quaerat iste. Mollitia debitis, fugit necessitatibus id illo quod iste. Ullam nemo exercitationem pariatur voluptatem repellat assumenda neque quisquam dolorum nesciunt, commodi nobis fuga culpa molestias sequi amet fugit iure consequatur. Culpa ducimus,
+                    dolorem quae aliquam temporibus ipsum ipsam error possimus officia ex voluptatem corporis laborum? Facilis quo non pariatur molestiae obcaecati rerum vel nam officia deserunt sint modi, quae ipsum sunt provident repudiandae sapiente iste inventore veritatis voluptatem illo
+                    perferendis eos iusto. Debitis esse incidunt ducimus ea iusto aperiam excepturi veritatis ullam amet, qui labore explicabo asperiores fuga perferendis deleniti eaque inventore nihil odio itaque? Modi vitae suscipit amet molestias quisquam ut obcaecati enim dolorem officiis, id
+                    consequuntur voluptatem animi eum iusto incidunt numquam aut unde reiciendis ducimus veritatis delectus consectetur labore dolores. Ut, molestiae optio. Aspernatur, eius. Nulla eveniet cum vel, itaque, id ipsum nisi debitis modi facere aliquam perspiciatis vero! Eius saepe ab eum
+                    incidunt ipsa eligendi sit, vitae aliquid debitis assumenda facilis suscipit nostrum. Saepe repudiandae reiciendis totam temporibus numquam explicabo iure maiores qui cum, praesentium officia veniam. Et consequuntur repellat enim hic, consequatur, laudantium est in fuga molestiae
+                    expedita totam nihil earum minima. Ipsum perspiciatis voluptate incidunt libero accusantium molestiae
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //  c-modal-body -->
+
+            <div class="c-modal-footer">
+              <div class="inner">
+                <div class="buttons">
+                  <button type="button" class="co-btn is-outline-navy-1 popup-cls-btn"><span>취소</span></button>
+                  <button type="button" class="co-btn bg-navy-1"><span>확인</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- = Type05  -->
+        <!-- [ // layer popup] -->
+      </div>
+      <!-- // [ TYPE04] -->
+    </div>
+    <!-- guide script -->
+    <script src="../js/pretty.js"></script>
+
+    <script defer src="../../js/common.js"></script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Layout Guide</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- guide css -->
+    <link rel="stylesheet" href="../css/base.css" />
+
+    <link rel="stylesheet" href="../../lib/jquery-ui/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
+  </head>
+  <body>
+    <div id="wrap" class="coding_guide">
+      <h1 class="h1_guide">Date</h1>
+
+      <!-- [Tab - 페이지 이동 ] -->
+      <div class="title-box">
+        <h2 class="h2_guide">Date</h2>
+      </div>
+
+      <div class="guide_descbox">
+        <h3 class="g-title"></h3>
+        <div class="inner_desc">
+          <ul>
+            <li>datePicker 기본 스타일</li>
+            <li>기능에 따른 스크립트 수정 후 사용</li>
+            <li>적용 sample page : html/rv/RV_02_003.html</li>
+          </ul>
+        </div>
+      </div>
+      <!-- [ Basic] -->
+      <h3 class="h3_guide">Date Picker(Sample)</h3>
+      <div class="d_desc code">
+        <!-- ? view -->
+
+        <div class="row">
+          <div class="col label-input">
+            <label for="rsvHopeDate01_01">예약일자</label>
+            <div class="c-input-date">
+              <input type="text" class="c-input btn-date-picker" id="rsvHopeDate01_01" placeholder="YYYY-MM-DD" autocomplete="off" />
+              <span><i class="date-btn"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ? // view -->
+        <!-- ! code -->
+        <xmp class="prettyprint linenums javascript">
+	<div class="col label-input">
+		<label for="rsvHopeDate01_01">예약일자</label>
+		<div class="c-input-date">
+			<input type="text" class="c-input btn-date-picker" id="rsvHopeDate01_01" placeholder="YYYY-MM-DD" autocomplete="off" />
+			<span><i class="date-btn"></i></span>
+		</div>
+	</div>
+
+<script src="../../js/date.js"></script>
+<script>
+	$(function () {
+		$('.btn-date-picker').datepicker({
+			beforeShowDay: disableAllTheseDays,
+			beforeShow: function (input) {
+				datepickerBtmBar(input);
+			},
+			onChangeMonthYear: function (input) {
+				datepickerBtmBar(input);
+			},
+		});
+		// 특정날짜 disabled List
+		var disabledDays = ['2022-7-9', '2022-7-26', '2022-7-26', '2022-8-1'];
+
+		function disableAllTheseDays(date) {
+			var m = date.getMonth(),
+				d = date.getDate(),
+				y = date.getFullYear();
+
+			for (i = 0; i < disabledDays.length; i++) {
+				if ($.inArray(y + '-' + (m + 1) + '-' + d, disabledDays) != -1) {
+					return [false];
+				}
+			}
+			return [date.getDay() != 0, '']; // 일요일 제어
+			return [true];
+		}
+	});
+</script>
+
+				</xmp>
+        <!-- ! // code -->
+      </div>
+      <!-- // [ Date Picker] -->
+    </div>
+    <!-- guide script -->
+    <script src="../js/pretty.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/date.js"></script>
+    <script>
+      $(function () {
+        $('.btn-date-picker').datepicker({
+          beforeShowDay: disableAllTheseDays,
+          beforeShow: function (input) {
+            datepickerBtmBar(input);
+          },
+          onChangeMonthYear: function (input) {
+            datepickerBtmBar(input);
+          },
+        });
+        // 특정날짜 disabled List
+        var disabledDays = ['2022-7-9', '2022-7-26', '2022-7-26', '2022-8-1'];
+
+        function disableAllTheseDays(date) {
+          var m = date.getMonth(),
+            d = date.getDate(),
+            y = date.getFullYear();
+
+          for (i = 0; i < disabledDays.length; i++) {
+            if ($.inArray(y + '-' + (m + 1) + '-' + d, disabledDays) != -1) {
+              return [false];
+            }
+          }
+          return [date.getDay() != 0, '']; // 일요일 제어
+          return [true];
+        }
+      });
+    </script>
+  </body>
+</html>
