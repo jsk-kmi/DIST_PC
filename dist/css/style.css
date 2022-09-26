@@ -9577,6 +9577,9 @@ RV-02-003_1
 .institution-list-field .institution-card.none-data .co-none-txt {
 		margin-top: 12px;
 }
+.institution-list-field .institution-card > a {
+		cursor: pointer;
+}
 
 .rsv-institution-datail-field {
 		display: none;
@@ -12058,5 +12061,12 @@ RV-02-003_1
 		font-weight: 500;
 		line-height: 1.5;
 		color: #494949;
+}
+
+.client-card-field .top-select-box {
+		margin-top: 20px;
+}
+.client-card-field .top-select-box select {
+		border-radius: 12px;
 }
 /*# sourceMappingURL=maps/style.css.map */
