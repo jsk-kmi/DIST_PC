@@ -4811,46 +4811,9 @@
 }
 
 .healthexam-item-list {
-  position: relative;
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 20px;
-    bottom: 0;
-    // width: 1px;
-    border-left: 2px dashed $color-blue-1;
-    content: '';
-  }
-  &:before,
-  &:after {
-    position: absolute;
-    content: '';
-    // top: 50%;
-    background: red;
-    left: 4px;
-    width: 10px;
-    height: 10px;
-  }
-
-  &:before {
-    top: 0;
-  }
-  &:after {
-    bottom: 0;
-  }
   > li {
-    padding-left: 20px;
     & ~ li {
       margin-top: 8px;
-    }
-
-    &:before {
-      position: absolute;
-      left: 4px;
-      border-left: 1px solid red;
-      content: '';
-      top: 0;
-      bottom: 0;
     }
   }
 }
