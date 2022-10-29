@@ -1322,6 +1322,22 @@ label.title-md {
 		width: 100%;
 }
 
+.c-label-box label,
+.c-label-box .c-label-txt {
+		margin-bottom: 4px;
+}
+.c-label-box label + .sub-cont,
+.c-label-box .c-label-txt + .sub-cont {
+		color: #a4a4a4;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 2;
+}
+
+.col-chk-btn-type .c-chkoption-box {
+		margin-top: 16px;
+}
+
 .input-list.detail-list {
 		padding: 20px 40px;
 }
@@ -2244,6 +2260,34 @@ textarea.type02,
 .c-rdochk .chk-label,
 .c-rdochk label.chk-label {
 		margin-bottom: 0;
+}
+
+.c-chkbtn {
+		position: relative;
+		cursor: pointer;
+}
+.c-chkbtn > label {
+		display: block;
+		width: 100%;
+		padding: 4px 16px;
+		border-radius: 8px;
+		color: rgba(28, 28, 27, 0.8);
+		background-color: #fff;
+		border: 1px solid #d2d2d1;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 2;
+		cursor: pointer;
+}
+.c-chkbtn input {
+		position: absolute;
+		top: 0;
+		left: 0;
+}
+.c-chkbtn input:checked + label {
+		background-color: #253981;
+		border-color: #253981;
+		color: #fff;
 }
 
 .c-chkbox.type01 input[type=radio]:checked + .chk-label i,
@@ -12032,5 +12076,18 @@ RV-02-003_1
 }
 .client-card-field .top-select-box select {
 		border-radius: 12px;
+}
+
+.c-chkoption-box {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		        flex-wrap: wrap;
+}
+.c-chkoption-box > .c-chkbtn + .c-chkbtn {
+		margin-left: 12px;
 }
 /*# sourceMappingURL=maps/style.css.map */

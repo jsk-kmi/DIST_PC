@@ -5272,3 +5272,13 @@
     }
   }
 }
+
+.c-chkoption-box {
+  display: flex;
+  flex-wrap: wrap;
+  > .c-chkbtn {
+    & + .c-chkbtn {
+      margin-left: 12px;
+    }
+  }
+}

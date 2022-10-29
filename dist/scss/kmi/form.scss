@@ -36,6 +36,23 @@ label.title-md {
   }
 }
 
+.c-label-box {
+  label,
+  .c-label-txt {
+    margin-bottom: 4px;
+    & + .sub-cont {
+      color: $color-gray-3;
+      @include coTxtCaption;
+    }
+  }
+}
+
+.col-chk-btn-type {
+  .c-chkoption-box {
+    margin-top: 16px;
+  }
+}
+
 // = input List Detail
 
 .input-list {
@@ -996,6 +1013,34 @@ textarea,
   }
 }
 
+//+ c-chkbtn
+.c-chkbtn {
+  position: relative;
+  cursor: pointer;
+  > label {
+    display: block;
+    width: 100%;
+    padding: 4px 16px;
+    border-radius: 8px;
+    color: $color-black-op8;
+    background-color: $color-white-1;
+    border: 1px solid $color-gray-4;
+    @include coTxtCaption;
+    cursor: pointer;
+  }
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    &:checked {
+      & + label {
+        background-color: $color-navy-1;
+        border-color: $color-navy-1;
+        color: $color-white-1;
+      }
+    }
+  }
+}
 // + check box
 .c-chkbox {
   // - blue

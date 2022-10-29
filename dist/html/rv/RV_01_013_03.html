@@ -220,13 +220,57 @@
                                         <div class="col-4">
                                             <div class="co-title-field">
                                                 <h2 class="sub-title">희망 신청일자</h2>
-                                                <div class="c-chkbox">
-                                                    <input type="checkbox" id="chkOnlyMorningDate04_01" />
-                                                    <label for="chkOnlyMorningDate04_01" class="chk-label"><i></i><span>오전 예약 가능일만 보기</span></label>
-                                                </div>
+                                                <!-- [Comment] 옵션 삭제(10/29)-->
+                                                <!-- <div class="c-chkbox">
+                            <input type="checkbox" id="chkOnlyMorningDate04_01" />
+                            <label for="chkOnlyMorningDate04_01" class="chk-label"><i></i><span>오전 예약 가능일만 보기</span></label>
+                          </div> -->
                                             </div>
                                             <div class="co-cont-article input-cont-article">
                                                 <div class="c-input-list-basic input-cont">
+                                                    <!-- [ mod(221029)]
+														- 옵션 추가
+														-->
+                                                    <div class="row">
+                                                        <div class="col col-chk-btn-type">
+                                                            <div class="c-label-box">
+                                                                <label class="c-label-txt">검진 시간 선택</label>
+                                                                <div class="sub-cont">원하시는 시간대를 설정해 주세요.</div>
+                                                            </div>
+                                                            <div class="c-chkoption-box">
+                                                                <div class="c-chkbtn">
+                                                                    <input type="radio" id="rdoRsvHopeTime04_01" name="rdoRsvHopeTime04" checked />
+                                                                    <label for="rdoRsvHopeTime04_01">전체</label>
+                                                                </div>
+                                                                <div class="c-chkbtn">
+                                                                    <input type="radio" id="rdoRsvHopeTime04_02" name="rdoRsvHopeTime04" />
+                                                                    <label for="rdoRsvHopeTime04_02">오전</label>
+                                                                </div>
+                                                                <div class="c-chkbtn">
+                                                                    <input type="radio" id="rdoRsvHopeTime04_03" name="rdoRsvHopeTime04" />
+                                                                    <label for="rdoRsvHopeTime04_03">오후</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col col-chk-btn-type">
+                                                            <div class="c-label-box">
+                                                                <label class="c-label-txt">대장내시경 진행방법</label>
+                                                                <div class="sub-cont">수면 대장내시경 항목은 병원 상황에 따라 검진을 두번 나눠서 진행하는 경우가 있으니 예약 가능한 일자를 확인 후 예약 바랍니다.</div>
+                                                            </div>
+                                                            <div class="c-chkoption-box">
+                                                                <div class="c-chkbtn">
+                                                                    <input type="radio" id="rdoRsvHopeWay04_01" name="rdoRsvHopeWay04" checked />
+                                                                    <label for="rdoRsvHopeWay04_01">수면내시경 포함 진행</label>
+                                                                </div>
+                                                                <div class="c-chkbtn">
+                                                                    <input type="radio" id="rdoRsvHopeWay04_02" name="rdoRsvHopeWay04" />
+                                                                    <label for="rdoRsvHopeWay04_02">분리검진 진행</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <div class="row">
                                                         <div class="col label-input">
                                                             <label for="rsvHopeDate04_01">예약일자</label>
