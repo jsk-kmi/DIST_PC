@@ -3898,14 +3898,21 @@ textarea.type02,
 		padding: 25px 28px;
 		border-bottom: 1px solid #3b4e93;
 }
-#sideNav .top-logo .logo {
-		display: inline-block;
+#sideNav .top-logo .logo img {
 		height: 30px;
-}
-#sideNav .top-logo .logo > img {
-		height: 100%;
 		width: auto;
 		max-width: 100%;
+}
+#sideNav .top-logo .logo.type-color a {
+		padding: 4px 12px;
+		display: inline-block;
+		line-height: 1;
+		background-color: #fff;
+		border-radius: 8px;
+		overflow: hidden;
+}
+#sideNav .top-logo .logo.type-color a > img {
+		height: 24px;
 }
 
 .sidebar-menu {

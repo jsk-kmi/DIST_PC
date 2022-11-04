@@ -55,12 +55,25 @@ body {
     padding: 25px 28px;
     border-bottom: 1px solid #3b4e93;
     .logo {
-      display: inline-block;
-      height: 30px;
-      > img {
-        height: 100%;
+      // display: inline-block;
+      // height: 30px;
+      img {
+        height: 30px;
         width: auto;
         max-width: 100%;
+      }
+      &.type-color {
+        a {
+          padding: 4px 12px;
+          display: inline-block;
+          line-height: 1;
+          background-color: $color-white-1;
+          border-radius: 8px;
+          overflow: hidden;
+          > img {
+            height: 24px;
+          }
+        }
       }
     }
   }
