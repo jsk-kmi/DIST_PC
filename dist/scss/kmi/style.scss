@@ -788,20 +788,18 @@
     display: flex;
     width: 100%;
     height: 100%;
-    min-width: 1200px;
-    min-height: 800px;
     flex: 1 0 auto;
   }
   .side-area {
-    width: 560px;
-    min-width: 560px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    border-right: 1px solid $color-gray-5;
-    background-color: $color-white-1;
-    padding: 197px 90px;
-    position: relative;
+    // width: 560px;
+    // min-width: 560px;
+    // height: 100%;
+    // display: flex;
+    // align-items: center;
+    // border-right: 1px solid $color-gray-5;
+    // background-color: $color-white-1;
+    // padding: 197px 90px;
+    // position: relative;
 
     h1.title {
       display: block;
@@ -809,7 +807,7 @@
       text-align: left;
       font: {
         size: $p-fs-large-1;
-        weight: $weight-400;
+        weight: $weight-500;
       }
       line-height: 58px;
     }
@@ -1037,22 +1035,27 @@
     margin-top: 100px;
     text-align: center;
     p {
-      color: $color-gray-3;
+      color: $color-gray-1;
       @include coBodyTxt;
-      & ~ p {
-        margin-top: 8px;
+      &:first-child {
+        > span {
+          font-weight: $weight-400;
+        }
       }
-    }
-
-    span {
-      color: $color-black-1;
+      & ~ p {
+      }
     }
   }
 
   .btm-logo {
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
     @include position(50%, initial);
+
+    > .copyright {
+      margin-top: 20px;
+      color: $color-black-op4;
+    }
   }
 
   height: 100%;
@@ -5279,6 +5282,150 @@
   > .c-chkbtn {
     & + .c-chkbtn {
       margin-left: 12px;
+    }
+  }
+}
+
+// ================================================= WITH KMI
+#container {
+  .login-wrapper {
+    &.type-withkmi {
+      min-height: 900px;
+      .use-info {
+        padding: 20px 0;
+        border-radius: 16px;
+        border: 1px solid $color-gray-5;
+        background-color: $color-gray-7;
+      }
+      .side-area {
+        width: 520px;
+        min-width: 520px;
+        padding: {
+          left: 70px;
+          right: 70px;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+        // flex: 1 1 0;
+      }
+
+      .login-area {
+        width: 100%;
+        max-width: 100%;
+      }
+      .btm-logo {
+        // position: static;
+        // left: 0;
+        // transform: none;
+        // text-align: center;
+      }
+      .contents-field-02 {
+        justify-content: center;
+        height: calc(100% - 80px);
+        width: 100%;
+        min-width: 1100px;
+        overflow: hidden;
+        background-color: rgba(47, 122, 211, 0.15);
+        display: flex;
+        align-items: center;
+        .logo-txt {
+          display: flex;
+          align-items: center;
+
+          .logo {
+            line-height: 32px;
+            img {
+              vertical-align: middle;
+            }
+          }
+
+          color: $color-pink;
+          > em {
+            & ~ span {
+              @include coSubTitle;
+              position: relative;
+              padding-left: 16px;
+              &:before {
+                position: absolute;
+                top: 12px;
+                left: 9px;
+                content: '';
+                width: 1px;
+                height: 12px;
+                background-color: $color-blue-1;
+              }
+            }
+          }
+        }
+        .btm-info {
+          margin-top: 24px;
+          @include fontStyle(18px, 24px, 300);
+          color: $color-navy-1;
+        }
+
+        .login-txt {
+          padding-right: 90px;
+          .c-title {
+            @include fontStyle(40px, 52px, 700);
+            margin-top: 4px;
+            color: $color-navy-1;
+          }
+        }
+        .login-img {
+          min-height: auto;
+          max-height: 100%;
+          .img {
+            img {
+              min-width: 30.7vw;
+              max-width: 30.7vw;
+              max-height: 100%;
+            }
+          }
+        }
+      }
+      @media screen and (min-width: 1920px) {
+        .contents-field-02 {
+          justify-content: space-between;
+          padding: {
+            left: 5.2vw;
+            right: 5.2vw;
+          }
+          .logo {
+            img {
+              height: 24px;
+            }
+          }
+          .btm-info {
+            font-size: 0.9vw;
+            line-height: 1.2vw;
+          }
+          .login-txt {
+            .c-title {
+              font-size: 2vw;
+              line-height: 2.7vw;
+            }
+          }
+          .logo-txt {
+            > em {
+              & ~ span {
+                padding-left: 20px;
+                font-size: 24px;
+                &:before {
+                  top: 15px;
+                  left: 11px;
+                  width: 2px;
+                  height: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -1140,7 +1140,7 @@ button > span {
 }
 .c-modal-body .cont-box .title {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: #1c1c1b;
 }
@@ -1726,7 +1726,7 @@ label + .c-m-input-list {
 }
 .c-input-unit input[type=text][readonly=readonly] {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 }
 .c-input-unit .unit {
@@ -1739,7 +1739,7 @@ label + .c-m-input-list {
 		text-align: center;
 		color: #a4a4a4;
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 }
 .c-input-unit.input-view input[type=text] {
@@ -4115,7 +4115,7 @@ textarea.type02,
 }
 .header .user-profile .name {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: rgba(255, 255, 255, 0.6);
 		padding-left: 12px;
@@ -5641,7 +5641,7 @@ a.co-link,
 }
 .c-loading-wrapper .is-loading .txt {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: #777776;
 		position: absolute;
@@ -5898,7 +5898,7 @@ a.co-link,
 
 .co-sub-title-01 {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 }
 
@@ -5940,7 +5940,7 @@ a.co-link,
 .co-list-field.none-data p {
 		margin-top: 19px;
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: #a4a4a4;
 }
@@ -6066,7 +6066,7 @@ a.co-link,
 }
 .co-cont-section .sub-title {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: #1c1c1b;
 }
@@ -7513,36 +7513,17 @@ RV-02-003_1
 		display: flex;
 		width: 100%;
 		height: 100%;
-		min-width: 1200px;
-		min-height: 800px;
 		-webkit-box-flex: 1;
 		-webkit-flex: 1 0 auto;
 		    -ms-flex: 1 0 auto;
 		        flex: 1 0 auto;
-}
-.login-wrapper .side-area {
-		width: 560px;
-		min-width: 560px;
-		height: 100%;
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		    -ms-flex-align: center;
-		        align-items: center;
-		border-right: 1px solid #e9e9e9;
-		background-color: #fff;
-		padding: 197px 90px;
-		position: relative;
 }
 .login-wrapper .side-area h1.title {
 		display: block;
 		width: 100%;
 		text-align: left;
 		font-size: 40px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 58px;
 }
 .login-wrapper .contents-area {
@@ -7759,25 +7740,26 @@ RV-02-003_1
 		text-align: center;
 }
 .login-wrapper .use-info p {
-		color: #a4a4a4;
+		color: #494949;
 		font-size: 14px;
 		line-height: 2.1428571429;
 }
-.login-wrapper .use-info p ~ p {
-		margin-top: 8px;
-}
-.login-wrapper .use-info span {
-		color: #1c1c1b;
+.login-wrapper .use-info p:first-child > span {
+		font-weight: 400;
 }
 .login-wrapper .btm-logo {
 		position: absolute;
-		bottom: 40px;
+		bottom: 20px;
 		position: absolute;
 		left: 50%;
 		top: initial;
 		-webkit-transform: translateX(-50%);
 		    -ms-transform: translateX(-50%);
 		        transform: translateX(-50%);
+}
+.login-wrapper .btm-logo > .copyright {
+		margin-top: 20px;
+		color: rgba(28, 28, 27, 0.4);
 }
 .login-wrapper .top-header {
 		width: 100%;
@@ -8789,7 +8771,7 @@ RV-02-003_1
 }
 .institution-info-list-field .institution-info-card .title {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -8895,7 +8877,7 @@ RV-02-003_1
 }
 .checkup-item-list .items-card .name {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: #777776;
 		margin-top: 4px;
@@ -8921,7 +8903,7 @@ RV-02-003_1
 }
 .checkup-item-detail-field .datail-card .title {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: #1c1c1b;
 }
@@ -9141,7 +9123,7 @@ RV-02-003_1
 		text-align: center;
 		color: #777776;
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		max-width: 50%;
 }
@@ -9314,7 +9296,7 @@ RV-02-003_1
 }
 .visit-center-card.none-data .none-txt {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: #a4a4a4;
 }
@@ -9588,7 +9570,7 @@ RV-02-003_1
 }
 .institution-list-field .institution-card .title {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -9709,12 +9691,12 @@ RV-02-003_1
 }
 .institution-detail-card .top-box > em {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 }
 .institution-detail-card .top-box .title {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: #494949;
 }
@@ -9791,7 +9773,7 @@ RV-02-003_1
 .institution-detail-card .price-info > em {
 		margin: 7px 0 0 4px;
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: #2f7ad3;
 }
@@ -10214,7 +10196,7 @@ RV-02-003_1
 }
 .reservation-sidebar .inner-wrap .top-title {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: #253981;
 }
@@ -10382,7 +10364,7 @@ RV-02-003_1
 .resevation-btm-bar.type02 .compare-product > p {
 		margin-left: 8px;
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 }
 .resevation-btm-bar.type02 .compare-product .cnt {
@@ -10668,7 +10650,7 @@ RV-02-003_1
 }
 .compare-card .name {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: #494949;
 		overflow: hidden;
@@ -10808,7 +10790,7 @@ RV-02-003_1
 }
 .rsv-institution-list-wrap .rsv-institution-card .title {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -11083,7 +11065,7 @@ RV-02-003_1
 }
 .result-article .co-title-field .title {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 }
 .result-article .list-field {
@@ -11290,7 +11272,7 @@ RV-02-003_1
 }
 .final-confirm-article .title {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: #1c1c1b;
 }
@@ -11683,7 +11665,7 @@ RV-02-003_1
 		color: #494949;
 		padding-right: 4px;
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 }
 .total-surcharges-wrap .btm-total-price {
@@ -11697,13 +11679,13 @@ RV-02-003_1
 }
 .total-surcharges-wrap .btm-total-price .price {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 }
 .total-surcharges-wrap .btm-total-price .price > em {
 		color: #2f7ad3;
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 }
 
@@ -11750,7 +11732,7 @@ RV-02-003_1
 .healthexam-item-card .category .chk-label > span {
 		padding-left: 8px;
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 }
 .healthexam-item-card .c-chkbox.type02 i {
@@ -11782,7 +11764,7 @@ RV-02-003_1
 }
 .healthexam-item-card .date-confirm .date {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: #777776;
 		padding-left: 12px;
@@ -11790,7 +11772,7 @@ RV-02-003_1
 }
 .healthexam-item-card .date-unable-txt {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: #253981;
 }
@@ -11870,7 +11852,7 @@ RV-02-003_1
 }
 .chkup-ctg-accordion .per-surcharges > em {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: #494949;
 		padding-left: 12px;
@@ -11895,7 +11877,7 @@ RV-02-003_1
 }
 .c-layer-popup.rsv-his-confirm-popup .c-title {
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		color: #253981;
 }
@@ -12096,5 +12078,146 @@ RV-02-003_1
 }
 .c-chkoption-box > .c-chkbtn + .c-chkbtn {
 		margin-left: 12px;
+}
+
+#container .login-wrapper.type-withkmi {
+		min-height: 900px;
+}
+#container .login-wrapper.type-withkmi .use-info {
+		padding: 20px 0;
+		border-radius: 16px;
+		border: 1px solid #e9e9e9;
+		background-color: #f3f3f3;
+}
+#container .login-wrapper.type-withkmi .side-area {
+		width: 520px;
+		min-width: 520px;
+		padding-left: 70px;
+		padding-right: 70px;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		position: relative;
+}
+#container .login-wrapper.type-withkmi .login-area {
+		width: 100%;
+		max-width: 100%;
+}
+#container .login-wrapper.type-withkmi .contents-field-02 {
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		height: calc(100% - 80px);
+		width: 100%;
+		min-width: 1100px;
+		overflow: hidden;
+		background-color: rgba(47, 122, 211, 0.15);
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+}
+#container .login-wrapper.type-withkmi .contents-field-02 .logo-txt {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		color: #fda3ba;
+}
+#container .login-wrapper.type-withkmi .contents-field-02 .logo-txt .logo {
+		line-height: 32px;
+}
+#container .login-wrapper.type-withkmi .contents-field-02 .logo-txt .logo img {
+		vertical-align: middle;
+}
+#container .login-wrapper.type-withkmi .contents-field-02 .logo-txt > em ~ span {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 2;
+		position: relative;
+		padding-left: 16px;
+}
+#container .login-wrapper.type-withkmi .contents-field-02 .logo-txt > em ~ span:before {
+		position: absolute;
+		top: 12px;
+		left: 9px;
+		content: "";
+		width: 1px;
+		height: 12px;
+		background-color: #2f7ad3;
+}
+#container .login-wrapper.type-withkmi .contents-field-02 .btm-info {
+		margin-top: 24px;
+		font-size: 18px;
+		line-height: 1.3333333333;
+		color: #253981;
+}
+#container .login-wrapper.type-withkmi .contents-field-02 .login-txt {
+		padding-right: 90px;
+}
+#container .login-wrapper.type-withkmi .contents-field-02 .login-txt .c-title {
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 1.3;
+		margin-top: 4px;
+		color: #253981;
+}
+#container .login-wrapper.type-withkmi .contents-field-02 .login-img {
+		min-height: auto;
+		max-height: 100%;
+}
+#container .login-wrapper.type-withkmi .contents-field-02 .login-img .img img {
+		min-width: 30.7vw;
+		max-width: 30.7vw;
+		max-height: 100%;
+}
+@media screen and (min-width: 1920px) {
+		#container .login-wrapper.type-withkmi .contents-field-02 {
+				-webkit-box-pack: justify;
+				-webkit-justify-content: space-between;
+				    -ms-flex-pack: justify;
+				        justify-content: space-between;
+				padding-left: 5.2vw;
+				padding-right: 5.2vw;
+		}
+		#container .login-wrapper.type-withkmi .contents-field-02 .logo img {
+				height: 24px;
+		}
+		#container .login-wrapper.type-withkmi .contents-field-02 .btm-info {
+				font-size: 0.9vw;
+				line-height: 1.2vw;
+		}
+		#container .login-wrapper.type-withkmi .contents-field-02 .login-txt .c-title {
+				font-size: 2vw;
+				line-height: 2.7vw;
+		}
+		#container .login-wrapper.type-withkmi .contents-field-02 .logo-txt > em ~ span {
+				padding-left: 20px;
+				font-size: 24px;
+		}
+		#container .login-wrapper.type-withkmi .contents-field-02 .logo-txt > em ~ span:before {
+				top: 15px;
+				left: 11px;
+				width: 2px;
+				height: 20px;
+		}
 }
 /*# sourceMappingURL=maps/style.css.map */

@@ -324,7 +324,7 @@ $scrollbarRadius: 12px;
 }
 
 @mixin coSubTitle {
-  @include fontStyle(16px, 32px, 400);
+  @include fontStyle(16px, 32px, 500);
 }
 
 @mixin coTxtSmall01 {
@@ -343,12 +343,8 @@ $scrollbarRadius: 12px;
   @include fontStyle(14px, 30px, 500);
 }
 
-@mixin coBodyTxt {
-  @include fontStyle(14px, 30px, 300);
-}
-
-@mixin coTxtMainTitle {  
-	@include fontStyle(20px, 30px, 500)
+@mixin coTxtMainTitle {
+  @include fontStyle(20px, 30px, 500);
 }
 
 // = Card List
