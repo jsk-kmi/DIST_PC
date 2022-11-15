@@ -2508,7 +2508,7 @@
   .inner {
     display: flex;
     flex: 0 0 0;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .cont-box {
@@ -5334,7 +5334,7 @@
         align-items: center;
         border-right: 1px solid $color-gray-5;
         background-color: $color-white-1;
-        padding: 197px 90px;
+        padding: 197px 5vw;
         position: relative;
       }
     }
@@ -5343,7 +5343,6 @@
       justify-content: center;
       height: calc(100% - 80px);
       width: 100%;
-      padding-left: 5vw;
       overflow: hidden;
       background-color: rgba(47, 122, 211, 0.15);
       display: flex;
@@ -5384,7 +5383,7 @@
       }
 
       .login-txt {
-        padding-right: 90px;
+        // padding-right: 90px;
         .c-title {
           @include fontStyle(40px, 52px, 700);
           margin-top: 4px;

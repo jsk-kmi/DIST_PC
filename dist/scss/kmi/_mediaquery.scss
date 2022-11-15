@@ -1,0 +1,39 @@
+@include responsive(laptopM) {
+  #container {
+    .login-wrapper {
+      .contents-field-02 {
+        .login-txt {
+          flex-shrink: 0;
+          padding-right: 0;
+        }
+
+        .login-img {
+          .img {
+            img {
+              min-width: 23vw;
+              max-width: 23vw;
+            }
+          }
+        }
+      }
+      .side-area {
+        min-width: 480px;
+        width: auto;
+      }
+
+      &.type-withkmi {
+        .side-area {
+          min-width: 480px;
+          width: auto;
+        }
+      }
+
+      &:not(.type-withkmi) {
+        .side-area {
+          min-width: 480px;
+          width: auto;
+        }
+      }
+    }
+  }
+}

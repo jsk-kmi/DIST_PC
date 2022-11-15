@@ -376,11 +376,11 @@ $scrollbarRadius: 12px;
 
 // = Responsive
 @mixin responsive($device) {
-  @if ($device == 'laptop') {
+  @if ($device == 'laptopS') {
     @media screen and (max-width: 1280px) {
       @content;
     }
-  } @else if ($device == 'laptop2') {
+  } @else if ($device == 'laptopM') {
     @media screen and (max-width: 1440px) {
       @content;
     }
