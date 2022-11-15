@@ -5324,103 +5324,117 @@
         // transform: none;
         // text-align: center;
       }
-      .contents-field-02 {
-        justify-content: center;
-        height: calc(100% - 80px);
-        width: 100%;
-        min-width: 1100px;
-        overflow: hidden;
-        background-color: rgba(47, 122, 211, 0.15);
+    }
+    &:not(.type-withkmi) {
+      .side-area {
+        width: 560px;
+        min-width: 560px;
+        height: 100%;
         display: flex;
         align-items: center;
-        .logo-txt {
-          display: flex;
-          align-items: center;
+        border-right: 1px solid $color-gray-5;
+        background-color: $color-white-1;
+        padding: 197px 90px;
+        position: relative;
+      }
+    }
 
-          .logo {
-            line-height: 32px;
-            img {
-              vertical-align: middle;
-            }
-          }
+    .contents-field-02 {
+      justify-content: center;
+      height: calc(100% - 80px);
+      width: 100%;
+      min-width: 1100px;
+      overflow: hidden;
+      background-color: rgba(47, 122, 211, 0.15);
+      display: flex;
+      align-items: center;
+      .logo-txt {
+        display: flex;
+        align-items: center;
 
-          color: $color-pink;
-          > em {
-            & ~ span {
-              @include coSubTitle;
-              position: relative;
-              padding-left: 16px;
-              &:before {
-                position: absolute;
-                top: 12px;
-                left: 9px;
-                content: '';
-                width: 1px;
-                height: 12px;
-                background-color: $color-blue-1;
-              }
-            }
+        .logo {
+          line-height: 32px;
+          img {
+            vertical-align: middle;
           }
         }
-        .btm-info {
-          margin-top: 24px;
-          @include fontStyle(18px, 24px, 300);
-          color: $color-navy-1;
-        }
 
-        .login-txt {
-          padding-right: 90px;
-          .c-title {
-            @include fontStyle(40px, 52px, 700);
-            margin-top: 4px;
-            color: $color-navy-1;
-          }
-        }
-        .login-img {
-          min-height: auto;
-          max-height: 100%;
-          .img {
-            img {
-              min-width: 30.7vw;
-              max-width: 30.7vw;
-              max-height: 100%;
+        color: $color-pink;
+        > em {
+          & ~ span {
+            @include coSubTitle;
+            position: relative;
+            padding-left: 16px;
+            &:before {
+              position: absolute;
+              top: 12px;
+              left: 9px;
+              content: '';
+              width: 1px;
+              height: 12px;
+              background-color: $color-blue-1;
             }
           }
         }
       }
-      @media screen and (min-width: 1920px) {
-        .contents-field-02 {
-          justify-content: space-between;
-          padding: {
-            left: 5.2vw;
-            right: 5.2vw;
+      .btm-info {
+        margin-top: 24px;
+        @include fontStyle(18px, 24px, 300);
+        color: $color-navy-1;
+      }
+
+      .login-txt {
+        padding-right: 90px;
+        .c-title {
+          @include fontStyle(40px, 52px, 700);
+          margin-top: 4px;
+          color: $color-navy-1;
+        }
+      }
+      .login-img {
+        min-height: auto;
+        max-height: 100%;
+        .img {
+          img {
+            min-width: 30.7vw;
+            max-width: 30.7vw;
+            max-height: 100%;
           }
-          .logo {
-            img {
-              height: 24px;
-            }
+        }
+      }
+    }
+    @media screen and (min-width: 1920px) {
+      .contents-field-02 {
+        justify-content: space-between;
+        padding: {
+          left: 5.2vw;
+          right: 5.2vw;
+        }
+        .logo {
+          img {
+            height: 24px;
           }
-          .btm-info {
-            font-size: 0.9vw;
-            line-height: 1.2vw;
+        }
+        .btm-info {
+          font-size: 0.9vw;
+          line-height: 1.2vw;
+        }
+        .login-txt {
+          .c-title {
+            font-size: 2vw;
+            line-height: 2.7vw;
           }
-          .login-txt {
-            .c-title {
-              font-size: 2vw;
-              line-height: 2.7vw;
-            }
-          }
-          .logo-txt {
-            > em {
-              & ~ span {
-                padding-left: 20px;
-                font-size: 24px;
-                &:before {
-                  top: 15px;
-                  left: 11px;
-                  width: 2px;
-                  height: 20px;
-                }
+        }
+        .logo-txt {
+          > em {
+            & ~ span {
+              padding-left: 20px;
+              font-size: 24px;
+              &:before {
+                top: 15px;
+                left: 11px;
+                width: 2px;
+                height: 20px;
               }
             }
           }
