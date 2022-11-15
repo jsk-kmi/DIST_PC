@@ -9344,7 +9344,6 @@ RV-02-003_1
 .event-card {
 		position: relative;
 		background-color: #fff;
-		border: 1px solid rgba(28, 28, 27, 0.1);
 		border-radius: 12px;
 		overflow: hidden;
 }
