@@ -1,5 +1,5 @@
-/* 
-	Common 
+/*
+	Common
 */
 
 //	= Font
@@ -371,7 +371,9 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
       }
 
       &:before {
-        @include position(0, 50%);
+        position: absolute;
+        left: 0;
+        top: 4px;
         content: counter(list-cnt) '.';
         display: inline-block;
         text-align: left;
@@ -499,7 +501,6 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
     display: block;
   }
 }
-
 
 // = Title Field
 
@@ -1264,4 +1265,17 @@ RV-02-003_1
   letter-spacing: -0.3px;
 }
 
-
+// = Seperate Page
+#container {
+  &.type-container-02 {
+    .content-wrapper {
+      padding-left: 0;
+    }
+    .contents {
+      max-width: 2560px;
+    }
+    .header {
+      padding-left: 0;
+    }
+  }
+}

@@ -2639,6 +2639,8 @@
     padding-bottom: 56.338%;
     position: relative;
     overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid $color-gray-7;
     .img {
       position: absolute;
       top: 0;
@@ -2648,7 +2650,7 @@
       height: inherit;
       background: {
         position: center;
-        size: cover;
+        size: 100% 100%;
         repeat: no-repeat;
       }
     }
@@ -2662,7 +2664,7 @@
   }
 
   .cont {
-    padding: 20px;
+    padding: 20px 0;
     font-size: 0;
   }
   .date {
@@ -2679,6 +2681,7 @@
   &.co-none-data {
     @include cardListNoneData;
     padding-bottom: calc(56.338% + 90px);
+    border: 1px solid $color-gray-5;
   }
 
   &.is-end {
@@ -2705,7 +2708,7 @@
     > li {
       padding: 14px 32px;
       display: flex;
-      align-items: center;
+      align-items: center; 
       justify-content: space-between;
       &:nth-child(odd) {
         background-color: $color-white-1;
@@ -4692,9 +4695,16 @@
   .rsv-details-info {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 16px;
     @media screen and (max-width: 1600px) {
       display: block;
+    }
+
+    .select-period-btns {
+      .chk-btn-type {
+        height: 0;
+      }
     }
   }
 
@@ -4712,8 +4722,16 @@
     color: $color-blue-1;
   }
   .right {
-    display: flex;
+    display: block;
+    &:after {
+      @include after;
+    }
+    .co-date-period,
+    .select-period-btns {
+      float: left;
+    }
     align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -4755,10 +4773,13 @@
       opacity: 0;
       cursor: pointer;
       & + .chk-label {
-        line-height: 30px;
-        display: inline-block;
+        min-height: 44px;
+        cursor: pointer;
+        display: table;
+        table-layout: fixed;
+        line-height: 1.5;
         padding: 8px 20px;
-        border-radius: 12px;
+        border-radius: 8px;
         border: 1px solid #d2d2d1;
         background-color: #fff;
       }
@@ -5438,6 +5459,243 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+// + 이용약관
+.co-terms-area {
+  .top-title {
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 1px solid $color-gray-5;
+    > h1 {
+      @include coMainTitle;
+    }
+  }
+  .terms-tab-wrap {
+    padding-top: 20px;
+  }
+}
+
+.terms-tab-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .select-box {
+    width: 140px;
+  }
+}
+
+.terms-field {
+  .c-terms-section {
+    &:not(:first-of-type) {
+      margin-top: 60px;
+    }
+  }
+}
+
+.c-terms-section {
+  > h2 {
+    @include coTxtMainTitle;
+    color: $color-gray-1;
+  }
+  > h3 {
+    margin-top: 20px;
+    @include fontStyle(14px, 28px, 500);
+    color: $color-gray-1;
+  }
+  > p {
+    margin-top: 4px;
+    @include coBodyTxt;
+  }
+  p,
+  ol,
+  ul {
+    @include coBodyTxt;
+    color: $color-gray-2;
+  }
+  .co-list-card {
+    &.number01,
+    &.number02 {
+      > li {
+        padding-left: 20px;
+      }
+    }
+    &.number01 {
+      > li {
+        &:before {
+          top: 7px;
+          width: 14px;
+          height: 14px;
+          font-size: 11px;
+          line-height: 1.3;
+        }
+      }
+    }
+    &.number02 {
+      > li {
+        &:before {
+          top: 8px;
+        }
+      }
+    }
+  }
+}
+
+// = Use Guide
+.c-layer-popup {
+  &.useguide-popup {
+    .c-modal-inner {
+      min-height: 100%;
+      height: 100%;
+      padding: {
+        left: 20px;
+        right: 20px;
+      }
+    }
+    .modal-wrap {
+      height: calc(100% - 80px);
+    }
+    .c-modal-body {
+      height: 100%;
+      overflow-y: hidden;
+    }
+    .modal-field {
+      width: 1180px;
+      height: 100%;
+    }
+  }
+}
+
+.useguide-tab-wrap {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  .tab-cont-wrap {
+    margin-top: 40px;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .tab-content {
+    height: 100%;
+  }
+}
+
+.useguide-field {
+  height: 100%;
+  padding-bottom: 20px;
+  > .inner {
+    display: flex;
+    flex: 1 0 100%;
+    height: 100%;
+    position: relative;
+  }
+  .left-wrap {
+    width: 260px;
+    padding-right: 40px;
+    border-right: 1px solid $color-gray-5;
+  }
+  .right-wrap {
+    position: relative;
+    padding: {
+      left: 40px;
+      right: 20px;
+    }
+    @include scrollType01;
+    overflow: {
+      x: hidden;
+      y: auto;
+    }
+    > .inner {
+      position: relative;
+    }
+    // @include scrollType01;
+    width: 100%;
+  }
+  .co-tab-list {
+    flex-shrink: 0;
+  }
+}
+
+.btn-guide-list {
+  > li {
+    > button {
+      background-color: $color-white-1;
+      color: $color-gray-2;
+      display: block;
+      padding: 8px 20px;
+      @include coBodyTxt;
+      color: $color-gray-2;
+      border-radius: 8px;
+      border: 1px solid $color-gray-5;
+      width: 100%;
+      text-align: left;
+      @include ellipsisLine01;
+    }
+    > button {
+      &.on {
+        background-color: $color-navy-1;
+        color: $color-white-1;
+        border: 1px solid $color-navy-1;
+      }
+    }
+    & ~ li {
+      margin-top: 12px;
+    }
+  }
+}
+
+.c-guide-section {
+  & ~ .c-guide-section {
+    margin-top: $guide-spacing-40;
+  }
+  h2,
+  h3,
+  ol,
+  ul,
+  p,
+  div {
+    word-break: keep-all;
+  }
+  > h2 {
+    @include coMainTitle;
+    &:not(:first-of-type) {
+      margin-top: $guide-spacing-60;
+    }
+    & + h3 {
+      margin-top: $guide-spacing-20;
+    }
+  }
+
+  h3 {
+    margin-top: $guide-spacing-40;
+    color: $color-navy-1;
+    @include coSubTitle;
+  }
+
+  > p {
+    & ~ img {
+      margin-top: $guide-spacing-20;
+    }
+  }
+  .guide-step-list {
+    margin-top: $guide-spacing-20;
+    h3.title {
+      .step {
+        color: $color-gray-3;
+      }
+    }
+    > li {
+      p ~ img {
+        margin-top: $guide-spacing-20;
+      }
+      & ~ li {
+        margin-top: $guide-spacing-40;
       }
     }
   }

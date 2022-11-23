@@ -321,6 +321,25 @@
   }
 }
 
+// = type06 (guide(1180)
+.c-layer-popup {
+  &.type06 {
+    .c-modal-inner {
+      padding: {
+        left: 20px;
+        right: 20px;
+      }
+    }
+    .modal-wrap {
+      padding: 0 40px;
+      width: 100%;
+    }
+    .modal-field {
+      width: 1180px;
+    }
+  }
+}
+
 // = surcharge (추가금 별도 type)
 .c-layer-popup {
   &.surcharges {
