@@ -461,8 +461,43 @@ var termsSrollbarCustom = function termsSrollbarCustom() {
     $('.terms-scroll').eq(i).children('.inner').addClass("scroll-effect".concat(i));
     window.Scrollbar.init(document.querySelector(".scroll-effect".concat(i)));
   }
-}; // = Function()
+}; // + useGuideScroll
+// const useGuideScroll = () => {
+//   let useguideScrollCnt = $('.useguide-field').length;
+//   console.log('useguideScrollCnt' + useguideScrollCnt);
+//   for (let i = 0; i < useguideScrollCnt; i++) {
+//     $('.useguide-field').eq(i).find('.right-wrap').addClass(`guide-scroll${i}`);
+//     window.Scrollbar.init(document.querySelector(`.guide-scroll${i}`));
+//   }
+// };
+// + selectedTabList
 
+
+var selectedTabList02 = function selectedTabList02() {
+  $('.btn-guide-list > li > button').on('click', function (e) {
+    var target = $(e.currentTarget),
+        guideTabList = target.closest('.btn-guide-list'),
+        tabContRight = target.closest('.useguide-field').find('.right-wrap').find('.inner'),
+        tabControl = target.attr('id'),
+        tabContList = $(".c-guide-section[aria-labelledby=".concat(tabControl, "]")),
+        tabContPosition = tabContList.position().top;
+    console.log(tabContPosition);
+    guideTabList.find(' > li > button').removeClass('on').attr('aria-selected', 'false');
+    target.addClass('on').attr('aria-selected', 'true'); // tabContRight.stop().animate({ scrollTop: 400 }, 500);
+
+    target.closest('.useguide-field').find('.right-wrap').stop().animate({
+      scrollTop: tabContPosition
+    }, 1000);
+  });
+};
+
+var guideScroll = function guideScroll() {
+  $('.useguide-field .right-wrap').on('scroll', function () {
+    console.log('offsetTop : ' + $('.useguide-field').find('.right-wrap').scrollTop());
+  });
+};
+
+guideScroll(); // = Function()
 
 openUserControl();
 goToTop();
@@ -472,5 +507,7 @@ btnClosePopup();
 basicScrollbarCustom();
 termsSrollbarCustom();
 selectedTabList();
-minHeightControl();
+minHeightControl(); // useGuideScroll();
+
+selectedTabList02();
 //# sourceMappingURL=maps/common.js.map

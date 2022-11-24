@@ -47,7 +47,6 @@ $ico-list01: (
   }
   width: $size;
   height: $size;
-  display: inline-block;
   @include is-blind;
 
   @each $icon in $ico-list01 {

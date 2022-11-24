@@ -340,10 +340,10 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
     > li {
       list-style: none;
       padding-left: 19px;
-      counter-increment: list-cnt;
+      counter-increment: list-cnt01;
       position: relative;
       &:before {
-        content: counter(list-cnt);
+        content: counter(list-cnt01);
         position: absolute;
         top: 4px;
         left: 0;
@@ -363,7 +363,7 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
   &.number02 {
     > li {
       list-style: none;
-      counter-increment: list-cnt;
+      counter-increment: list-cnt02;
       position: relative;
       padding-left: 18px;
       font: {
@@ -374,7 +374,7 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
         position: absolute;
         left: 0;
         top: 4px;
-        content: counter(list-cnt) '.';
+        content: counter(list-cnt02) '.';
         display: inline-block;
         text-align: left;
         line-height: 1;
@@ -1276,6 +1276,9 @@ RV-02-003_1
     }
     .header {
       padding-left: 0;
+    }
+    footer.footer .container {
+      max-width: 100%;
     }
   }
 }
