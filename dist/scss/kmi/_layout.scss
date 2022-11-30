@@ -397,7 +397,7 @@ body {
   .contents-area {
     flex-grow: 1;
     flex-shrink: 1;
-    padding: 40px 60px 60px;
+    padding: 40px 60px;
     min-width: 1200px;
 
     @include responsive(laptop2) {

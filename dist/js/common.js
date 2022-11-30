@@ -470,10 +470,49 @@ var termsSrollbarCustom = function termsSrollbarCustom() {
 //     window.Scrollbar.init(document.querySelector(`.guide-scroll${i}`));
 //   }
 // };
-// + selectedTabList
+// = Terms
+// + termsGoTop
 
 
-var selectedTabList02 = function selectedTabList02() {
+var termsGoTop = function termsGoTop() {
+  $('.btn-terms-go-top').on('click', function () {
+    $('html, body').stop().animate({
+      scrollTop: '0'
+    }, 500);
+  });
+}; // + termsScrollEffect
+
+
+var termsScrollEffect = function termsScrollEffect() {
+  $(window).on('scroll', function () {
+    var guidePopupScrollY = window.scrollY;
+
+    if (guidePopupScrollY > 100) {
+      $('.btn-terms-go-top').addClass('on');
+    } else {
+      $('.btn-terms-go-top').removeClass('on');
+    }
+  });
+}; // + personalInfoScroll
+
+
+var personalInfoScroll = function personalInfoScroll() {
+  $('.policy-list > li > a').on('click', function (e) {
+    var target = $(e.currentTarget),
+        policyList = target.closest('.policy-list'),
+        policyControl = target.attr('id'),
+        policyContList = $(".policy-section[aria-labelledby=".concat(policyControl, "]")),
+        policyContPosition = policyContList.offset().top - $('.top-header.type-kmi').outerHeight();
+    policyList.find(' > li > a').removeClass('on').attr('aria-selected', 'false');
+    target.addClass('on').attr('aria-selected', 'true');
+    $('html,body').stop().animate({
+      scrollTop: policyContPosition
+    }, 1000);
+  });
+}; // + selectedTabGuide
+
+
+var selectedTabGuide = function selectedTabGuide() {
   $('.btn-guide-list > li > button').on('click', function (e) {
     var target = $(e.currentTarget),
         guideTabList = target.closest('.btn-guide-list'),
@@ -481,7 +520,6 @@ var selectedTabList02 = function selectedTabList02() {
         tabControl = target.attr('id'),
         tabContList = $(".c-guide-section[aria-labelledby=".concat(tabControl, "]")),
         tabContPosition = tabContList.position().top;
-    console.log(tabContPosition);
     guideTabList.find(' > li > button').removeClass('on').attr('aria-selected', 'false');
     target.addClass('on').attr('aria-selected', 'true'); // tabContRight.stop().animate({ scrollTop: 400 }, 500);
 
@@ -489,15 +527,8 @@ var selectedTabList02 = function selectedTabList02() {
       scrollTop: tabContPosition
     }, 1000);
   });
-};
+}; // = Function()
 
-var guideScroll = function guideScroll() {
-  $('.useguide-field .right-wrap').on('scroll', function () {
-    console.log('offsetTop : ' + $('.useguide-field').find('.right-wrap').scrollTop());
-  });
-};
-
-guideScroll(); // = Function()
 
 openUserControl();
 goToTop();
@@ -509,5 +540,5 @@ termsSrollbarCustom();
 selectedTabList();
 minHeightControl(); // useGuideScroll();
 
-selectedTabList02();
+selectedTabGuide();
 //# sourceMappingURL=maps/common.js.map

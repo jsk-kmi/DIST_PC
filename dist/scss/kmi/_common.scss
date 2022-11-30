@@ -365,7 +365,7 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
       list-style: none;
       counter-increment: list-cnt02;
       position: relative;
-      padding-left: 18px;
+      padding-left: 20px;
       font: {
         size: $fs-nomal;
       }
@@ -379,6 +379,19 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
         text-align: left;
         line-height: 1;
         padding-right: 8px;
+      }
+    }
+  }
+
+  &.sequence-k {
+    > li {
+      position: relative;
+
+      padding-left: 20px;
+      .seq {
+        position: absolute;
+        top: 0;
+        left: 0;
       }
     }
   }
