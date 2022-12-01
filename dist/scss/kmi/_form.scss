@@ -1032,6 +1032,14 @@ textarea,
     position: absolute;
     top: 0;
     left: 0;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
     &:checked {
       & + label {
         background-color: $color-navy-1;
@@ -1145,7 +1153,7 @@ textarea,
   }
 }
 
-/* 
+/*
 	 = Select
 */
 
