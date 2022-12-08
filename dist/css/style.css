@@ -4762,12 +4762,6 @@ footer.footer .btn-go-top {
 		clear: both;
 }
 
-@media (prefers-color-scheme: dark) {
-		html,
-body {
-				background-color: #253981;
-		}
-}
 /*
 	Common
 */
