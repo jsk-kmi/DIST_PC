@@ -4668,6 +4668,15 @@ footer.footer .company-info {
 		white-space: nowrap;
 		color: #a4a4a4;
 }
+footer.footer .company-info > li {
+		line-height: 1.7;
+}
+footer.footer .company-info > li > span {
+		display: inline-block;
+}
+footer.footer .company-info > li > span ~ span {
+		margin-left: 6px;
+}
 footer.footer .top-useinfo:after {
 		display: block;
 		content: "";
@@ -4695,6 +4704,9 @@ footer.footer .top-useinfo > li ~ li :before {
 }
 footer.footer .top-useinfo a {
 		color: #a4a4a4;
+}
+footer.footer .top-useinfo .personal-policy > a {
+		color: #fcfcfc;
 }
 footer.footer .btn-go-top {
 		position: absolute;
@@ -8782,14 +8794,32 @@ RV-02-003_1
 .main-card .customer-service {
 		text-align: center;
 }
+.main-card .customer-service .title {
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 1.8;
+}
+.main-card .customer-service .tel,
+.main-card .customer-service .time {
+		color: #2f7ad3;
+		display: block;
+}
+.main-card .customer-service .tel {
+		font-size: 30px;
+		font-weight: 900;
+		line-height: 1.1333333333;
+		color: #2f7ad3;
+}
+.main-card .customer-service .tel ~ .time {
+		margin-top: 5px;
+}
 .main-card .customer-service .time {
 		font-size: 20px;
 		font-weight: 500;
 		line-height: 1.8;
-		color: #2f7ad3;
 }
 .main-card .customer-service .time + p {
-		margin-top: 12px;
+		margin-top: 6px;
 		color: #494949;
 }
 

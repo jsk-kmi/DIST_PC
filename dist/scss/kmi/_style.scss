@@ -1685,12 +1685,26 @@
     }
   }
   .customer-service {
+    .title {
+      @include coMainTitle;
+    }
     text-align: center;
+    .tel,
+    .time {
+      color: $color-blue-1;
+      display: block;
+    }
+    .tel {
+      @include fontStyle(30px, 34px, 900);
+      color: $color-blue-1;
+      & ~ .time {
+        margin-top: 5px;
+      }
+    }
     .time {
       @include coMainTitle;
-      color: $color-blue-1;
       & + p {
-        margin-top: 12px;
+        margin-top: 6px;
         color: $color-gray-1;
         // white-space: nowrap;
       }

@@ -467,6 +467,16 @@ footer.footer {
     margin-top: 20px;
     white-space: nowrap;
     color: $color-gray-3;
+
+    > li {
+      line-height: 1.7;
+      > span {
+        display: inline-block;
+        & ~ span {
+          margin-left: 6px;
+        }
+      }
+    }
   }
   .top-useinfo {
     &:after {
@@ -493,6 +503,12 @@ footer.footer {
     }
     a {
       color: $color-gray-3;
+    }
+
+    .personal-policy {
+      > a {
+        color: $color-white-2;
+      }
     }
   }
 
