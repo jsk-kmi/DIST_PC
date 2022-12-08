@@ -80,45 +80,63 @@ var mainContSideNav = function mainContSideNav() {
 
 var $nowFirstRow = null,
     rollingTxtList = null,
-    duration = 1000; // +  Auto Rolling
+    duration = 1000,
+    $rollingListCnt = $('.rolling-banner').children('.list').children('li').length; // +  Auto Rolling
 
-var rollingAuto = setInterval(function () {
-  rollingTxtList = $('.rolling-banner > .list');
-  $nowFirstRow = rollingTxtList.children('li:first-child');
-
-  var listRow = function listRow() {
-    $nowFirstRow.appendTo(rollingTxtList).show(400);
-  };
-
-  $nowFirstRow.hide(1000, listRow);
-}, 2000); // + rolling banner txt
-
-var rollingTxtBanner = function rollingTxtBanner() {
-  var $rollingPrevbtn = $('.rolling-banner').find('.prev-btn'),
-      $rollingNextbtn = $('.rolling-banner').find('.next-btn'); // Prev Btn
-
-  $rollingPrevbtn.on('click', function () {
-    clearInterval(rollingAuto);
-    rollingTxtList = $('.rolling-banner > .list');
-    $nowFirstRow = rollingTxtList.children('li:last-child');
-
-    var listRow = function listRow() {
-      $nowFirstRow.prependTo(rollingTxtList).show(duration);
-    };
-
-    $nowFirstRow.hide(duration, listRow);
-  }); // Next Btn
-
-  $rollingNextbtn.on('click', function () {
-    clearInterval(rollingAuto);
+var rollingAuto = function rollingAuto() {
+  setInterval(function () {
     rollingTxtList = $('.rolling-banner > .list');
     $nowFirstRow = rollingTxtList.children('li:first-child');
 
     var listRow = function listRow() {
-      $nowFirstRow.appendTo(rollingTxtList).show(duration);
+      $nowFirstRow.appendTo(rollingTxtList).show(400);
     };
 
-    $nowFirstRow.hide(duration, listRow);
+    $nowFirstRow.hide(1000, listRow);
+  }, 2000);
+}; // + rolling banner txt
+
+
+var rollingTxtBanner = function rollingTxtBanner() {
+  if ($rollingListCnt <= 1) {
+    return 0;
+  } else {
+    rollingAuto();
+  }
+
+  var $rollingPrevbtn = $('.rolling-banner').find('.prev-btn'),
+      $rollingNextbtn = $('.rolling-banner').find('.next-btn'); // Prev Btn
+
+  $rollingPrevbtn.on('click', function () {
+    if ($rollingListCnt <= 1) {
+      return 0;
+    } else {
+      clearInterval(rollingAuto);
+      rollingTxtList = $('.rolling-banner > .list');
+      $nowFirstRow = rollingTxtList.children('li:last-child');
+
+      var listRow = function listRow() {
+        $nowFirstRow.prependTo(rollingTxtList).show(duration);
+      };
+
+      $nowFirstRow.hide(duration, listRow);
+    }
+  }); // Next Btn
+
+  $rollingNextbtn.on('click', function () {
+    if ($rollingListCnt <= 1) {
+      return 0;
+    } else {
+      clearInterval(rollingAuto);
+      rollingTxtList = $('.rolling-banner > .list');
+      $nowFirstRow = rollingTxtList.children('li:first-child');
+
+      var listRow = function listRow() {
+        $nowFirstRow.appendTo(rollingTxtList).show(duration);
+      };
+
+      $nowFirstRow.hide(duration, listRow);
+    }
   });
 }; // + sideMenuToggle
 
@@ -137,7 +155,7 @@ var sideMenuToggle = function sideMenuToggle() {
       sideMenuList.removeClass('on');
       seletedMenu.addClass('on');
 
-      if (seletedMenu.next().is(':visible') == 0) {
+      if (seletedMenu.next().is(':visible') === 0) {
         sidebarSubMenuList.stop().slideUp(350);
       }
 
@@ -217,23 +235,6 @@ var checkupProduct = function checkupProduct() {
     $('.institution-datail-list .institution-detail-card').removeClass('on');
     nowChkupCard.addClass('on');
   });
-}; // + 검진항목 하단 버튼 제어
-
-
-var btmCompareBar = function btmCompareBar() {
-  $('.btn-bar-toggle').on('click', function (e) {
-    $(this).toggleClass('is-open');
-
-    if ($(this).hasClass('is-open')) {
-      $(this).find('.is-blind').text('접기');
-    } else {
-      $(this).find('.is-blind').text('펼치기');
-    }
-
-    var target = $(e.currentTarget);
-    var btmCompareHeight = target.closest('.resevation-btmbar-wrap').height();
-    reservationBtmBarFixed(btmCompareHeight);
-  });
 }; // + 검진예약 하단 bar Control
 
 
@@ -268,6 +269,23 @@ var reservationBtmBarFixed = function reservationBtmBarFixed() {
   } else {
     $('.resevation-btmbar-wrap').removeClass('fixed');
   }
+}; // + 검진항목 하단 버튼 제어
+
+
+var btmCompareBar = function btmCompareBar() {
+  $('.btn-bar-toggle').on('click', function (e) {
+    $(this).toggleClass('is-open');
+
+    if ($(this).hasClass('is-open')) {
+      $(this).find('.is-blind').text('접기');
+    } else {
+      $(this).find('.is-blind').text('펼치기');
+    }
+
+    var target = $(e.currentTarget);
+    var btmCompareHeight = target.closest('.resevation-btmbar-wrap').height();
+    reservationBtmBarFixed(btmCompareHeight);
+  });
 }; //  + 대상자 선택 활성화
 
 
@@ -320,7 +338,6 @@ var checkupCtgInputChk = function checkupCtgInputChk() {
           var targetName = target.attr('name');
           $("input[name=".concat(targetName, "]")).closest('.healthexam-item-card').removeClass('on');
           targetItemCard.addClass('on');
-          console.log(targetName);
           break;
         }
 

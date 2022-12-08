@@ -336,22 +336,44 @@ $ico-chkbox-list01: (is-default, is-white, is-main, is-sub, is-red, is-full);
   }
   display: inline-block;
   &.is-red {
-    &.favorite {
-      background-position: -834px -36px;
-    }
+    //  &.favorite {
+    //    background-position: -834px -36px;
+    //  }
     background-color: #ffebe9;
   }
   &.is-blue {
     background-color: $color-gray-8;
-    &.favorite {
-      background-position: -834px 2px;
-    }
+    //  &.favorite {
+    //    background-position: -834px 2px;
+    // }
     &.info01 {
       background-position: -36px 2px;
     }
 
     &.assignment {
       background-position: -872px 2px;
+    }
+  }
+}
+
+.ico-bg-type {
+  &.favorite {
+    background: {
+      size: 20px;
+      position: center;
+      repeat: no-repeat;
+    }
+  }
+  &.is-red {
+    &.favorite,
+    &.compare {
+      background-image: url($image-ico-path + 'ico_compare_02.svg');
+    }
+  }
+  &.is-blue {
+    &.favorite,
+    &.compare {
+      background-image: url($image-ico-path + 'ico_compare_01.svg');
     }
   }
 }

@@ -288,18 +288,16 @@ em {
 }
 
 // + tab focus
-a,
-button {
-  &:focus {
-    //    outline: 1px dashed $color-black-1;
-  }
-}
+// :focus {
+//   &:not(:focus-visible) {
+//     outline: 0;
+//   }
+//   outline: $focus-style;
+// }
 
-.sidenav-wrapper {
-  a,
-  button {
-    &:focus {
-      // outline: 1px dashed red;
-    }
-  }
-}
+// .c-chkbox {
+//   &:focus-visible,
+//   &:focus {
+//     outline: $focus-style;
+//   }
+// }

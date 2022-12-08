@@ -405,8 +405,6 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
 }
 
 // = tab-list
-.co-tab-wrap {
-}
 .co-tab-list {
   width: 100%;
   display: flex;
@@ -959,7 +957,9 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
 
     .ico-accordion {
       span {
+        transform: rotate(180deg);
         background-position: right center;
+        transition: transform 0.1s;
       }
     }
 
@@ -988,6 +988,9 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
     height: 20px;
     margin: 6px;
     background: url($image-ico-path + 'ico-sprites-accordion_01.png') 0 center/auto 20px no-repeat;
+
+    transform: rotate(-180deg);
+    transition: transform 0.1s;
   }
 }
 
@@ -1293,5 +1296,16 @@ RV-02-003_1
     footer.footer .container {
       max-width: 100%;
     }
+  }
+}
+
+// = Animation
+
+@keyframes coBtnHoverAni {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 150%;
   }
 }

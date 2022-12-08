@@ -129,7 +129,10 @@
     background: url($image-ico-path + 'ico_close_01.svg') center/28px no-repeat;
     width: 28px;
     height: 28px;
+    opacity: 1;
+    transition: opacity 0.4s;
     &:hover {
+      transition: opacity 0.4s;
       opacity: 0.6;
     }
   }
@@ -185,6 +188,7 @@
       width: auto;
       min-width: 80px;
       border-radius: $radius-12;
+      @include CoBtnAnimation;
     }
   }
 

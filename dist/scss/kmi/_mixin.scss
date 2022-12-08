@@ -395,3 +395,144 @@ $scrollbarRadius: 12px;
     }
   }
 }
+
+// = Animation
+@mixin aniCheckbox01 {
+  .chk-label {
+    i {
+      position: relative;
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        background-color: $color-white-1;
+        width: 0;
+
+        transition: width 0.2s cubic-bezier(0.34, 0.82, 0.45, 0.94);
+      }
+      &:before {
+        top: 7px;
+        left: 5px;
+        transform: rotate(-45deg);
+      }
+      &:after {
+        top: 9px;
+        left: 1px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  > input {
+    &[type='checkbox'] {
+      &:checked {
+        & + .chk-label {
+          > i {
+            border: 1px solid $color-gray-6;
+            border-radius: 4px;
+            background-image: none;
+            background-color: $color-navy-1;
+            transition: height 0.2s cubic-bezier(0.34, 0.82, 0.45, 0.94);
+            &:before,
+            &:after {
+              height: 1px;
+            }
+            &:before {
+              width: 10px;
+              transition-delay: 0.02s;
+            }
+            &:after {
+              width: 6px;
+              transition-delay: 0s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin aniCheckbox02 {
+  .chk-label {
+    i {
+      position: relative;
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        background-color: $color-white-1;
+        height: 0;
+        opacity: 0;
+        transition: width 0.2s linear;
+      }
+      &:before {
+        width: 0;
+        top: 8px;
+        left: 5px;
+        transform: rotate(-45deg);
+      }
+      &:after {
+        width: 0;
+        top: 9px;
+        left: 2px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  > input {
+    &[type='checkbox'],
+    &[type='radio'] {
+      &:checked {
+        & + .chk-label {
+          > i {
+            border: 0;
+            border-radius: 50%;
+            background-image: none;
+            background-color: $color-navy-1;
+            &:before,
+            &:after {
+              opacity: 1;
+              height: 2px;
+            }
+            &:before {
+              width: 10px;
+              transition: all 0.25s linear;
+              transition-delay: 0.03s;
+            }
+            &:after {
+              width: 6px;
+
+              transition: width 0.2s linear;
+              transition-delay: 0s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin CoBtnAnimation {
+  position: relative;
+  overflow: hidden;
+  &:after {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.493) 50%, rgba(255, 255, 255, 0) 100%);
+    content: '';
+    height: 200%;
+    left: -80%;
+    opacity: 0.2;
+    position: absolute;
+    top: 50%;
+    transform: rotate(30deg) translateY(-50%);
+    width: 20px;
+    z-index: -10;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    &:after {
+      animation: coBtnHoverAni 0.5s linear 1;
+    }
+  }
+}

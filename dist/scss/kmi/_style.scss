@@ -1,6 +1,3 @@
-@import 'variables';
-@import 'mixin';
-
 /*
 = bread crumb
 */
@@ -943,11 +940,9 @@
 
       .c-chkbox {
         float: left;
-
         .chk-label {
           line-height: $p-lineheight-normal;
         }
-
         & + .link-guide {
           margin-top: 5px;
         }
@@ -1634,6 +1629,8 @@
           table-layout: fixed;
           width: 100%;
           position: relative;
+          transition: background-color 0.4s;
+
           &:hover {
             background-color: $color-white-3;
           }
@@ -2421,6 +2418,7 @@
 .datail-inner-cont {
   margin-top: 20px;
   padding-bottom: 20px;
+  min-height: 200px;
 }
 
 .btm-nav-board {
@@ -3680,6 +3678,13 @@
           background-position: -38px 0;
         }
       }
+      &:hover {
+        span {
+          &:before {
+            animation: rsvPrevBtnAni 0.9s 3 linear;
+          }
+        }
+      }
     }
   }
   .btn-reservation-next {
@@ -3691,6 +3696,38 @@
         right: 0;
       }
     }
+    &:hover {
+      opacity: 1;
+      span {
+        &:before {
+          animation: rsvNextBtnAni 0.9s 3 linear;
+        }
+      }
+    }
+  }
+}
+
+@keyframes rsvNextBtnAni {
+  from {
+    right: 0;
+  }
+  50% {
+    right: -3px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes rsvPrevBtnAni {
+  from {
+    left: 0;
+  }
+  50% {
+    left: -3px;
+  }
+  to {
+    left: 0;
   }
 }
 
@@ -4952,7 +4989,7 @@
     &.type02 {
       i {
         margin: {
-          top: 3px;
+          top: 8px;
           right: 12px;
         }
       }

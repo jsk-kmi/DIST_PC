@@ -427,6 +427,7 @@
   justify-content: center;
   color: $color-gray-4;
   &:hover {
+    transition: background-color 0.4s;
     background-color: $color-white-3;
     color: $color-gray-4;
   }
