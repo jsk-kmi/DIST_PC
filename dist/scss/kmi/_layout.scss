@@ -494,20 +494,20 @@ footer.footer {
           position: absolute;
           content: '';
           width: 1px;
-          height: 11px;
-          background-color: $color-gray-3;
-          top: 50%;
+          height: 12px;
+          background-color: $color-gray-1;
+          top: calc(50% + 1px);
           transform: translateY(-50%);
         }
       }
     }
     a {
-      color: $color-gray-3;
+      color: $color-gray-6;
     }
 
     .personal-policy {
       > a {
-        color: $color-white-2;
+        color: $color-blue-3;
       }
     }
   }

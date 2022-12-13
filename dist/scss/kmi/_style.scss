@@ -1695,16 +1695,14 @@
       display: block;
     }
     .tel {
-      @include fontStyle(30px, 34px, 900);
+      @include fontStyle(30px, 40px, 700);
       color: $color-blue-1;
-      & ~ .time {
-        margin-top: 5px;
-      }
     }
     .time {
-      @include coMainTitle;
+      @include coSubTitle;
+      color: $color-gray-3;
       & + p {
-        margin-top: 6px;
+        margin-top: 12px;
         color: $color-gray-1;
         // white-space: nowrap;
       }
@@ -5972,4 +5970,9 @@
     opacity: 1;
     transition: opacity 0.4s;
   }
+}
+
+//+ Temp Style
+#useGuideSubTabPanel_04_04 {
+  padding-bottom: 480px;
 }

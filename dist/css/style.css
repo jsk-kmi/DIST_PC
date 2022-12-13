@@ -4695,18 +4695,18 @@ footer.footer .top-useinfo > li ~ li :before {
 		position: absolute;
 		content: "";
 		width: 1px;
-		height: 11px;
-		background-color: #a4a4a4;
-		top: 50%;
+		height: 12px;
+		background-color: #494949;
+		top: calc(50% + 1px);
 		-webkit-transform: translateY(-50%);
 		    -ms-transform: translateY(-50%);
 		        transform: translateY(-50%);
 }
 footer.footer .top-useinfo a {
-		color: #a4a4a4;
+		color: #d2d2d1;
 }
 footer.footer .top-useinfo .personal-policy > a {
-		color: #fcfcfc;
+		color: #489CFF;
 }
 footer.footer .btn-go-top {
 		position: absolute;
@@ -8806,20 +8806,18 @@ RV-02-003_1
 }
 .main-card .customer-service .tel {
 		font-size: 30px;
-		font-weight: 900;
-		line-height: 1.1333333333;
+		font-weight: 700;
+		line-height: 1.3333333333;
 		color: #2f7ad3;
 }
-.main-card .customer-service .tel ~ .time {
-		margin-top: 5px;
-}
 .main-card .customer-service .time {
-		font-size: 20px;
+		font-size: 16px;
 		font-weight: 500;
-		line-height: 1.8;
+		line-height: 2;
+		color: #a4a4a4;
 }
 .main-card .customer-service .time + p {
-		margin-top: 6px;
+		margin-top: 12px;
 		color: #494949;
 }
 
@@ -13201,5 +13199,9 @@ RV-02-003_1
 		opacity: 1;
 		-webkit-transition: opacity 0.4s;
 		transition: opacity 0.4s;
+}
+
+#useGuideSubTabPanel_04_04 {
+		padding-bottom: 480px;
 }
 /*# sourceMappingURL=maps/style.css.map */
