@@ -13065,6 +13065,10 @@ RV-02-003_1
 		width: 260px;
 		padding-right: 40px;
 		border-right: 1px solid #e9e9e9;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 260px;
+		    -ms-flex: 0 0 260px;
+		        flex: 0 0 260px;
 }
 .useguide-field .right-wrap {
 		position: relative;
@@ -13164,6 +13168,9 @@ RV-02-003_1
 		margin-top: 20px;
 }
 .c-guide-section .guide-step-list {
+		margin-top: 20px;
+}
+.c-guide-section .guide-step-list > li:first-of-type > h3 {
 		margin-top: 20px;
 }
 .c-guide-section .guide-step-list h3.title .step {

@@ -5846,6 +5846,7 @@
     width: 260px;
     padding-right: 40px;
     border-right: 1px solid $color-gray-5;
+    flex: 0 0 260px;
   }
   .right-wrap {
     position: relative;
@@ -5932,6 +5933,13 @@
   }
   .guide-step-list {
     margin-top: $guide-spacing-20;
+    > li {
+      &:first-of-type {
+        > h3 {
+          margin-top: 20px;
+        }
+      }
+    }
     h3.title {
       .step {
         color: $color-gray-3;

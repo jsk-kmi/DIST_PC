@@ -529,7 +529,7 @@ var personalInfoScroll = function personalInfoScroll() {
 }; // + selectedTabGuide
 
 
-var selectedTabGuide = function selectedTabGuide() {
+var useGuideSelected = function useGuideSelected() {
   $('.btn-guide-list > li > button').on('click', function (e) {
     var target = $(e.currentTarget),
         guideTabList = target.closest('.btn-guide-list'),
@@ -537,14 +537,42 @@ var selectedTabGuide = function selectedTabGuide() {
         tabControl = target.attr('id'),
         tabContList = $(".c-guide-section[aria-labelledby=".concat(tabControl, "]")),
         tabContPosition = tabContList.position().top;
-    guideTabList.find(' > li > button').removeClass('on').attr('aria-selected', 'false');
-    target.addClass('on').attr('aria-selected', 'true'); // tabContRight.stop().animate({ scrollTop: 400 }, 500);
+    guideTabList.find(' > li > button').attr('aria-selected', 'false');
+    target.attr('aria-selected', 'true'); // tabContRight.stop().animate({ scrollTop: 400 }, 500);
 
     target.closest('.useguide-field').find('.right-wrap').stop().animate({
       scrollTop: tabContPosition
-    }, 1000);
+    }, 800);
   });
-}; // = Function()
+};
+
+var useGuideTopTabEvent = function useGuideTopTabEvent() {
+  var $useGuideTabList = $('.useguide-tab-wrap').find('.top-tab-box').find('.co-tab-list');
+  $useGuideTabList.on('click', 'li > a', function (e) {
+    useGuideTabInitScroll();
+  });
+};
+
+function useGuideTabInitScroll() {
+  $('.tab-content.on').find('.right-wrap').on('scroll', function (e) {
+    var target = e.currentTarget,
+        // nowSideTabList = e.closest().find('.useguide-field');
+    nowSideTabList = $(this).closest('.useguide-field').find('.btn-guide-list'),
+        nowScrollY = $(this).scrollTop();
+    nowSideTabList.css('bacckground-color', '#ddd');
+    $(this).find('.c-guide-section').each(function (index, node) {
+      var $node = $(this);
+      var offsetTop = parseInt($node.position().top);
+
+      if (nowScrollY >= offsetTop) {
+        nowSideTabList.find(' li > button.on').removeClass('on');
+        var currentPageIndex = $node.index();
+        nowSideTabList.find(' li > button').eq(currentPageIndex).addClass('on');
+      }
+    });
+  });
+} // GuideTabScroll();
+// = Function()
 
 
 openUserControl();
@@ -555,7 +583,5 @@ btnClosePopup();
 basicScrollbarCustom();
 termsSrollbarCustom();
 selectedTabList();
-minHeightControl(); // useGuideScroll();
-
-selectedTabGuide();
+minHeightControl();
 //# sourceMappingURL=maps/common.js.map
