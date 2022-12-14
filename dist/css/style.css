@@ -10113,6 +10113,9 @@ RV-02-003_1
 .rsv-institution-datail-field .title-box .co-link {
 		margin-left: 12px;
 }
+.rsv-institution-datail-field .title-box .info01 {
+		margin-left: 8px;
+}
 .rsv-institution-datail-field.on {
 		display: block;
 }

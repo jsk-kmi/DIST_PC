@@ -145,21 +145,19 @@ var sideMenuToggle = function sideMenuToggle() {
   $('.sidebar-menu > li').on('click', '> a', function (e) {
     e.preventDefault();
     var seletedMenu = $(e.currentTarget),
-        sideMenuList = $('.sidebar-menu > li > a'),
-        sidebarSubMenuList = $('.sidebar-menu ul');
+        sideMenuList = $('.sidebar-menu > li'),
+        selectedSideLink = sideMenuList.children('a'),
+        sidebarSubMenuList = $('.sidebar-menu ul'),
+        slideDuration = 300; // 활성화 사이드바 컨트롤
 
     if (seletedMenu.hasClass('on') && seletedMenu.next().is(':visible')) {
-      sideMenuList.removeClass('on');
-      seletedMenu.next().slideUp();
-    } else {
-      sideMenuList.removeClass('on');
+      seletedMenu.removeClass('on');
+      seletedMenu.next().stop().slideUp(slideDuration);
+    } else if (!(seletedMenu.hasClass('on') && seletedMenu.next().is(':visible'))) {
+      selectedSideLink.removeClass('on');
+      sidebarSubMenuList.stop().slideUp(slideDuration);
       seletedMenu.addClass('on');
-
-      if (seletedMenu.next().is(':visible') === 0) {
-        sidebarSubMenuList.stop().slideUp(350);
-      }
-
-      seletedMenu.next().stop().slideToggle(350);
+      seletedMenu.next().stop().slideDown(slideDuration);
     }
   });
 }; // + 검진예약 Sidebar Floating
@@ -542,7 +540,7 @@ var useGuideSelected = function useGuideSelected() {
 
     target.closest('.useguide-field').find('.right-wrap').stop().animate({
       scrollTop: tabContPosition
-    }, 800);
+    }, 700);
   });
 };
 
@@ -553,7 +551,8 @@ var useGuideTopTabEvent = function useGuideTopTabEvent() {
   });
 };
 
-function useGuideTabInitScroll() {
+function useGuideTabInitScroll(target) {
+  var scrollContent = $('tab-content.on');
   $('.tab-content.on').find('.right-wrap').on('scroll', function (e) {
     var target = e.currentTarget,
         // nowSideTabList = e.closest().find('.useguide-field');
