@@ -419,8 +419,6 @@ var rsvCenterFloatingRight = function rsvCenterFloatingRight() {
     var nowScrollY = $(window).scrollTop() + fixHeaderHeight;
     var topPos = parseInt(nowScrollY - 175); // contents spacing
 
-    console.log(nowScrollY);
-
     if (nowScrollY > currentLayoutOffsetY) {
       $('.floating-box').stop().animate({
         top: topPos

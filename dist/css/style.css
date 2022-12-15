@@ -10092,7 +10092,7 @@ RV-02-003_1
 		background-color: #fcfcfc;
 }
 .rsv-institution-datail-field .co-title-field {
-		padding-right: 48px;
+		padding-right: 24px;
 		padding-bottom: 20px;
 }
 .rsv-institution-datail-field .title-box {
@@ -12157,16 +12157,16 @@ RV-02-003_1
 .healthexam-item-field .title-field + .healthexam-item-card {
 		margin-top: 8px;
 }
-.healthexam-item-field .title-field .top-ref-txt {
-		font-size: 12px;
-		line-height: 1.6666666667;
-		color: #2f7ad3;
-}
 .healthexam-item-field .title-field .exam-chkbox .chk-label span {
 		font-size: 12px;
 		font-weight: 400;
 		line-height: 1;
 		color: rgba(28, 28, 27, 0.8);
+}
+.healthexam-item-field .top-ref-txt {
+		font-size: 12px;
+		line-height: 1.6666666667;
+		color: #2f7ad3;
 }
 .healthexam-item-field + .healthexam-item-card {
 		margin-top: 8px;
@@ -12275,6 +12275,25 @@ RV-02-003_1
 		    -ms-flex-pack: justify;
 		        justify-content: space-between;
 }
+.healthexam-item-card .in-row.type03 {
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+}
+.healthexam-item-card .in-row.type03 + .type04 {
+		margin-top: 10px;
+}
+.healthexam-item-card .in-row.type03 .top-ref-txt {
+		text-align: right;
+}
+.healthexam-item-card .in-row.type04 {
+		padding-left: 22px;
+}
 .healthexam-item-card .in-row .col {
 		padding: 0;
 }
@@ -12338,6 +12357,18 @@ RV-02-003_1
 }
 .healthexam-item-card.on {
 		background-color: #ecf1f8;
+}
+.healthexam-item-card .healthexam-inner-list {
+		margin-top: 10px;
+}
+.healthexam-item-card .healthexam-inner-list .chk-label > span {
+		font-size: 14px;
+		line-height: 2.1428571429;
+		font-weight: 300;
+		color: #494949;
+}
+.healthexam-item-card .healthexam-inner-list > li ~ li {
+		margin-top: 4px;
 }
 
 .chkup-ctg-accordion .info-title-field {

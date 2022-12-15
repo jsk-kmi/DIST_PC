@@ -2899,7 +2899,7 @@
 
   .co-title-field {
     padding: {
-      right: 48px;
+      right: 24px;
       bottom: 20px;
     }
   }
@@ -4876,11 +4876,6 @@
       margin-top: 8px;
     }
 
-    .top-ref-txt {
-      @include fontStyle(12px, 20px, 300);
-      color: $color-blue-1;
-    }
-
     .exam-chkbox {
       .chk-label {
         span {
@@ -4893,6 +4888,11 @@
         }
       }
     }
+  }
+
+  .top-ref-txt {
+    @include fontStyle(12px, 20px, 300);
+    color: $color-blue-1;
   }
   & + .healthexam-item-card {
     margin-top: 8px;
@@ -4982,6 +4982,19 @@
     &.type01 {
       justify-content: space-between;
     }
+    &.type03 {
+      justify-content: space-between;
+      align-items: center;
+      & + .type04 {
+        margin-top: 10px;
+      }
+      .top-ref-txt {
+        text-align: right;
+      }
+    }
+    &.type04 {
+      padding-left: 22px;
+    }
 
     .col {
       padding: 0;
@@ -5045,6 +5058,21 @@
 
   &.on {
     background-color: $color-gray-8;
+  }
+  .healthexam-inner-list {
+    margin-top: 10px;
+    .chk-label {
+      > span {
+        @include coBodyTxt;
+        font-weight: 300;
+        color: $color-gray-1;
+      }
+    }
+    > li {
+      & ~ li {
+        margin-top: 4px;
+      }
+    }
   }
 }
 
