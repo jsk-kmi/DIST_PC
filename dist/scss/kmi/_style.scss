@@ -6008,3 +6008,20 @@
 #useGuideSubTabPanel_04_04 {
   padding-bottom: 480px;
 }
+
+.offered-examination {
+  > h5.title {
+    @include fontStyle(14px, 28px, 700);
+    color: $color-gray-1;
+    padding: 8px 12px;
+  }
+
+  .offered-list {
+    margin-top: 6px;
+    border-top: 2px solid $color-gray-6;
+    > li {
+      padding: 8px 12px;
+      border-bottom: 1px solid $color-gray-5;
+    }
+  }
+}
