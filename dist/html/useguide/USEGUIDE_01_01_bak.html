@@ -419,6 +419,9 @@
                                                                     <li>
                                                                         <button type="button" role="tab" id="useGuideSubTab_04_01" aria-controls="useGuideSubTabPanel_04_01" class="on"><span>서비스 문의</span></button>
                                                                     </li>
+                                                                    <!-- <li>
+                                      <button type="button" role="tab" id="useGuideSubTab_04_02" aria-controls="useGuideSubTabPanel_04_02" aria-selected="false"><span>이벤트</span></button>
+                                    </li> -->
                                                                     <li>
                                                                         <button type="button" role="tab" id="useGuideSubTab_04_03" aria-controls="useGuideSubTabPanel_04_03" aria-selected="false"><span>공지사항</span></button>
                                                                     </li>
@@ -446,6 +449,21 @@
                                                                         <img src="../../images/guide/serviceinquiry_guide_img02.png" alt="서비스 문의 가이드 이미지 02" />
                                                                     </div>
                                                                     <!-- useGuideSubTabPanel_04_02 -->
+                                                                    <div class="c-guide-section" id="useGuideSubTabPanel_04_02" aria-labelledby="useGuideSubTab_04_02">
+                                                                        <h2>이벤트</h2>
+                                                                        <h3 class="title">이벤트 목록</h3>
+                                                                        <p>
+                                                                            KMI에서 진행중인 최신 이벤트를 확인 할 수 있습니다.<br />
+                                                                            아직 진행중인 이벤트와 종료된 이벤트는 상단 탭으로 구분되어있습니다. 이벤트 참여 시 유의하시기 바랍니다.
+                                                                        </p>
+                                                                        <img src="../../images/guide/event_guide_img01.png" alt="이벤트 가이드 이미지 01" />
+                                                                        <h3 class="title">이벤트 상세</h3>
+                                                                        <p>
+                                                                            이벤트 상세 내용을 확인 하실 수 있습니다.<br />
+                                                                            목록으로 이동하시려 면 목록으로 버튼을 선택해 주세요.
+                                                                        </p>
+                                                                        <img src="../../images/guide/event_guide_img02.png" alt="이벤트 가이드 이미지 02" />
+                                                                    </div>
                                                                     <!-- useGuideSubTabPanel_04_03 -->
                                                                     <div class="c-guide-section" id="useGuideSubTabPanel_04_03" aria-labelledby="useGuideSubTab_04_03">
                                                                         <h2>공지사항</h2>
@@ -501,10 +519,6 @@
     <script src="../../js/common.js"></script>
 
     <script>
-        useGuideSelected();
-        useGuideTabInitScroll();
-        useGuideTopTabEvent();
-
         // 팝업 확인용 스크립트 (개발 소스에서 사용 X)
         $('.btn-open-popup').trigger('click');
     </script>
