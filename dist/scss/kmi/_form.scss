@@ -1011,6 +1011,16 @@ textarea,
       }
       @include aniCheckbox02;
     }
+
+    input[type='checkbox'] {
+      &.all-terms-chk {
+        & + .chk-label {
+          i {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
   }
 
   .chk-label,

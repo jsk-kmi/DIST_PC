@@ -320,6 +320,10 @@ $scrollbarRadius: 12px;
   color: $color-gray-3;
 }
 
+@mixin coHeadTitle {
+  @include fontStyle(24px, 40px, 700);
+}
+
 @mixin coTitle01 {
   @include fontStyle(24px, 36px, 700);
 }
@@ -535,4 +539,15 @@ $scrollbarRadius: 12px;
       animation: coBtnHoverAni 0.5s linear 1;
     }
   }
+}
+
+@mixin isSkipTxt {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
 }

@@ -1057,6 +1057,16 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
       margin-top: 4px;
     }
   }
+  .chk-list {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .co-terms-tit {
+    color: $color-gray-3;
+    & + .co-terms-detail {
+      margin-top: 4px;
+    }
+  }
 }
 
 .co-title-field {
@@ -1064,24 +1074,42 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
     margin-top: 12px;
   }
 }
+// co-terms-detail
 .co-terms-detail {
   border-radius: $radius-12;
   border: 1px solid $color-gray-5;
   background-color: $color-white-2;
   @include fontStyle(12px, 20px, 300);
   color: $color-gray-2;
-  padding: 5px;
+  padding: 15px 5px;
 
   // terms-scroll
   &.terms-scroll {
-    height: 140px;
-
+    height: 180px;
     &.type02 {
       height: 360px;
     }
+
+    .c-terms-section {
+      @include fontStyle(12px, 24px, 300);
+      color: $color-gray-2;
+      h2 {
+        margin-top: 20px;
+      }
+      h3 {
+        margin-top: 10px;
+      }
+      &:first-of-type {
+        > h2 {
+          &:first-of-type {
+            margin-top: 0;
+          }
+        }
+      }
+    }
   }
   .inner {
-    padding: 15px;
+    padding: 5px 15px;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
@@ -1111,6 +1139,21 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
     .cont {
       @include coTxtCaption;
       color: $color-gray-2;
+
+      hr {
+        background-color: $color-gray-5;
+        height: 1px;
+        border: 0;
+        margin: 12px 0;
+      }
+      .in-cont {
+        & ~ .in-cont {
+          margin-top: 12px;
+        }
+      }
+    }
+    b {
+      @include fontStyle(14px, 28px, 500);
     }
   }
 
@@ -1121,6 +1164,20 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
 
   & + .co-ref-txt {
     margin-top: 12px;
+  }
+  & + .chk-list {
+    margin-top: 14px;
+    > .c-chkbox {
+      margin-bottom: 0;
+      & ~ .c-chkbox {
+        margin-left: 17px;
+      }
+    }
+  }
+
+  // terms-field
+  .terms-field {
+    margin-top: 0;
   }
 }
 
@@ -1236,6 +1293,37 @@ RV-02-003_1
       color: $color-gray-3;
     }
   }
+  .terms-all-chkbox {
+    &.top {
+      margin-top: 0;
+    }
+  }
+}
+
+.c-terms-txt {
+  color: $color-gray-2;
+}
+.terms-all-chkbox {
+  &.terms-co-chk {
+    .left {
+      & + .cont {
+        margin-top: 8px;
+      }
+      & + .c-terms-txt {
+        color: $color-gray-3;
+      }
+    }
+  }
+}
+.terms-all-chkbox {
+  &.top {
+    margin-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $color-gray-7;
+  }
+  & + .co-terms-chk-list {
+    margin-top: 20px;
+  }
 }
 
 .btn-terms-accordion {
@@ -1270,6 +1358,52 @@ RV-02-003_1
     }
   }
 }
+.co-terms-tbl {
+  width: 100%;
+  margin: {
+    top: 12px;
+    bottom: 12px;
+  }
+  caption {
+    @include isSkipTxt;
+  }
+
+  border-top: 1px solid $color-gray-5;
+  thead {
+    th {
+      border-bottom: 2px solid $color-gray-4;
+      text-align: center;
+      @include fontStyle(14px, 28px, 700);
+      color: $color-gray-1;
+    }
+  }
+  th,
+  td {
+    padding: 4px 8px;
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid $color-gray-5;
+    }
+    th,
+    td {
+      @include coTxtCaption;
+      vertical-align: middle;
+      color: $color-gray-2;
+    }
+  }
+
+  &.type02 {
+    tbody {
+      th {
+        border-bottom: 2px solid $color-gray-4;
+        text-align: center;
+        @include fontStyle(14px, 28px, 700);
+        color: $color-gray-1;
+      }
+    }
+  }
+}
 
 // width
 .w-auto {
@@ -1279,6 +1413,15 @@ RV-02-003_1
 // + letter-spacing
 .c-space-letter {
   letter-spacing: -0.3px;
+}
+
+.c-modal-inner {
+  .title {
+    & + .c-space-letter {
+      margin-top: 12px;
+      color: $color-gray-2;
+    }
+  }
 }
 
 // = Seperate Page
@@ -1307,5 +1450,47 @@ RV-02-003_1
   }
   to {
     left: 150%;
+  }
+}
+
+#container {
+  .top-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: {
+      left: 40px;
+      right: 40px;
+    }
+    border-bottom: 1px solid $color-gray-5;
+    background-color: $color-white-3;
+
+    &.type-color {
+      .logo {
+        > div {
+          background-color: $color-gray-4;
+          border-radius: 12px;
+          padding: 8px 20px;
+        }
+      }
+    }
+
+    .logo {
+      height: 100%;
+      padding: {
+        top: 12px;
+        bottom: 12px;
+      }
+      > div {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+      img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
   }
 }
