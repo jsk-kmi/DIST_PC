@@ -5879,6 +5879,18 @@ a.co-link,
 		text-align: right !important;
 }
 
+.va-t {
+		text-align: left !important;
+}
+
+.va-m {
+		text-align: center !important;
+}
+
+.va-b {
+		text-align: right !important;
+}
+
 .justify-cont-s {
 		-webkit-box-pack: start !important;
 		-webkit-justify-content: flex-start !important;
@@ -6888,9 +6900,6 @@ a.co-link,
 }
 .co-terms-detail.terms-scroll .c-terms-section h2 {
 		margin-top: 20px;
-}
-.co-terms-detail.terms-scroll .c-terms-section h3 {
-		margin-top: 10px;
 }
 .co-terms-detail.terms-scroll .c-terms-section:first-of-type > h2:first-of-type {
 		margin-top: 0;
@@ -11526,6 +11535,7 @@ RV-02-003_1
 }
 
 .tbl-detail-chkctg-compare {
+		width: 100%;
 		font-size: 14px;
 		line-height: 1.7142857143;
 }

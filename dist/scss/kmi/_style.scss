@@ -1056,7 +1056,6 @@
   height: 100%;
   border-left: 1px solid $color-gray-5;
 
-
   // .logo {
   //   display: inline-block;
   //   padding: {
@@ -4043,13 +4042,13 @@
 }
 
 .tbl-detail-chkctg-compare {
+  width: 100%;
   @include scrollType01;
 
   @include fontStyle(14px, 24px, 300);
 
   table {
     border-radius: 12px;
-
     thead {
       border-bottom: 1px solid $color-gray-5;
       th:last-child {
