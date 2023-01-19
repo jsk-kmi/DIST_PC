@@ -3622,7 +3622,7 @@ textarea.type02,
 }
 .co-horizontal-scroll::-webkit-scrollbar-corner {
 		opacity: 0;
-		background-color: #e9e9e9;
+		background-color: transparent;
 }
 .co-horizontal-scroll .co-table {
 		display: table;
@@ -3630,6 +3630,85 @@ textarea.type02,
 }
 .co-horizontal-scroll table {
 		table-layout: fixed;
+}
+
+.tbl-campare-fix-field::-webkit-scrollbar {
+		opacity: 0;
+		height: 8px;
+		width: 8px;
+		background-color: #fff;
+}
+.tbl-campare-fix-field::-webkit-scrollbar:hover {
+		opacity: 1;
+}
+.tbl-campare-fix-field ::-webkit-scrollbar-track {
+		background-color: #fff;
+}
+.tbl-campare-fix-field::-webkit-scrollbar-thumb {
+		opacity: 0;
+		background: #e9e9e9;
+		border-radius: 50px;
+		background-clip: padding-box;
+}
+.tbl-campare-fix-field::-webkit-scrollbar-corner {
+		opacity: 0;
+		background-color: transparent;
+}
+
+.co-tbl-head-fixed {
+		display: table;
+		width: 100%;
+		overflow: auto;
+		height: 100%;
+		position: relative;
+		border-radius: 12px;
+		border: 1px solid #ddd;
+}
+.co-tbl-head-fixed::-webkit-scrollbar {
+		opacity: 0;
+		height: 8px;
+		width: 8px;
+		background-color: #fff;
+}
+.co-tbl-head-fixed::-webkit-scrollbar:hover {
+		opacity: 1;
+}
+.co-tbl-head-fixed ::-webkit-scrollbar-track {
+		background-color: #fff;
+}
+.co-tbl-head-fixed::-webkit-scrollbar-thumb {
+		opacity: 0;
+		background: #e9e9e9;
+		border-radius: 50px;
+		background-clip: padding-box;
+}
+.co-tbl-head-fixed::-webkit-scrollbar-corner {
+		opacity: 0;
+		background-color: transparent;
+}
+.co-tbl-head-fixed thead tr:first-of-type th:last-of-type, .co-tbl-head-fixed thead tr:first-of-type th:first-of-type {
+		position: relative;
+}
+.co-tbl-head-fixed thead tr:first-of-type th:last-of-type:before, .co-tbl-head-fixed thead tr:first-of-type th:first-of-type:before {
+		position: absolute;
+		top: 0;
+		content: "";
+		width: 1px;
+		height: 8px;
+		z-index: 1;
+		background-color: #fff;
+}
+.co-tbl-head-fixed thead tr:first-of-type th:first-of-type {
+		border-top-left-radius: 12px;
+}
+.co-tbl-head-fixed thead tr:first-of-type th:first-of-type:before {
+		left: -1px;
+}
+.co-tbl-head-fixed thead tr:first-of-type th:last-of-type {
+		border-top-right-radius: 12px;
+}
+.co-tbl-head-fixed thead tr:first-of-type th:last-of-type:before {
+		right: -1px;
 }
 
 .t-i-help01 {
@@ -4257,7 +4336,7 @@ textarea.type02,
 }
 .sidebar-menu::-webkit-scrollbar-corner {
 		opacity: 0;
-		background-color: #e9e9e9;
+		background-color: transparent;
 }
 .sidebar-menu li a {
 		color: rgba(255, 255, 255, 0.8);
@@ -7032,7 +7111,7 @@ a.co-link,
 .co-per-scroll-layout .left-wrap > .c-inner::-webkit-scrollbar-corner,
 .co-per-scroll-layout .right-wrap > .c-inner::-webkit-scrollbar-corner {
 		opacity: 0;
-		background-color: #e9e9e9;
+		background-color: transparent;
 }
 
 .co-date-period {
@@ -7670,7 +7749,7 @@ RV-02-003_1
 .c-layout-type01 .left-wrap > .c-inner::-webkit-scrollbar-corner,
 .c-layout-type01 .right-wrap > .c-inner::-webkit-scrollbar-corner {
 		opacity: 0;
-		background-color: #e9e9e9;
+		background-color: transparent;
 }
 
 .c-calendar-container {
@@ -7907,7 +7986,7 @@ RV-02-003_1
 .c-article.mod-reservation .c-inner-left::-webkit-scrollbar-corner,
 .c-article.mod-reservation .c-inner-right::-webkit-scrollbar-corner {
 		opacity: 0;
-		background-color: #e9e9e9;
+		background-color: transparent;
 }
 .c-article.mod-reservation .c-inner-left {
 		width: 180px;
@@ -11559,7 +11638,7 @@ RV-02-003_1
 }
 .tbl-detail-chkctg-compare::-webkit-scrollbar-corner {
 		opacity: 0;
-		background-color: #e9e9e9;
+		background-color: transparent;
 }
 .tbl-detail-chkctg-compare table {
 		border-radius: 12px;
@@ -11587,19 +11666,20 @@ RV-02-003_1
 .tbl-detail-chkctg-compare table td {
 		padding: 8px;
 }
-.tbl-detail-chkctg-compare .peronal-add-price {
+
+.peronal-add-price {
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		word-wrap: break-word;
 		font-weight: 300;
 }
-.tbl-detail-chkctg-compare .peronal-add-price .price {
+.peronal-add-price .price {
 		padding-left: 8px;
 		display: inline;
 		color: rgba(164, 164, 164, 0.4);
 }
-.tbl-detail-chkctg-compare .peronal-add-price .price em {
+.peronal-add-price .price em {
 		padding-left: 8px;
 		color: rgba(28, 28, 27, 0.8);
 }
@@ -13321,7 +13401,7 @@ RV-02-003_1
 }
 .useguide-field .right-wrap::-webkit-scrollbar-corner {
 		opacity: 0;
-		background-color: #e9e9e9;
+		background-color: transparent;
 }
 .useguide-field .right-wrap > .inner {
 		position: relative;
@@ -13444,5 +13524,58 @@ RV-02-003_1
 .offered-examination .offered-list > li {
 		padding: 8px 12px;
 		border-bottom: 1px solid #e9e9e9;
+}
+
+.c-layer-popup.compare {
+		overflow-y: hidden;
+}
+.c-layer-popup.compare .c-modal-inner {
+		height: 100%;
+}
+.c-layer-popup.compare .c-modal-body {
+		overflow-y: hidden;
+}
+.c-layer-popup.compare .modal-wrap {
+		padding: 0 40px;
+		width: 100%;
+}
+.c-layer-popup.compare .modal-field {
+		width: 100%;
+}
+.c-layer-popup.compare table {
+		position: relative;
+		border-radius: 12px;
+		padding: 2px 0;
+}
+.c-layer-popup.compare table thead {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		left: 0;
+		border-radius: 10px;
+		overflow: hidden;
+}
+.c-layer-popup.compare table thead th {
+		position: relative;
+		border: 0;
+		background-color: #ecf1f8;
+		font-weight: 500;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		outline: 1px solid #e9e9e9;
+		outline-offset: -0.5px;
+}
+.c-layer-popup.compare table thead td {
+		padding: 8px;
+		border-right: 1px solid #e9e9e9;
+}
+
+.tbl-campare-fix-field {
+		border-radius: 10px;
+		height: 100%;
+		overflow-y: auto;
+		padding: 0 10px 10px 10px;
+		position: relative;
 }
 /*# sourceMappingURL=maps/style.css.map */

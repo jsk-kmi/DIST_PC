@@ -38,7 +38,9 @@
             <!--  button data-target === popup id -->
             <!--  aria-labelledby === title id -->
             <button type="button" class="btn-open-popup" data-toggle="modal" data-target="#popupDetailCheckupCompare01"><span>open popup</span></button>
-            <div class="c-layer-popup type05" id="popupDetailCheckupCompare01" role="dialog" aria-labelledby="popupDetailCheckupCompare01_Label" aria-modal="true" aria-hidden="true">
+
+            <!-- [ mod(230119) ] -->
+            <div class="c-layer-popup compare" id="popupDetailCheckupCompare01" role="dialog" aria-labelledby="popupDetailCheckupCompare01_Label" aria-modal="true" aria-hidden="true">
                 <div class="modal-wrap">
                     <div class="modal-field" tabindex="0">
                         <div class="c-modal-header">
@@ -48,23 +50,23 @@
                             <button type="button" class="popup-cls-btn"><span class="skip">팝업 닫기</span></button>
                         </div>
                         <!-- c-modal-body -->
-                        <div class="c-modal-body co-modal-scroll">
+                        <div class="c-modal-body ">
                             <div class="c-modal-inner">
-                                <div class="co-table-field co-horizontal-scroll">
-                                    <div class="co-table cont-type04 tbl-center tbl-detail-chkctg-compare">
+                                <div class="co-table-field tbl-campare-fix-field">
+                                    <div class="co-table tbl-center co-tbl-head-fixed">
                                         <table class="table">
                                             <caption>
                                                 검진 세부 항목 비교 : 대분류, 중분류, 검사항목, 관련질환, 병원별 건강검진 진행항목 및 개인 추가금에 대한 정보
                                             </caption>
                                             <colgroup>
-                                                <col style="width: 8%" />
-                                                <col style="width: 8%" />
-                                                <col style="width: 11%" />
-                                                <col style="min-width: 320px" />
-                                                <col style="width: 12%" />
-                                                <col style="width: 12%" />
-                                                <col style="width: 12%" />
-                                                <col style="width: 12%" />
+                                                <col style="min-width:140px" />
+                                                <col style="min-width:140px" />
+                                                <col style="min-width:140px" />
+                                                <col style="min-width:320px" />
+                                                <col style="width:200px; min-width:200px;" />
+                                                <col style="width:200px; min-width:200px;" />
+                                                <col style="width:200px; min-width:200px;" />
+                                                <col style="width:200px; min-width:200px;" />
                                             </colgroup>
                                             <thead>
                                                 <tr>
@@ -77,8 +79,7 @@
                                                         <p class="title-sub">정밀종합검진 일반형</p>
                                                     </th>
                                                     <th>
-                                                        강북삼성병원 <br />
-                                                        <p class="title-sub">종합검진</p>
+                                                        상품비교 선택 항목이 없습니다.
                                                     </th>
                                                     <th>
                                                         강북삼성병원 <br />
@@ -594,12 +595,14 @@
                 <!-- = type03  -->
                 <!-- [ // layer popup] -->
             </div>
+            <!-- [ // mod(230119) ] -->
             <!-- // Contents -->
         </div>
         <!-- // Content-Wrapper -->
     </div>
     <script src="../../lib/swiper/js/swiper.js"></script>
     <script src="../../js/common.js"></script>
+
 </body>
 
 </html>

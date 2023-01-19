@@ -264,7 +264,7 @@ $scrollbarRadius: 12px;
 
   &::-webkit-scrollbar-corner {
     opacity: 0;
-    background-color: $color-gray-5;
+    background-color: transparent;
   }
   // @include ieScroll;
 }
