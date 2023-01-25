@@ -383,7 +383,7 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
       &:before {
         position: absolute;
         left: 0;
-        top: 4px;
+        top: 8px;
         content: counter(list-cnt02) '.';
         display: inline-block;
         text-align: left;

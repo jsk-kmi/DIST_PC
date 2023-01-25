@@ -491,6 +491,10 @@
 
 .tbl-campare-fix-field {
   @include scrollType01;
+  th,
+  td {
+    border-right: 1px solid $table-border-color;
+  }
 }
 .co-tbl-head-fixed {
   display: table;
@@ -516,7 +520,6 @@
               width: 1px;
               height: 8px;
               z-index: 1;
-              // background-color: $color-white-1;
               background-color: $color-white-1;
             }
           }
@@ -530,6 +533,16 @@
             border-top-right-radius: 12px;
             &:before {
               right: -1px;
+            }
+            &:after {
+              position: absolute;
+              top: 0;
+              right: 0;
+              content: '';
+              width: 5px;
+              height: 1px;
+              z-index: 1;
+              background-color: $color-white-1;
             }
           }
         }

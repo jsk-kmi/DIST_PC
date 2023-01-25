@@ -3654,6 +3654,10 @@ textarea.type02,
 		opacity: 0;
 		background-color: transparent;
 }
+.tbl-campare-fix-field th,
+.tbl-campare-fix-field td {
+		border-right: 1px solid #e9e9e9;
+}
 
 .co-tbl-head-fixed {
 		display: table;
@@ -3709,6 +3713,16 @@ textarea.type02,
 }
 .co-tbl-head-fixed thead tr:first-of-type th:last-of-type:before {
 		right: -1px;
+}
+.co-tbl-head-fixed thead tr:first-of-type th:last-of-type:after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		content: "";
+		width: 5px;
+		height: 1px;
+		z-index: 1;
+		background-color: #fff;
 }
 
 .t-i-help01 {
@@ -6205,7 +6219,7 @@ a.co-link,
 .co-list-card.number02 > li:before {
 		position: absolute;
 		left: 0;
-		top: 4px;
+		top: 8px;
 		content: counter(list-cnt02) ".";
 		display: inline-block;
 		text-align: left;
