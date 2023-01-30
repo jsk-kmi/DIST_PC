@@ -386,6 +386,10 @@
     flex-shrink: 0;
   }
 
+  .header {
+    min-width: 700px;
+  }
+
   .cont-wrap {
     display: flex;
     width: 100%;

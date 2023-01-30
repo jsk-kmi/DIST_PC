@@ -1682,24 +1682,32 @@
         }
       }
     }
+
+    // - type03
+    &.type03 {
+      padding: 30px 28px;
+    }
   }
   .customer-service {
     .title {
       @include coMainTitle;
     }
-    text-align: center;
-    .tel,
+    p .tel,
     .time {
-      color: $color-blue-1;
       display: block;
     }
     .tel {
-      @include fontStyle(30px, 40px, 700);
+      @include fontStyle(30px, 32px, 700);
       color: $color-blue-1;
+      display: block;
+      margin-bottom: 16px;
     }
     .time {
-      @include coSubTitle;
-      color: $color-gray-3;
+      @include coBodyTxt;
+      color: $color-black-1;
+      > span {
+        color: $color-gray-2;
+      }
       & + p {
         margin-top: 12px;
         color: $color-gray-1;
