@@ -11180,6 +11180,15 @@ RV-02-003_1
 		border-radius: 16px;
 		border: 1px solid #e9e9e9;
 		background-color: #f3f3f3;
+		color: rgba(28, 28, 27, 0.8);
+}
+#container .login-wrapper.type-withkmi .use-info .time {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 2;
+}
+#container .login-wrapper.type-withkmi .use-info .time ~ p {
+		margin-top: 8px;
 }
 #container .login-wrapper.type-withkmi .side-area {
 		width: 520px;

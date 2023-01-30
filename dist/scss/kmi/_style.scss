@@ -5420,6 +5420,13 @@
         border-radius: 16px;
         border: 1px solid $color-gray-5;
         background-color: $color-gray-7;
+        color: $color-black-op8;
+        .time {
+          @include coSubTitle;
+          & ~ p {
+            margin-top: 8px;
+          }
+        }
       }
       .side-area {
         width: 520px;
