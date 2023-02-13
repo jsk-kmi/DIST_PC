@@ -150,7 +150,7 @@
       top: 0;
       left: 0;
       content: '';
-      width: 36px;
+      width: 28px;
       height: 28px;
       background: {
         image: url($image-ico-sprite01);
@@ -181,8 +181,13 @@
       }
     }
     &.nav05 {
-      &:before {
+      ico_sprites_01 &:before {
         background-position-x: -608px;
+      }
+    }
+    &.nav06 {
+      &:before {
+        background-position-x: -1216px;
       }
     }
   }
@@ -230,15 +235,16 @@
     display: flex;
     padding: 16px 60px;
     justify-content: space-between;
-
+    width: 100%;
     align-items: center;
-    min-width: 550px;
+    // min-width: 600px;
     max-width: 2300px;
   }
 
   .top-left,
   .top-right {
     display: flex;
+    flex: 0 0 auto;
     align-items: center;
   }
 
@@ -365,7 +371,7 @@
 .contents-wrap {
   // max-width: 2560px;
   min-width: 1200px;
-  min-height: calc(100% - 240px);
+  min-height: calc(100% - 223px);
   width: 100%;
   display: flex;
   flex-grow: 1;
@@ -419,7 +425,7 @@
   .contents-area {
     flex-grow: 1;
     flex-shrink: 1;
-    padding: 40px 60px;
+    padding: 40px 60px 60px;
     min-width: 1200px;
 
     @include responsive(laptop2) {

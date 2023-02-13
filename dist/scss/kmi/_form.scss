@@ -996,7 +996,7 @@ textarea,
           }
         }
       }
-      @include aniCheckbox02;
+      @include aniCheckbox02($color-navy-1);
     }
     &.type02 {
       input[type='checkbox'],
@@ -1009,7 +1009,7 @@ textarea,
           }
         }
       }
-      @include aniCheckbox02;
+      @include aniCheckbox02($color-navy-1);
     }
 
     input[type='checkbox'] {
@@ -1021,6 +1021,33 @@ textarea,
         }
       }
     }
+  }
+
+  &.type-blue {
+    input[type='checkbox'],
+    input[type='radio'] {
+      top: 7px;
+      left: 7px;
+      opacity: 0;
+      & + .chk-label,
+      & + label.chk-label {
+        line-height: 1;
+        display: table;
+        i {
+          margin-right: 4px;
+          cursor: pointer;
+          display: inline-block;
+          width: 18px;
+          height: 18px;
+          background: {
+            image: url($image-ico-path + 'ico-chk-01.svg');
+            position: 0 0;
+            size: auto 18px;
+          }
+        }
+      }
+    }
+    @include aniCheckbox02($color-blue-1);
   }
 
   .chk-label,
@@ -1269,8 +1296,7 @@ textarea,
     &:not(:first-of-type) {
       padding-top: $gap;
     }
-    &:not(:last-of-type),
-    &:only-child {
+    &:not(:last-of-type) {
       padding-bottom: $gap;
     }
     margin: {

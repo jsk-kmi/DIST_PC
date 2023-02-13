@@ -32,6 +32,10 @@ a.co-link,
   color: $color-blue-1;
   @include fontStyle(12px, 17px, 300);
 }
+a.co-link-lined,
+.co-link-lined {
+  text-decoration: underline;
+}
 
 // = color
 // + font
@@ -410,7 +414,7 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
 // + list none
 .co-none-txt {
   @include coBodyTxt;
-  color: $color-gray-2;
+  color: $color-gray-17;
   text-align: center;
 }
 
@@ -490,30 +494,6 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
       }
     }
   }
-}
-
-// flex-align
-.justify-cont-s {
-  justify-content: flex-start !important;
-}
-.justify-cont-e {
-  justify-content: flex-end !important;
-}
-.justify-cont-c {
-  justify-content: center !important;
-}
-.justify-cont-sb {
-  justify-content: space-between !important;
-}
-// flex-align
-.align-item-s {
-  align-items: flex-start !important;
-}
-.align-item-e {
-  align-items: flex-end !important;
-}
-.align-item-c {
-  align-items: center !important;
 }
 
 .tab-content {
@@ -646,7 +626,6 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
   align-items: center;
   > p {
     @include coTxtCaption;
-    font-weight: 400;
     & ~ p {
       &:before {
         content: '/';
@@ -661,11 +640,11 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
   }
 
   a {
-    background: url($image-ico-path + '/ico_home_02.svg') center/100% auto no-repeat;
+    background: url($image-ico-path + '/ico_home_02.svg') center/12px auto no-repeat;
     display: inline-block;
-    width: 12px;
-    height: 14px;
-    margin-top: 3px;
+    width: 20px;
+    height: 20px;
+    margin-top: 6px;
   }
 
   .on {
@@ -694,6 +673,10 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
   .co-title-field {
     &.co-cont-list {
       margin-top: 8px;
+    }
+
+    & + .co-no-data {
+      margin-top: 12px;
     }
   }
 }
@@ -874,14 +857,19 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
   .title {
     @include coTitle01;
     color: $color-blue-1;
-    margin-top: 40px;
+    margin-top: 20px;
 
     & + .cont {
       margin-top: 12px;
     }
   }
-  .co-btn-field {
+  .co-btn-field,
+  .co-cont-article {
     margin-top: 40px;
+  }
+
+  .co-list-card {
+    text-align: left;
   }
 }
 
@@ -1017,7 +1005,7 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
   width: 28px;
   height: 28px;
   background: {
-    image: url($image-ico-path + 'ico_sprite_slide_arrow.svg');
+    image: url($image-ico-path + 'ico_sprite_slide_arrow_02.svg');
     size: 28px auto;
     repeat: no-repeat;
   }
@@ -1033,6 +1021,9 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
   background-position: 0 0px;
   &:hover {
     background-position: 0 -76px;
+  }
+  &.swiper-button-disabled {
+    background-position-y: 0;
   }
 }
 

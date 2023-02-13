@@ -1347,7 +1347,8 @@
     }
     .reg-number {
       padding-left: 12px;
-      @include coTxtSmall01;
+      @include coTxtCaption;
+      color: $color-gray-14;
     }
   }
 
@@ -4218,6 +4219,25 @@
       }
     }
   }
+
+  .co-slide-btn-prev {
+    &.swiper-button-disabled {
+      background-position-y: -152px;
+      opacity: 1 !important;
+      &:hover {
+        background-position-y: -152px;
+      }
+    }
+  }
+  .co-slide-btn-next {
+    &.swiper-button-disabled {
+      background-position-y: -190px;
+      opacity: 1 !important;
+      &:hover {
+        background-position-y: -190px;
+      }
+    }
+  }
 }
 
 .mychkup-history-card {
@@ -4253,7 +4273,7 @@
     justify-content: space-between;
   }
   .date {
-    @include fontStyle(12px, 20px, 300);
+    @include coTxtCaption;
     color: $color-blue-1;
   }
 
@@ -4264,6 +4284,11 @@
 
   .center {
     margin-top: 20px;
+  }
+
+  .name,
+  .value {
+    @include ellipsisLine01;
   }
 }
 
@@ -4280,14 +4305,21 @@
       @include coSubTitle;
     }
   }
-
-  .list-field {
+  .list-field,
+  .cont-field {
     margin-top: 12px;
     padding: 32px 20px;
     border: 1px solid $color-gray-5;
     border-radius: 12px;
     color: $color-gray-1;
     background-color: $color-white-2;
+  }
+  .cont-field {
+    .cont {
+      > em {
+        font-weight: $weight-700;
+      }
+    }
   }
 }
 
@@ -4299,9 +4331,6 @@
 
 //= 검진 결과 상세 type
 // + type01
-.type01 {
-}
-
 .chkup-result-cont {
   &.type01 {
     > .row {
@@ -5773,6 +5802,9 @@
       }
       tbody {
         border-top: 1px solid $color-gray-6;
+        th {
+          font-weight: 300;
+        }
       }
       th,
       td {
@@ -6113,4 +6145,335 @@
   overflow-y: auto;
   padding: 0 10px 10px 10px;
   position: relative;
+}
+
+// = Job Stress
+// + Jon Stress Examination
+.jobstressexam-wrap {
+  .condition-field {
+    > .co-no-data {
+      margin-top: 12px;
+    }
+  }
+}
+
+.jobstress-terms-cont {
+  &.no-target {
+    .col-7 {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+}
+.jobstress-cont-section {
+  & ~ .co-btn-field {
+  }
+}
+
+p {
+  & ~ .jobstress-list-cont {
+    margin-top: 12px;
+  }
+}
+.jobstress-list-cont {
+  > li {
+    & ~ li {
+      margin-top: 12px;
+    }
+    > p {
+      padding-left: 16px;
+    }
+  }
+}
+
+.jobstress-exam-list-wrap {
+  .sub-title {
+    & + .cont-01 {
+      margin-bottom: 12px;
+    }
+  }
+  .exam-field {
+    padding: 24px 32px;
+    border: 1px solid $color-gray-6;
+    background-color: $color-white-2;
+    border-radius: 8px;
+
+    &.no-data {
+      padding: 24px 32px;
+      color: $color-gray-18;
+    }
+    & ~ .exam-field {
+      margin-top: 40px;
+    }
+    h3.title {
+      @include coHeadTitle;
+      margin-bottom: 12px;
+    }
+    .cont {
+      @include coSubTitle;
+      color: $color-gray-15;
+      &.is-error {
+        color: $color-orange-2;
+      }
+    }
+
+    .exam-article {
+      & ~ .exam-article {
+        margin-top: 28px;
+      }
+
+      .row {
+        display: flex;
+        flex: 1 1 auto;
+        margin: {
+          top: 8px;
+          left: -20px;
+          right: -20px;
+        }
+
+        .c-chkbox {
+          max-width: 25%;
+          flex: 0 0 25%;
+
+          padding: 0 20px;
+
+          input [type='checkbox'],
+          input[type='radio'] {
+            & + .chk-label {
+              > i {
+                margin-right: 8px;
+              }
+            }
+            &:checked {
+              & + .chk-label {
+                box-shadow: 0 0 0 1px $color-blue-1;
+                border-color: $color-blue-1;
+                position: relative;
+
+                > i {
+                  &:before,
+                  &:after {
+                    transition: all 0s linear;
+                  }
+                }
+                > span {
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+
+          > label {
+            width: 100%;
+            padding: 15px 12px;
+            border-radius: 12px;
+            border: 1px solid $color-gray-5;
+            background-color: $color-white-1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .ref-cont {
+    margin-top: 12px;
+    > p {
+      color: $color-gray-14;
+      > .link {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.jobstress-taget-list-field {
+  .targets-list {
+    margin-bottom: -10px;
+    li {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 10px;
+    }
+  }
+  .client-card {
+    padding: 24px 20px;
+    min-height: 108px;
+    max-height: none;
+    height: auto;
+    &.person {
+      &.on {
+        &:before {
+          width: 15px;
+          height: 15px;
+          // background-size: auto 20px;
+          top: 26px;
+          right: 20px;
+        }
+      }
+    }
+  }
+}
+
+// + job stress result
+
+.jobstress-history-field {
+  margin-top: 12px;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+
+  padding: {
+    left: 48px;
+    right: 48px;
+  }
+
+  .mychkup-history-swiper {
+    overflow: hidden;
+    width: auto;
+  }
+
+  .swiper {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    width: 296px;
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    & + .swiper-slide {
+      margin-left: 20px;
+    }
+  }
+
+  .slide-card {
+    width: 100%;
+    position: relative;
+    border-radius: $radius-12;
+    overflow: hidden;
+  }
+  .co-slide-btn-prev,
+  .co-slide-btn-next {
+    cursor: default;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .co-slide-btn-prev {
+    left: 0;
+    &:hover {
+      background-position: 0 0;
+    }
+  }
+  .co-slide-btn-next {
+    right: 0;
+    background-position: 0 -38px;
+  }
+
+  .mychkup-history-swiper {
+    overflow: hidden;
+  }
+
+  &:before {
+    content: none;
+  }
+  //  is-active
+  &.is-active {
+    &:hover {
+      &:before {
+        position: absolute;
+        top: 1px;
+        bottom: 1px;
+        right: 48px;
+        content: '';
+        background: linear-gradient(90deg, rgba(25, 25, 25, 0.025) 0%, rgba(217, 217, 217, 0) 38.05%);
+        transform: rotate(-180deg);
+        border-radius: 12px;
+        width: 96px;
+        // border-radius: 14px 0 0 14px;
+      }
+    }
+
+    .co-slide-btn-prev,
+    .co-slide-btn-next {
+      cursor: pointer;
+    }
+    .co-slide-btn-prev {
+      &:hover {
+        background-position: 0 -76px;
+      }
+    }
+    .co-slide-btn-next {
+      &:hover {
+        background-position: 0 -114px;
+      }
+    }
+  }
+
+  .co-slide-btn-prev {
+    &.swiper-button-disabled {
+      background-position-y: -152px;
+      opacity: 1 !important;
+      &:hover {
+        background-position-y: -152px;
+      }
+    }
+  }
+  .co-slide-btn-next {
+    &.swiper-button-disabled {
+      background-position-y: -190px;
+      opacity: 1 !important;
+      &:hover {
+        background-position-y: -190px;
+      }
+    }
+  }
+}
+
+.mychkup-history-card {
+  &.jobstress {
+    min-height: 164px;
+    padding: 32px 20px;
+    .value {
+      margin-top: 12px;
+    }
+  }
+}
+
+// + 없을 경우 표시
+.co-no-data {
+  &.type01 {
+    padding: 30px 20px;
+    border: 1px solid $color-gray-5;
+    border-radius: 12px;
+    border-radius: $radius-12;
+    background-color: $color-white-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > div {
+      display: block;
+      text-align: center;
+    }
+    .img {
+      img {
+        width: 63px;
+      }
+    }
+
+    .co-none-txt {
+      margin-top: 12px;
+      @include coSubTitle;
+      color: $color-gray-17;
+    }
+  }
 }

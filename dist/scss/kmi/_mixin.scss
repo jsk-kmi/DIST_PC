@@ -456,7 +456,7 @@ $scrollbarRadius: 12px;
   }
 }
 
-@mixin aniCheckbox02 {
+@mixin aniCheckbox02($color) {
   .chk-label {
     i {
       position: relative;
@@ -493,7 +493,7 @@ $scrollbarRadius: 12px;
             border: 0;
             border-radius: 50%;
             background-image: none;
-            background-color: $color-navy-1;
+            background-color: $color;
             &:before,
             &:after {
               opacity: 1;
@@ -511,6 +511,9 @@ $scrollbarRadius: 12px;
               transition-delay: 0s;
             }
           }
+          > span {
+            color: $color;
+          }
         }
       }
     }
@@ -520,23 +523,25 @@ $scrollbarRadius: 12px;
 @mixin CoBtnAnimation {
   position: relative;
   overflow: hidden;
-  &:after {
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.493) 50%, rgba(255, 255, 255, 0) 100%);
-    content: '';
-    height: 200%;
-    left: -80%;
-    opacity: 0.2;
-    position: absolute;
-    top: 50%;
-    transform: rotate(30deg) translateY(-50%);
-    width: 20px;
-    z-index: -10;
-  }
-
-  &:hover {
-    opacity: 0.8;
+  &:not(:disabled) {
     &:after {
-      animation: coBtnHoverAni 0.5s linear 1;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.493) 50%, rgba(255, 255, 255, 0) 100%);
+      content: '';
+      height: 200%;
+      left: -80%;
+      opacity: 0.2;
+      position: absolute;
+      top: 50%;
+      transform: rotate(30deg) translateY(-50%);
+      width: 20px;
+      z-index: -10;
+    }
+
+    &:hover {
+      opacity: 0.8;
+      &:after {
+        animation: coBtnHoverAni 0.5s linear 1;
+      }
     }
   }
 }
