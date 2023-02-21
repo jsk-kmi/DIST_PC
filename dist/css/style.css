@@ -11607,18 +11607,8 @@ RV-02-003_1
 		padding: 8px;
 		border-bottom: 1px solid #e9e9e9;
 }
-.terms-field table.terms-table-1 tr th:nth-child(1) {
-		width: 120px;
-}
-.terms-field table.terms-table-1 tr th:nth-child(2) {
-		width: 180px;
-}
-.terms-field table.terms-table-1 tr th:nth-child(3) {
-		width: 57%;
-}
-.terms-field table.terms-table-1 tr th:nth-child(5) {
-		width: 17%;
-		text-align: center;
+.terms-field table.terms-table-1 {
+		table-layout: fixed;
 }
 .terms-field table.terms-table-2 thead tr th,
 .terms-field table.terms-table-2 tbody tr td {
