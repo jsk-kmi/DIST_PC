@@ -11610,7 +11610,7 @@ RV-02-003_1
 .terms-field table.terms-table-1 {
 		table-layout: fixed;
 }
-.terms-field table.terms-table-1 tr th[rowspan] {
+.terms-field table.terms-table-1 tr tbody th[rowspan] {
 		vertical-align: top;
 }
 .terms-field table.terms-table-2 thead tr th,
