@@ -3464,14 +3464,23 @@ textarea.type02,
 .ico-type01.t-i-special {
 		background-position: -1140px 0;
 }
-.ico-type01.t-i-center-info {
+.ico-type01.t-i-center-info nav06 {
 		background-position: -1178px 0;
+}
+.ico-type01.t-i-nav06 {
+		background-position: -1216px 0;
+}
+.ico-type01.t-i-del02 {
+		background-position: -1254px 0;
 }
 .ico-type01.t-i-help01-02 {
 		background-position: 0 -38px;
 }
 .ico-type01.t-i-help01-03 {
 		background-position: 0 -76px;
+}
+.ico-type01.t-i-del02:hover {
+		background-position: -1254px -38px;
 }
 
 .ico-type01.t-i-arrow01-02 {
@@ -5803,6 +5812,7 @@ a.co-link-lined,
 		font-size: 16px;
 		font-weight: 500;
 		line-height: 2;
+		color: #1c1c1b;
 }
 
 .co-list-field {
@@ -9904,6 +9914,7 @@ RV-02-003_1
 		line-height: 2;
 		color: #a4a4a4;
 		margin-left: 12px;
+		margin-right: 4px;
 }
 .targets-list .btn-chkup-type > span {
 		text-decoration: underline;
@@ -9927,12 +9938,14 @@ RV-02-003_1
 		border-color: #2f7ad3;
 		position: relative;
 }
-.targets-list .client-card.person.on:before {
+.targets-list .client-card.person.on .relationship {
+		align-items: center;
+		display: flex;
+}
+.targets-list .client-card.person.on .relationship:after {
 		content: "";
-		position: absolute;
-		top: 35px;
-		right: 23px;
-		display: inline-block;
+		margin-left: 7px;
+		margin-top: 1px;
 		width: 14px;
 		height: 14px;
 		background: url("../images/ico/ico_sprites_check.svg") -116px -7px/auto 28px no-repeat;
@@ -9978,6 +9991,21 @@ RV-02-003_1
 }
 .targets-list .client-card .inner {
 		width: 100%;
+}
+.targets-list .client-card .btn-del-target {
+		overflow: hidden;
+		text-indent: 100%;
+		white-space: nowrap;
+		display: inline-block;
+		position: absolute;
+		top: 32px;
+		right: 20px;
+		width: 24px;
+		height: 24px;
+		background: url("../images/ico/ico_sprite_del_02.svg") 0 0/24px auto no-repeat;
+}
+.targets-list .client-card .btn-del-target:hover {
+		background-position: 0 bottom;
 }
 .targets-list .none-data img {
 		height: 68px;
@@ -10259,6 +10287,11 @@ RV-02-003_1
 		border-right: 1px solid #e9e9e9;
 }
 
+.popup-del-exam-target em {
+		color: #253981;
+		font-weight: 500;
+}
+
 .rsv-exam-result-wrap .co-cont-section {
 		padding-bottom: 60px;
 }
@@ -10508,9 +10541,17 @@ RV-02-003_1
 		margin-top: 20px;
 }
 
+.co-table.tbl-chkresult-compare table thead th,
+.co-table.tbl-chkresult-compare table thead td {
+		padding: 8px;
+}
 .co-table.tbl-chkresult-compare table tbody th,
 .co-table.tbl-chkresult-compare table tbody td {
-		padding: 12px;
+		padding: 8px 12px;
+}
+.co-table.tbl-chkresult-compare table th,
+.co-table.tbl-chkresult-compare table td {
+		color: #494949;
 }
 
 .exam-result-inquiry .input-list-field > .row {
@@ -12146,5 +12187,90 @@ p ~ .jobstress-list-cont {
 		font-weight: 500;
 		line-height: 2;
 		color: #939391;
+}
+
+.jo-progress-bar {
+		border-radius: 8px;
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: 32px;
+		background-color: #ecf1f8;
+}
+.jo-progress-bar .mark {
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 100%;
+		display: flex;
+}
+.jo-progress-bar .bar {
+		border-radius: 8px;
+		display: block;
+		width: 0%;
+		height: 100%;
+		background: #253981;
+		background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.125) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.125) 50%, rgba(255, 255, 255, 0.125) 75%, transparent 75%, transparent);
+		background-size: 16px 16px;
+}
+.jo-progress-bar .bar > span {
+		position: absolute;
+		overflow: hidden;
+		left: 0;
+		right: 0;
+		color: rgba(0, 0, 0, 0.6);
+		line-height: 18px;
+}
+.jo-progress-bar .score {
+		position: relative;
+}
+.jo-progress-bar .score > span {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		color: #fff;
+}
+
+.jo-progress-field {
+		padding: 24px 20px;
+		background-color: #f8f9fb;
+		border-radius: 12px;
+		border: 1px solid #d2d2d1;
+}
+
+.jo-progress-box {
+		position: relative;
+}
+.jo-progress-box .mark.step1 {
+		height: 24px;
+		margin-bottom: 4px;
+		width: 100%;
+}
+.jo-progress-box .mark.step1 > div {
+		position: absolute;
+		left: 0;
+		width: 100%;
+}
+.jo-progress-box .mark.step1 span {
+		position: absolute;
+}
+.jo-progress-box .mark.step1 span:first-child {
+		left: 0;
+}
+.jo-progress-box .mark.step1 span:nth-child(2) {
+		left: 50%;
+}
+.jo-progress-box .mark.step1 span:nth-child(3) {
+		right: 0;
+}
+
+@keyframes aniProgressBar {
+		0% {
+				background-position: 0 0;
+		}
+		100% {
+				background-position: 16px 16px;
+		}
 }
 /*# sourceMappingURL=maps/style.css.map */

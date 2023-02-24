@@ -3775,6 +3775,7 @@
     @include coTxtCaption;
     color: $color-gray-3;
     margin-left: 12px;
+		margin-right:4px;
     > span {
       text-decoration: underline;
       padding-right: 20px;
@@ -3796,16 +3797,28 @@
       box-shadow: 0 0 0 1px $color-blue-1;
       border-color: $color-blue-1;
       position: relative;
-      &:before {
-        content: '';
-        position: absolute;
-        top: 35px;
-        right: 23px;
-        display: inline-block;
-        width: 14px;
-        height: 14px;
-        background: url($image-ico-path + 'ico_sprites_check.svg') -116px -7px / auto 28px no-repeat;
+      .relationship {
+        align-items: center;
+        display: flex;
+        &:after {
+          content: '';
+          margin-left: 7px;
+          margin-top: 1px;
+          width: 14px;
+          height: 14px;
+          background: url($image-ico-path + 'ico_sprites_check.svg') -116px -7px / auto 28px no-repeat;
+        }
       }
+      // &:before {
+      //   content: '';
+      //   position: absolute;
+      //   top: 37px;
+      //   right: 55px;
+      //   display: inline-block;
+      //   width: 14px;
+      //   height: 14px;
+      //   background: url($image-ico-path + 'ico_sprites_check.svg') -116px -7px / auto 28px no-repeat;
+      // }
     }
   }
 
@@ -3852,6 +3865,21 @@
 
     .inner {
       width: 100%;
+    }
+    .btn-del-target {
+      overflow: hidden;
+      text-indent: 100%;
+      white-space: nowrap;
+      display: inline-block;
+      position: absolute;
+      top: 32px;
+      right: 20px;
+      width: 24px;
+      height: 24px;
+      background: url($image-ico-path + 'ico_sprite_del_02.svg') 0 0 /24px auto no-repeat;
+      &:hover {
+        background-position: 0 bottom;
+      }
     }
   }
 
@@ -4117,6 +4145,14 @@
       }
     }
     border-right: 0;
+  }
+}
+
+//
+.popup-del-exam-target {
+  em {
+    color: $color-navy-1;
+    font-weight: $weight-500;
   }
 }
 
@@ -4420,11 +4456,21 @@
 .co-table {
   &.tbl-chkresult-compare {
     table {
+      thead {
+        th,
+        td {
+          padding: 8px;
+        }
+      }
       tbody {
         th,
         td {
-          padding: 12px;
+          padding: 8px 12px;
         }
+      }
+      th,
+      td {
+        color: $color-gray-1;
       }
     }
   }
@@ -5840,6 +5886,13 @@
       //     }
       //   }
       // }
+      tr {
+        tbody {
+          th[rowspan] {
+            vertical-align: top;
+          }
+        }
+      }
     }
     &.terms-table-2 {
       thead tr th,
@@ -6482,5 +6535,98 @@ p {
       @include coSubTitle;
       color: $color-gray-17;
     }
+  }
+}
+
+.btm-bar {
+}
+.jo-progress-bar {
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 32px;
+  background-color: $color-gray-8;
+
+  .mark {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+  }
+  .bar {
+    border-radius: 8px;
+    display: block;
+    width: 0%;
+    height: 100%;
+    background: #253981;
+    background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.125) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.125) 50%, rgba(255, 255, 255, 0.125) 75%, transparent 75%, transparent);
+    background-size: 16px 16px;
+    // animation: aniProgressBar 2s linear 1;
+
+    > span {
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      right: 0;
+      color: rgba(0, 0, 0, 0.6);
+      line-height: 18px;
+    }
+  }
+
+  .score {
+    position: relative;
+    > span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: $color-white-1;
+    }
+  }
+}
+.jo-progress-field {
+  padding: 24px 20px;
+  background-color: $color-white-3;
+  border-radius: 12px;
+  border: 1px solid $color-gray-4;
+}
+
+.jo-progress-box {
+  position: relative;
+  .mark {
+    &.step1 {
+      > div {
+        position: absolute;
+        left: 0;
+        width: 100%;
+      }
+      height: 24px;
+      margin-bottom: 4px;
+      width: 100%;
+      span {
+        position: absolute;
+        &:first-child {
+          left: 0;
+        }
+        &:nth-child(2) {
+          left: 50%;
+        }
+        &:nth-child(3) {
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+@keyframes aniProgressBar {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 16px 16px;
   }
 }

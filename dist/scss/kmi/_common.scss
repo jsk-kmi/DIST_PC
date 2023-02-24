@@ -523,6 +523,7 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
 
 .co-sub-title-01 {
   @include coSubTitle;
+  color: $color-black-1;
 }
 
 // = co-list-field

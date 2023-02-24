@@ -35,9 +35,11 @@ $ico-list01: (
   eye,
   menu-hamburger,
   special,
-  center-info
+  center-info nav06,
+  nav06,
+  del02
 );
- 
+
 .ico-type01 {
   $size: 28px !default;
   background: {
@@ -64,6 +66,13 @@ $ico-list01: (
 
   &.t-i-help01-03 {
     background-position: 0 -76px;
+  }
+
+  // + del02
+  &.t-i-del02 {
+    &:hover {
+      background-position: -1254px -38px;
+    }
   }
 }
 
