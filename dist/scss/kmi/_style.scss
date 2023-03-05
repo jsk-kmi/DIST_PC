@@ -2089,6 +2089,9 @@
   + .co-terms-chk-card {
     margin-top: 20px;
   }
+  .tbl-chkresult-compare {
+    margin-top: 0;
+  }
 }
 
 // = checkup-institution-wrap
@@ -3775,7 +3778,7 @@
     @include coTxtCaption;
     color: $color-gray-3;
     margin-left: 12px;
-		margin-right:4px;
+    margin-right: 4px;
     > span {
       text-decoration: underline;
       padding-right: 20px;
@@ -4289,16 +4292,18 @@
     &.on {
       box-shadow: 0 0 0 1px $color-blue-1;
       border-color: $color-blue-1;
-      position: relative;
-      &:before {
-        content: '';
-        position: absolute;
-        top: 32px;
-        right: 20px;
-        display: inline-block;
-        width: 14px;
-        height: 14px;
-        background: url($image-ico-chkbox-sprite01) -116px -7px / auto 28px no-repeat;
+
+      .date {
+        display: flex;
+        align-items: center;
+        &:after {
+          content: '';
+          display: inline-flex;
+          margin-left: 7px;
+          width: 14px;
+          height: 14px;
+          background: url($image-ico-chkbox-sprite01) -116px -7px / auto 28px no-repeat;
+        }
       }
     }
   }
@@ -4330,7 +4335,7 @@
 
 .result-article {
   & ~ .result-article {
-    margin-top: 40px;
+    margin-top: 60px;
   }
 
   .co-title-field {
@@ -4340,11 +4345,14 @@
     .title {
       @include coSubTitle;
     }
+    & ~ .jo-progress-field {
+      margin-top: 12px;
+    }
   }
   .list-field,
   .cont-field {
     margin-top: 12px;
-    padding: 32px 20px;
+    padding: 20px;
     border: 1px solid $color-gray-5;
     border-radius: 12px;
     color: $color-gray-1;
@@ -6207,7 +6215,7 @@
   position: relative;
 }
 
-// = Job Stress
+// = JO
 // + Jon Stress Examination
 .jobstressexam-wrap {
   .condition-field {
@@ -6242,6 +6250,23 @@ p {
     }
     > p {
       padding-left: 16px;
+    }
+  }
+}
+
+$jo-padding: 20px;
+.jo-score-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  margin: {
+    left: -$jo-padding;
+    right: -$jo-padding;
+  }
+  .col {
+    padding: {
+      left: $jo-padding;
+      right: $jo-padding;
     }
   }
 }
@@ -6538,8 +6563,7 @@ p {
   }
 }
 
-.btm-bar {
-}
+// = [JO]
 .jo-progress-bar {
   border-radius: 8px;
   position: relative;
@@ -6555,66 +6579,80 @@ p {
     width: 100%;
     display: flex;
   }
-  .bar {
+  .jo-progress {
     border-radius: 8px;
     display: block;
     width: 0%;
     height: 100%;
     background: #253981;
     background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.125) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.125) 50%, rgba(255, 255, 255, 0.125) 75%, transparent 75%, transparent);
-    background-size: 16px 16px;
-    // animation: aniProgressBar 2s linear 1;
-
-    > span {
-      position: absolute;
-      overflow: hidden;
-      left: 0;
-      right: 0;
-      color: rgba(0, 0, 0, 0.6);
-      line-height: 18px;
-    }
-  }
-
-  .score {
-    position: relative;
-    > span {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      color: $color-white-1;
-    }
+    background-size: 18px 18px;
+    animation: aniProgressBar 3s linear infinite;
   }
 }
+
 .jo-progress-field {
   padding: 24px 20px;
   background-color: $color-white-3;
   border-radius: 12px;
   border: 1px solid $color-gray-4;
-}
 
-.jo-progress-box {
-  position: relative;
-  .mark {
-    &.step1 {
+  .result-value {
+    @include coSubTitle;
+    & + .progress-box {
+      margin-top: 12px;
+    }
+  }
+
+  .progress-box {
+    position: relative;
+    .mark {
+      &.step01,
+      &.step02 {
+        height: 24px;
+        margin-top: 4px;
+        width: 100%;
+      }
       > div {
         position: absolute;
         left: 0;
         width: 100%;
+        > span {
+          position: absolute;
+          &:last-of-type {
+            right: 0;
+          }
+        }
       }
-      height: 24px;
-      margin-bottom: 4px;
-      width: 100%;
-      span {
-        position: absolute;
-        &:first-child {
-          left: 0;
+      &.step01 {
+        span {
+          &:first-child {
+            left: 0;
+          }
+          &:nth-child(2) {
+            left: 25%;
+          }
+          &:nth-child(3) {
+            left: 50%;
+          }
+          &:nth-child(4) {
+            left: 75%;
+          }
         }
-        &:nth-child(2) {
-          left: 50%;
-        }
-        &:nth-child(3) {
-          right: 0;
+      }
+
+      &.step02 {
+        span {
+          margin-left: -30px;
+          &:first-child {
+            left: 25%;
+          }
+          &:nth-child(2) {
+            left: 50%;
+          }
+          &:nth-child(3) {
+            left: 70%;
+          }
         }
       }
     }

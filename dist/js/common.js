@@ -568,8 +568,45 @@ function useGuideTabInitScroll(target) {
       }
     });
   });
-} // GuideTabScroll();
-// = Function()
+} // + jobStress Progressbar
+
+
+var jobProgressbar = function jobProgressbar() {
+  var i = 0,
+      progressList = document.querySelectorAll('.jo-progress');
+  Array.prototype.forEach.call(progressList, function (value, index) {
+    var elemWidth = value.querySelector('span').innerText;
+
+    function progressCall(index) {
+      var prgbarElem = progressList[index];
+      var barWidth = 0;
+
+      if (i === 0) {
+        var prgInterval = setInterval(doing, 20);
+      }
+
+      function doing() {
+        if (barWidth >= elemWidth) {
+          clearInterval(prgInterval);
+          i = 0;
+        } else {
+          {
+            barWidth++;
+
+            if (elemWidth <= barWidth) {
+              prgbarElem.style.width = elemWidth + '%';
+              console.log(prgbarElem.style.width);
+            } else {
+              prgbarElem.style.width = barWidth + '%';
+            }
+          }
+        }
+      }
+    }
+
+    progressCall(index);
+  });
+}; // = Function()
 
 
 openUserControl();
