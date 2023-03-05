@@ -4031,7 +4031,7 @@ textarea.type02,
 .sidebar-menu .s-menu.nav04:before {
 		background-position-x: -570px;
 }
-ico_sprites_01 .sidebar-menu .s-menu.nav05:before {
+.sidebar-menu .s-menu.nav05:before {
 		background-position-x: -608px;
 }
 .sidebar-menu .s-menu.nav06:before {
@@ -5813,6 +5813,9 @@ a.co-link-lined,
 		font-weight: 500;
 		line-height: 2;
 		color: #1c1c1b;
+}
+.co-sub-title-01 + p {
+		margin-bottom: 12px;
 }
 
 .co-list-field {
@@ -8388,6 +8391,9 @@ RV-02-003_1
 .co-table-field + .co-terms-chk-card {
 		margin-top: 20px;
 }
+.co-table-field .tbl-chkresult-compare {
+		margin-top: 0;
+}
 
 .institution-info-list-field .list-field {
 		margin-top: 20px;
@@ -10399,14 +10405,15 @@ RV-02-003_1
 .mychkup-history-card:not(.is-not-apply).on {
 		box-shadow: 0 0 0 1px #2f7ad3;
 		border-color: #2f7ad3;
-		position: relative;
 }
-.mychkup-history-card:not(.is-not-apply).on:before {
+.mychkup-history-card:not(.is-not-apply).on .date {
+		display: flex;
+		align-items: center;
+}
+.mychkup-history-card:not(.is-not-apply).on .date:after {
 		content: "";
-		position: absolute;
-		top: 32px;
-		right: 20px;
-		display: inline-block;
+		display: inline-flex;
+		margin-left: 7px;
 		width: 14px;
 		height: 14px;
 		background: url("../images/ico/ico_sprites_checkbox01.svg") -116px -7px/auto 28px no-repeat;
@@ -10440,7 +10447,7 @@ RV-02-003_1
 }
 
 .result-article ~ .result-article {
-		margin-top: 40px;
+		margin-top: 60px;
 }
 .result-article .co-title-field {
 		display: flex;
@@ -10452,10 +10459,13 @@ RV-02-003_1
 		font-weight: 500;
 		line-height: 2;
 }
+.result-article .co-title-field ~ .jo-progress-field {
+		margin-top: 12px;
+}
 .result-article .list-field,
 .result-article .cont-field {
 		margin-top: 12px;
-		padding: 32px 20px;
+		padding: 20px;
 		border: 1px solid #e9e9e9;
 		border-radius: 12px;
 		color: #494949;
@@ -11957,6 +11967,18 @@ p ~ .jobstress-list-cont {
 		padding-left: 16px;
 }
 
+.jo-score-row {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 12px;
+		margin-left: -20px;
+		margin-right: -20px;
+}
+.jo-score-row .col {
+		padding-left: 20px;
+		padding-right: 20px;
+}
+
 .jobstress-exam-list-wrap .sub-title + .cont-01 {
 		margin-bottom: 12px;
 }
@@ -12204,32 +12226,15 @@ p ~ .jobstress-list-cont {
 		width: 100%;
 		display: flex;
 }
-.jo-progress-bar .bar {
+.jo-progress-bar .jo-progress {
 		border-radius: 8px;
 		display: block;
 		width: 0%;
 		height: 100%;
 		background: #253981;
 		background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.125) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.125) 50%, rgba(255, 255, 255, 0.125) 75%, transparent 75%, transparent);
-		background-size: 16px 16px;
-}
-.jo-progress-bar .bar > span {
-		position: absolute;
-		overflow: hidden;
-		left: 0;
-		right: 0;
-		color: rgba(0, 0, 0, 0.6);
-		line-height: 18px;
-}
-.jo-progress-bar .score {
-		position: relative;
-}
-.jo-progress-bar .score > span {
-		position: absolute;
-		left: 0;
-		width: 100%;
-		text-align: center;
-		color: #fff;
+		background-size: 18px 18px;
+		animation: aniProgressBar 3s linear infinite;
 }
 
 .jo-progress-field {
@@ -12238,31 +12243,56 @@ p ~ .jobstress-list-cont {
 		border-radius: 12px;
 		border: 1px solid #d2d2d1;
 }
-
-.jo-progress-box {
+.jo-progress-field .result-value {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 2;
+}
+.jo-progress-field .result-value + .progress-box {
+		margin-top: 12px;
+}
+.jo-progress-field .progress-box {
 		position: relative;
 }
-.jo-progress-box .mark.step1 {
+.jo-progress-field .progress-box .mark.step01, .jo-progress-field .progress-box .mark.step02 {
 		height: 24px;
-		margin-bottom: 4px;
+		margin-top: 4px;
 		width: 100%;
 }
-.jo-progress-box .mark.step1 > div {
+.jo-progress-field .progress-box .mark > div {
 		position: absolute;
 		left: 0;
 		width: 100%;
 }
-.jo-progress-box .mark.step1 span {
+.jo-progress-field .progress-box .mark > div > span {
 		position: absolute;
 }
-.jo-progress-box .mark.step1 span:first-child {
+.jo-progress-field .progress-box .mark > div > span:last-of-type {
+		right: 0;
+}
+.jo-progress-field .progress-box .mark.step01 span:first-child {
 		left: 0;
 }
-.jo-progress-box .mark.step1 span:nth-child(2) {
+.jo-progress-field .progress-box .mark.step01 span:nth-child(2) {
+		left: 25%;
+}
+.jo-progress-field .progress-box .mark.step01 span:nth-child(3) {
 		left: 50%;
 }
-.jo-progress-box .mark.step1 span:nth-child(3) {
-		right: 0;
+.jo-progress-field .progress-box .mark.step01 span:nth-child(4) {
+		left: 75%;
+}
+.jo-progress-field .progress-box .mark.step02 span {
+		margin-left: -30px;
+}
+.jo-progress-field .progress-box .mark.step02 span:first-child {
+		left: 25%;
+}
+.jo-progress-field .progress-box .mark.step02 span:nth-child(2) {
+		left: 50%;
+}
+.jo-progress-field .progress-box .mark.step02 span:nth-child(3) {
+		left: 70%;
 }
 
 @keyframes aniProgressBar {
