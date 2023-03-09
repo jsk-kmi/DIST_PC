@@ -78,6 +78,9 @@
                         <li>
                             <a href="javascript:;">
                                 <span class="s-menu nav06">직무스트레스</span>
+                                <div class="badge">
+                                    <i>1</i>
+                                </div>
                             </a>
                             <ul class="sidebar-sub-menu">
                                 <li><a href="javascript:;">검사하기</a></li>
@@ -161,7 +164,7 @@
                             <div class="inner-wrap">
                                 <em class="top-title">검진기관 및 검진항목</em>
                                 <div class="reservation-step-field">
-                                    <!-- [comment] 
+                                    <!-- [comment]
 																	- side list 상태별 스타일 제어 class
 																	- is-now : 현재
 																	- is-end : 완료
@@ -366,6 +369,14 @@
                 datepickerBtmBar(input);
             },
         });
+
+        $('.btn-date-picker').focus(function(event) {
+            var dim = $(this).offset();
+            $('#ui-datepicker-div').offset({
+                top: dim.top - 180,
+                left: dim.left + 150
+            })
+        })
         // 특정날짜 disabled List
         var disabledDays = ['2022-7-9', '2022-7-26', '2022-7-26', '2022-8-1'];
 
