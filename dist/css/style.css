@@ -4003,6 +4003,9 @@ textarea.type02,
 .sidebar-menu > li > a.on > .s-menu:before {
 		background-position-y: -38px;
 }
+.sidebar-menu > li > a.on .badge:hover {
+		box-shadow: none;
+}
 .sidebar-menu .s-menu {
 		position: relative;
 		padding-left: 34px;
@@ -4038,6 +4041,40 @@ textarea.type02,
 .sidebar-menu .s-menu.nav06:before {
 		background-position-x: -1216px;
 }
+.sidebar-menu .badge {
+		margin-top: 1px;
+		margin-left: 12px;
+		display: inline-flex;
+		font-size: 0;
+		line-height: 12px;
+		transition: box-shadow 0.5s;
+}
+.sidebar-menu .badge > em {
+		padding: 0 8px;
+		display: inline-block;
+		border-radius: 4px;
+		background-color: #ff6859;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 1.6666666667;
+		text-align: center;
+		color: #fff;
+		font-style: normal;
+		position: relative;
+}
+.sidebar-menu .badge > em:before {
+		content: "";
+		position: absolute;
+		top: 4px;
+		left: -7px;
+		border-top: 6px solid transparent;
+		border-bottom: 6px solid transparent;
+		border-right: 8px solid #ff6859;
+}
+.sidebar-menu .badge:hover {
+		transition: box-shadow 0.5s;
+		box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.25);
+}
 
 .sidebar-sub-menu {
 		display: none;
@@ -4056,40 +4093,6 @@ textarea.type02,
 }
 .sidebar-sub-menu > li > a.on:before {
 		background-color: #fff;
-}
-
-.badge {
-		margin-top: 1px;
-		margin-left: 10px;
-		display: inline-flex;
-		font-size: 0;
-		line-height: 12px;
-}
-.badge > i {
-		padding: 0 8px;
-		display: inline-block;
-		min-width: 24px;
-		min-height: 20px;
-		border-radius: 99px;
-		background-color: #ff6859;
-		font-size: 12px;
-		font-weight: 700;
-		line-height: 1.6666666667;
-		text-align: center;
-		color: #fff;
-		font-style: normal;
-		position: relative;
-}
-.badge > i:after {
-		position: absolute;
-		display: inline-block;
-		content: "";
-		top: 0%;
-		left: 50%;
-		width: 100%;
-		height: 100%;
-		transform: translateX(-50%);
-		border-radius: 50%;
 }
 
 /*
