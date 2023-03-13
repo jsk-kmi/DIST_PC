@@ -17,6 +17,7 @@
 .c-input {
   width: 100%;
 }
+
 label.title-md {
   color: $color-gray-1;
 }
@@ -1426,6 +1427,11 @@ textarea,
         &[readonly='readonly'] {
           border: 0;
           background-color: transparent;
+        }
+
+        &.type02 {
+          padding: 2px 8px;
+          border-radius: 8px;
         }
       }
     }

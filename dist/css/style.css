@@ -256,7 +256,8 @@ textarea {
 		color: #494949;
 }
 input[type=text]::-moz-placeholder, input[type=password]::-moz-placeholder, textarea::-moz-placeholder {
-		font: 400 14px/30px "NotoSansKR";
+		font-size: 14px;
+		line-height: 2.1428571429;
 		color: #a4a4a4;
 }
 input[type=text], input[type=text]::placeholder,
@@ -264,7 +265,8 @@ input[type=password],
 input[type=password]::placeholder,
 textarea,
 textarea::placeholder {
-		font: 400 14px/30px "NotoSansKR";
+		font-size: 14px;
+		line-height: 2.1428571429;
 		color: #a4a4a4;
 }
 
@@ -2536,6 +2538,11 @@ textarea.type02,
 .input-type.view01 input[type=password].c-input[readonly=readonly] {
 		border: 0;
 		background-color: transparent;
+}
+.input-type.view01 input[type=text].c-input.type02,
+.input-type.view01 input[type=password].c-input.type02 {
+		padding: 2px 8px;
+		border-radius: 8px;
 }
 .input-type.view01 .co-link {
 		font-size: 14px;

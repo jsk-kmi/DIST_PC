@@ -35,10 +35,11 @@
             <!-- Contents -->
             <section class="contents">
                 <!-- [comment]
-						- 팝업 연결 button [data-target] - .c-layer-popup [id] 동일 속성값 부여 
-						-  .c-layer-popup [aria-labelledby] - .c-modal-title-field > .c-title  동일 속성값 부여 
+						- 팝업 연결 button [data-target] - .c-layer-popup [id] 동일 속성값 부여
+						-  .c-layer-popup [aria-labelledby] - .c-modal-title-field > .c-title  동일 속성값 부여
 					-->
-                <button type="button" class="co-btn btn-open-popup" data-toggle="modal" data-target="#popupJoin04"><span>open popup</span></button>
+                <button type="button" class="co-btn btn-open-popup" data-toggle="modal" data-target="#popupJoin04"><span>open
+                        popup</span></button>
 
                 <div class="c-layer-popup type03" id="popupJoin04" role="dialog" aria-labelledby="popupJoin04_Label" aria-modal="true" aria-hidden="true">
                     <div class="modal-wrap modal-dialog-centered">
@@ -97,7 +98,7 @@
                                                 <div class="col-6">
                                                     <div class="input-type view01">
                                                         <label for="persnalInfo_06">이름</label>
-                                                        <input type="text" class="c-input" id="persnalInfo_06" value="홍길동" readonly="readonly" />
+                                                        <input type="text" class="c-input type02" id="persnalInfo_06" value="홍길동" readonly="readonly" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -105,7 +106,12 @@
                                                 <div class="col-6">
                                                     <div class="input-type view01">
                                                         <label for="persnalInfo_07">생년월일</label>
-                                                        <input type="text" class="c-input" id="persnalInfo_07" value="1978-05-12" readonly="readonly" />
+                                                        <!-- [comment]
+															- 생년 월일 입력 가능 요소인 경우 클래스 추가 type02
+														-->
+                                                        <!-- <input type="text" class="c-input" id="persnalInfo_07" value="19990101"
+															readonly="readonly" /> -->
+                                                        <input type="text" class="c-input type02" id="persnalInfo_07" value="19990101" />
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -203,7 +209,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="row inner">
-                                                            <div class="col"><input type="text" class="c-input" title="상세주소 입력" placeholder="상세주소" /></div>
+                                                            <div class="col"><input type="text" class="c-input" title="상세주소 입력" placeholder="상세주소" />
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -216,7 +223,8 @@
                                                             <div class="inner">
                                                                 <div class="c-chkbox">
                                                                     <input type="checkbox" id="receiveSmsChk_01" />
-                                                                    <label for="receiveSmsChk_01" class="chk-label"><i></i><span>제도 안내 수신동의 </span></label>
+                                                                    <label for="receiveSmsChk_01" class="chk-label"><i></i><span>제도 안내 수신동의
+                                                                        </span></label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -239,7 +247,8 @@
                                                             <div class="inner">
                                                                 <div class="c-chkbox">
                                                                     <input type="checkbox" id="receiveEmailChk_01" />
-                                                                    <label for="receiveEmailChk_01" class="chk-label"><i></i><span>제도 안내 수신동의 </span></label>
+                                                                    <label for="receiveEmailChk_01" class="chk-label"><i></i><span>제도 안내 수신동의
+                                                                        </span></label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -247,7 +256,8 @@
                                                             <div class="inner">
                                                                 <div class="c-chkbox">
                                                                     <input type="checkbox" id="receiveEmailChk_02" />
-                                                                    <label for="receiveEmailChk_02" class="chk-label"><i></i><span>해택 정보 수신동의</span></label>
+                                                                    <label for="receiveEmailChk_02" class="chk-label"><i></i><span>해택 정보
+                                                                            수신동의</span></label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -294,7 +304,7 @@
                                 <div class="c-modal-inner">
                                     <h4 class="c-title skip" id="joinInfoPopupLabel">입력 안내</h4>
                                     <p>이메일 중복여부를 확인해 주세요.</p>
-                                    <!-- alert 창 문구 
+                                    <!-- alert 창 문구
 										- 이미 사용중인 이메일 아이디입니다.
 										- 인증번호가 발송 되었습니다.
 										- 인증되었습니다.

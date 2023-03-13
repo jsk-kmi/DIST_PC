@@ -254,7 +254,7 @@ textarea {
   color: $color-gray-1;
   &,
   &::placeholder {
-    font: 400 14px/30px 'NotoSansKR';
+    @include coBodyTxt;
     color: $color-gray-3;
   }
 }
