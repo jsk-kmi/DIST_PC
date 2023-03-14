@@ -5959,31 +5959,43 @@ a.co-link-lined,
 		margin-top: 12px;
 }
 
-.co-location {
+.co-location,
+.co-location > ol {
 		display: flex;
 		font-size: 0;
 		align-items: center;
 }
-.co-location > p {
+.co-location > p,
+.co-location > ol > li,
+.co-location > ol > p,
+.co-location > ol > ol > li {
 		font-size: 12px;
 		font-weight: 400;
 		line-height: 2;
 }
-.co-location > p ~ p:before {
+.co-location > p ~ p:before, .co-location > p ~ li:before,
+.co-location > ol > li ~ p:before,
+.co-location > ol > li ~ li:before,
+.co-location > ol > p ~ p:before,
+.co-location > ol > p ~ li:before,
+.co-location > ol > ol > li ~ p:before,
+.co-location > ol > ol > li ~ li:before {
 		content: "/";
 		display: inline-block;
 		padding-left: 4px;
 		padding-right: 4px;
 		color: #e9e9e9;
 }
-.co-location a {
+.co-location a,
+.co-location > ol a {
 		background: url("../images/ico//ico_home_02.svg") center/12px auto no-repeat;
 		display: inline-block;
 		width: 20px;
 		height: 20px;
 		margin-top: 6px;
 }
-.co-location .on {
+.co-location .on,
+.co-location > ol .on {
 		color: #253981;
 }
 

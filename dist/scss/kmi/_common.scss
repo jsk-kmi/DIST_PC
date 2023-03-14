@@ -624,13 +624,16 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
   }
 }
 
-.co-location {
+.co-location,
+.co-location > ol {
   display: flex;
   font-size: 0;
   align-items: center;
-  > p {
+  > p,
+  > ol > li {
     @include coTxtCaption;
-    & ~ p {
+    & ~ p,
+    & ~ li {
       &:before {
         content: '/';
         display: inline-block;
@@ -1499,4 +1502,3 @@ RV-02-003_1
     }
   }
 }
-
