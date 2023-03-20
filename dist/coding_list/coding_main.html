@@ -12,18 +12,16 @@
 	<section class="section main-frame">
 		<h2 class="main-title">작업 전달 사항</h2>
 		<div class="table-wrapper">
-			<div class="update-date"><em class="fc-blue">(update: 22.07.19)</em></div>
+			<div class="update-date"><em class="fc-blue">(update: 23.00.00)</em></div>
 			<table class="fl-table">
 				<colgroup>
 					<col style="width: 15%" />
 					<col style="width: 70%" />
-					<col />
 				</colgroup>
 				<thead>
 					<tr>
 						<th>구분</th>
 						<th>내용</th>
-						<th>작성일시</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -32,59 +30,64 @@
 						<td>
 							<ul class="cont-list">
 								<li>
-									<em class="fc-red">※ 퍼블리싱 원본 파일 수정 X <br />- github push 금지 </em>
+									<em class="fc-red">※ 퍼블리싱 원본 파일 수정 및 git push X ※<br />(해당 소스는 퍼블리싱 gulp setting를 통해 Complie된 소스로,
+										<br />수정 할 경우
+										퍼블리싱 파일의 code 및 language 변환 과정에서 충돌 발생)</em>
+								</li>
+								<li>
+									<p>
+										퍼블리싱 원본 파일의 수정 및 추가 작업이 필요할 경우 별도의 파일을 생성하여 제어하여 원본 소스에 영향이 없도록 함
+									</p>
 								</li>
 								<li>
 									<p>수정이 필요한 파일(*.js, *.html) 의 경우 퍼블리싱/개발 소스 별도 관리 요망</p>
 								</li>
+								<li>작업 전달 사항 및 Info &gt; Guide 목록 확인 후 작업 진행 필요</li>
 							</ul>
 						</td>
-						<td class="date">22.07.19</td>
 					</tr>
 					<tr>
-						<td>웹 호환성</td>
+						<th>작업 환경</th>
 						<td>
 							<ul class="cont-list">
-								<li>HTML5를 적용한 Markup을 기반하여 웹 표준 및 호환성 작업 진행</li>
-								<li>Cross Broswing :<em style="color: blue; padding-left:5px; padding-right:5px;"> IE11 이상, Edge,
-										Chrome,
-										Firefox (Cross
-										Broswing Check 완료)</em>
+								<li>문서 및 버전 : HTML5, SCSS, ES6 &amp; ES2015, jQuery</li>
+								<li>인코딩 : UTF-8</li>
+								<li>Build System: Gulp</li>
+								<li>웹 호환성 : <em style="color: blue; padding-left:5px; padding-right:5px;">IE11 이상, Edge, Chrome, Firefox
+										(Cross Broswing Check Done)</em></li>
+								<li>IE 호환성 대응 완료
+									<br>- SCSS → CSS/CSS3 컴파일 (Gulp)
+									<br>- ES6 → ES2015 컴파일 (Babel)
 								</li>
-								<li>Markup &amp; Programming Language
-									<br>- HTML5, CSS3 : 브라우저 호환 작업 완료
-									<br>- Javascript, jQuery : 작업환경의 경우 ES6 기반으로 작업이 진행되나 배포용 소스(DIST)의 Babel 변환을 통한 브라우저 대응 작업 완료
-								</li>
-								<li>웹 접근성 Markup 부분 대응 </li>
+								<li>웹 접근성 : Markup 부분 대응</li>
+								<li>해상도 : 1920px ~</li>
 							</ul>
 						</td>
-						<td class="date">22.07.19</td>
 					</tr>
 					<tr>
-						<th>수정 코드 전달</th>
+						<th>수정/추가 코드 전달</th>
 						<td>
 							<ul class="cont-list">
-								<li>git log 확인하여 Source Diff 진행 후 Source 일괄 반영</li>
-								<!-- <li>
-                    <div>
-                      소스 수정 사항의 경우 주석 표기하여 반영 됨<br />
-                      <p class="fc-red">* 퍼블리싱 파일 업데이트 시 주석 검색을 통해 수정 부분 확인 후 개발 소스 반영</p>
-                      <div class="exam">ex) type1</div>
-                      <span class="code">&lt;!-- [ mod(220719) ] --&gt;</span>
-                      <div class="exam">ex) type2</div>
-                      <div class="code" style="display: inline-block">
-                        &lt;!-- [ mod(220719) ] <br />
-                        <span class="space"></span>- 수정사항] <br />--&gt;
-                      </div>
-                    </div>
-                  </li> -->
-
+								<li>
+									<div>최신 파일 다운로드 시 <span class="fc-red">전체 파일 </span> 일괄 덮어쓰기</div>
+								</li>
+								<li>Source Diff 후 Markup Source 일괄 반영</li>
+								<li>
+									<div>
+										소스 내 전달사항 및 수정 부분 주석 표기방식
+										<div class="exam">ex) type1</div>
+										<span class="code">&lt;!-- [ mod(220602) ] --&gt;</span>
+										<div class="exam">ex) type2</div>
+										<div class="code" style="display: inline-block">
+											&lt;!-- [ mod(220602) ] <br />
+											<span class="space"></span>- 수정사항] <br />--&gt;
+										</div>
+									</div>
+								</li>
 								<li>퍼블리싱 소스 내 <em class="fc-red" style="padding-left:5px; padding-right:5px;"> Guide comment 주석은 개발
-										소스에서
-										삭제</em>후 작업 요망</li>
+										소스에서 삭제</em>후 작업 요망</li>
 							</ul>
 						</td>
-						<td class="date">22.07.19</td>
 					</tr>
 				</tbody>
 			</table>
