@@ -1,10 +1,10 @@
 # KMI 재단법인 한국의학연구소
 
-## WITHKMI PC Publishing Repository (배포용)
+## HealthCare Platform Service UI Develop PC Repositiory (DEV_DIST)
 
 ## 개요
 
-- HealthCare Platform Service WITHKMI
+- KMI HealthCare Platform Service PC UI Develop Source
 
 - index 페이지 접속 후 파일 목록과 작업 전달사항 파악 : index 페이지 경로(dist/coding_list/index.html)
 
