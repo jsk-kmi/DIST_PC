@@ -453,7 +453,7 @@
       display: inline-block;
     }
   }
- 
+
   // + calendar_days
   .calendar_days {
     display: flex;
@@ -2921,10 +2921,13 @@
       @include coMainTitle;
     }
 
-    .co-link {
+    .co-link,
+    .co-info-txt {
       margin-left: 12px;
     }
-
+    .co-info-txt {
+      @include coBodyTxt;
+    }
     .info01 {
       margin-left: 8px;
     }
@@ -6666,5 +6669,11 @@ $jo-padding: 20px;
 
   100% {
     background-position: 16px 16px;
+  }
+}
+
+.ui-datepicker {
+  &.hide {
+    display: none !important;
   }
 }

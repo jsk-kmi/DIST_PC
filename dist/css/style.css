@@ -83,6 +83,9 @@ a {
 		vertical-align: baseline;
 		background: transparent;
 		box-sizing: border-box;
+		-webkit-user-select: none;
+		   -moz-user-select: none;
+		        user-select: none;
 }
 
 h1,
@@ -257,6 +260,7 @@ textarea {
 }
 input[type=text]::-moz-placeholder, input[type=password]::-moz-placeholder, textarea::-moz-placeholder {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		color: #a4a4a4;
 }
@@ -266,6 +270,7 @@ input[type=password]::placeholder,
 textarea,
 textarea::placeholder {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		color: #a4a4a4;
 }
@@ -973,6 +978,7 @@ st .c-panel.tab-panel + .c-panel {
 .c-modal-body .cont-box .cont {
 		color: #494949;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .c-modal-body .cont-box + .co-table-field {
@@ -1041,6 +1047,7 @@ st .c-panel.tab-panel + .c-panel {
 }
 .c-layer-popup.type01 .c-modal-body .in-cont {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .c-layer-popup.type01 .c-modal-body .in-cont > p ~ p {
@@ -1395,6 +1402,7 @@ label + .c-m-input-list {
 
 .chk-label > span {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		line-height: 1;
 		color: #a4a4a4;
@@ -1404,6 +1412,7 @@ label + .c-m-input-list {
 .c-chkbox.txt-type02 span,
 .c-rdochk.txt-type02 span {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.4166666667;
 }
 
@@ -1790,6 +1799,7 @@ input[type=password][readonly=readonly]:focus {
 label,
 .c-label-txt {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		font-weight: 400;
 		color: #777676;
@@ -1798,6 +1808,7 @@ label,
 .input-ref-txt {
 		margin-top: 8px;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 2;
 		color: #a4a4a4;
 }
@@ -2414,6 +2425,7 @@ textarea.type02,
 		width: 100%;
 		padding: 6px 36px 6px 12px;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .c-select select:focus {
@@ -2516,6 +2528,7 @@ textarea.type02,
 }
 .input-type.view01 label {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 2;
 		color: #777676;
 		min-width: 80px;
@@ -2523,6 +2536,7 @@ textarea.type02,
 .input-type.view01 input[type=text].c-input,
 .input-type.view01 input[type=password].c-input {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.2857142857;
 		padding: 0;
 		border-radius: 0;
@@ -2546,6 +2560,7 @@ textarea.type02,
 }
 .input-type.view01 .co-link {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		margin-left: 12px;
 }
@@ -2703,6 +2718,7 @@ textarea.type02,
 
 .ui-widget {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 
@@ -2737,12 +2753,24 @@ textarea.type02,
 }
 .ui-datepicker .ui-datepicker-title select > option {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		color: #1c1c1b;
 }
 .ui-datepicker .ui-datepicker-title .ui-datepicker-month {
 		text-align: center;
-		margin-top: 1px;
+}
+.ui-datepicker .ui-datepicker-title .ui-datepicker-year,
+.ui-datepicker .ui-datepicker-title .ui-datepicker-month {
+		margin-top: 2px;
+		line-height: 1;
+}
+.ui-datepicker .ui-datepicker-title .ui-datepicker-year {
+		margin-right: 3px;
+}
+.ui-datepicker .ui-datepicker-title .ui-datepicker-year + .ui-datepicker-month {
+		position: relative;
+		margin-left: 3px;
 }
 .ui-datepicker .ui-widget-header {
 		border-radius: 0;
@@ -2962,6 +2990,7 @@ textarea.type02,
 .co-table table th .co-link,
 .co-table table td .co-link {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 1.7142857143;
 }
 .co-table table thead th input[type=checkbox] + label i,
@@ -3023,6 +3052,7 @@ textarea.type02,
 }
 .co-table.cont-type01 .co-list-card > li, .co-table.cont-type02 .co-list-card > li {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .co-table.cont-type01 .co-list-card.circle01 > li:before, .co-table.cont-type02 .co-list-card.circle01 > li:before {
@@ -4213,6 +4243,7 @@ textarea.type02,
 		padding: 11px 20px;
 		color: #494949;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .header .user-control.on {
@@ -4483,6 +4514,7 @@ a.co-link,
 		text-decoration: underline;
 		color: #2f7ad3;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.4166666667;
 }
 
@@ -5606,6 +5638,7 @@ a.co-link-lined,
 		border-radius: 8px;
 		color: #fff;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 }
 .co-badge.type01 {
@@ -5639,17 +5672,20 @@ a.co-link-lined,
 		bottom: 0;
 		right: 0;
 		background: rgba(255, 255, 255, 0.75);
-		z-index: 3000;
+		z-index: 6000;
 }
 .c-loading-wrapper .is-loading {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		flex: 1 1 auto;
 }
 .c-loading-wrapper .is-loading > div {
-		display: block;
+		display: flex;
 		text-align: center;
 		position: relative;
+		flex: 1 1 100%;
+		justify-content: center;
 }
 .c-loading-wrapper .is-loading img {
 		display: block;
@@ -5693,6 +5729,7 @@ a.co-link-lined,
 }
 .co-list-card.circle02 li {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		padding-left: 12px;
 }
@@ -5706,6 +5743,7 @@ a.co-link-lined,
 		counter-increment: list-cnt01;
 		position: relative;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .co-list-card.number01 > li:before {
@@ -5751,6 +5789,7 @@ a.co-link-lined,
 
 .co-none-txt {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		color: #939391;
 		text-align: center;
@@ -5804,6 +5843,7 @@ a.co-link-lined,
 		border: 1px solid #d2d2d1;
 		padding: 4px 16px;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 }
 .co-tab-list.tab-1 > li {
@@ -5849,6 +5889,7 @@ a.co-link-lined,
 }
 .co-title-field .date {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #777676;
 }
@@ -6105,24 +6146,28 @@ a.co-link-lined,
 }
 .co-ref-txt.fs-small {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 2;
 		color: #a4a4a4;
 }
 
 .txt-type01 {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		color: #494949;
 }
 
 .txt-type02 {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #777676;
 }
 
 .txt-type03 {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		color: #777676;
 }
@@ -6236,6 +6281,7 @@ a.co-link-lined,
 }
 .co-accordion .btn-accrodion .cnt {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		color: #777676;
 }
@@ -6322,6 +6368,7 @@ a.co-link-lined,
 
 .swiper-pagination {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 2;
 		color: #a4a4a4;
 		color: #a4a4a4;
@@ -6357,6 +6404,7 @@ a.co-link-lined,
 		border: 1px solid #e9e9e9;
 		background-color: #fcfcfc;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #777676;
 		padding: 15px 5px;
@@ -6369,6 +6417,7 @@ a.co-link-lined,
 }
 .co-terms-detail.terms-scroll .c-terms-section {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 2;
 		color: #777676;
 }
@@ -6422,6 +6471,7 @@ a.co-link-lined,
 }
 .co-terms-detail .terms-cont {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		color: #777676;
 }
@@ -7517,6 +7567,7 @@ RV-02-003_1
 		display: block;
 		color: #494949;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .login-wrapper .login-box .login-input .search-related-field .search-list > li a:hover {
@@ -7574,6 +7625,7 @@ RV-02-003_1
 }
 .login-wrapper .login-btn > span {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 1.4285714286;
 }
 .login-wrapper .login-info-list {
@@ -7617,6 +7669,7 @@ RV-02-003_1
 .login-wrapper .use-info p {
 		color: #494949;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .login-wrapper .use-info p:first-child > span {
@@ -7661,6 +7714,7 @@ RV-02-003_1
 }
 .login-wrapper .contents-field > .login-img .c-title > p {
 		font-size: 32px;
+		font-weight: 300;
 		line-height: 1.4375;
 		font-size: 1.667vw;
 		font-weight: 300;
@@ -7810,6 +7864,7 @@ RV-02-003_1
 }
 .client-card .relationship {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #2f7ad3;
 		display: flex;
@@ -7842,6 +7897,7 @@ RV-02-003_1
 		display: flex;
 		align-items: center;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -8044,6 +8100,7 @@ RV-02-003_1
 }
 .main-card .card-cont.type01 .ref-txt {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #a4a4a4;
 }
@@ -8113,6 +8170,7 @@ RV-02-003_1
 }
 .main-card .card-cont.type02 .cont .go-link {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #253981;
 }
@@ -8138,6 +8196,7 @@ RV-02-003_1
 }
 .main-card .customer-service .time {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		color: #1c1c1b;
 }
@@ -8161,6 +8220,7 @@ RV-02-003_1
 		bottom: auto;
 		width: auto;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 2;
 		color: #a4a4a4;
 }
@@ -8251,6 +8311,7 @@ RV-02-003_1
 .main-slide-swiper .cont-01 {
 		margin-top: 4px;
 		font-size: 20px;
+		font-weight: 300;
 		line-height: 1.45;
 }
 .main-slide-swiper .swiper-button-field:hover:before {
@@ -8438,6 +8499,7 @@ RV-02-003_1
 }
 .consult-detail dl dt {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 2;
 		color: #a4a4a4;
 }
@@ -8488,6 +8550,7 @@ RV-02-003_1
 .institution-info-list-field .institution-info-card .location {
 		position: relative;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #2f7ad3;
 		padding-left: 17px;
@@ -8596,6 +8659,7 @@ RV-02-003_1
 }
 .checkup-item-list .items-card .sub-txt {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #777676;
 }
@@ -8710,6 +8774,7 @@ RV-02-003_1
 }
 .video-card .date {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #2f7ad3;
 }
@@ -8720,6 +8785,7 @@ RV-02-003_1
 		white-space: nowrap;
 		word-wrap: break-word;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .video-card.none-data {
@@ -8898,6 +8964,7 @@ RV-02-003_1
 		margin-left: 8px;
 		display: inline-block;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		padding: 2px 8px;
 		border-radius: 8px;
@@ -9011,6 +9078,7 @@ RV-02-003_1
 }
 .event-card .date {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #2f7ad3;
 }
@@ -9021,6 +9089,7 @@ RV-02-003_1
 		white-space: nowrap;
 		word-wrap: break-word;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .event-card.co-none-data {
@@ -9086,11 +9155,13 @@ RV-02-003_1
 .detail-download-field .download-list .file-info .file-size {
 		margin-left: 8px;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #a4a4a4;
 }
 .detail-download-field .btn-file-download {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 1.7142857143;
 		color: #a4a4a4;
 		position: relative;
@@ -9170,6 +9241,7 @@ RV-02-003_1
 .institution-list-field .institution-card .location {
 		position: relative;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #2f7ad3;
 		padding-left: 17px;
@@ -9250,8 +9322,14 @@ RV-02-003_1
 		font-weight: 500;
 		line-height: 1.8;
 }
-.rsv-institution-datail-field .title-box .co-link {
+.rsv-institution-datail-field .title-box .co-link,
+.rsv-institution-datail-field .title-box .co-info-txt {
 		margin-left: 12px;
+}
+.rsv-institution-datail-field .title-box .co-info-txt {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 2.1428571429;
 }
 .rsv-institution-datail-field .title-box .info01 {
 		margin-left: 8px;
@@ -9314,6 +9392,7 @@ RV-02-003_1
 .institution-detail-card .top-box .detail-btns [class*=btn] > span {
 		padding-left: 8px;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #a4a4a4;
 }
@@ -9429,6 +9508,7 @@ RV-02-003_1
 }
 .institution-info-list .title {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #2f7ad3;
 }
@@ -9473,6 +9553,7 @@ RV-02-003_1
 		display: flex;
 		align-items: flex-start;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .medical-team-list .ctg-info span {
@@ -9507,6 +9588,7 @@ RV-02-003_1
 .doctor-card .inner .doctor-info {
 		padding-left: 20px;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -9526,6 +9608,7 @@ RV-02-003_1
 .doctor-card .inner .doctor-info .cont {
 		margin-top: 4px;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -9601,6 +9684,7 @@ RV-02-003_1
 		flex: 0 0 52px;
 		color: #2f7ad3;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 }
 .medical-equip-card .top-box .detail-info li .cont {
@@ -9831,6 +9915,7 @@ RV-02-003_1
 }
 .resevation-btm-bar .btn-reset-product > span {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #777676;
 		position: relative;
@@ -10121,6 +10206,7 @@ RV-02-003_1
 }
 .compare-card .price-info {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 2;
 		color: #a4a4a4;
 		display: flex;
@@ -10132,6 +10218,7 @@ RV-02-003_1
 		padding-left: 4px;
 		padding-right: 4px;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		color: #2f7ad3;
 }
@@ -10275,6 +10362,7 @@ RV-02-003_1
 .tbl-detail-chkctg-compare {
 		width: 100%;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 1.7142857143;
 }
 .tbl-detail-chkctg-compare::-webkit-scrollbar {
@@ -10547,6 +10635,7 @@ RV-02-003_1
 }
 .chkup-result-cont.type01 .result-card01 .title {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .chkup-result-cont.type01 .result-card01 .col-title,
@@ -10574,12 +10663,14 @@ RV-02-003_1
 		display: inline-block;
 		padding-left: 4px;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 2;
 		color: #a4a4a4;
 }
 .chkup-result-cont.type01 .result-card01 .compare-info .divide {
 		padding: 5px 12px 0;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #777676;
 }
@@ -10843,6 +10934,7 @@ RV-02-003_1
 		border-width: 1px;
 		border-style: solid;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 }
 .status-btn.is-orange {
@@ -10922,6 +11014,7 @@ RV-02-003_1
 }
 .select-period-btns .btn-period span {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		color: #a4a4a4;
 }
@@ -10988,6 +11081,7 @@ RV-02-003_1
 }
 .healthexam-item-field .top-ref-txt {
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 1.6666666667;
 		color: #2f7ad3;
 }
@@ -11020,12 +11114,14 @@ RV-02-003_1
 }
 .total-surcharges-wrap .price-row .name {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .total-surcharges-wrap .price-row .price {
 		display: flex;
 		align-items: center;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		color: #a4a4a4;
 }
@@ -11059,6 +11155,7 @@ RV-02-003_1
 
 .healthexam-item-card {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		padding: 12px 24px;
 		border: 1px solid #e9e9e9;
@@ -11139,6 +11236,7 @@ RV-02-003_1
 }
 .healthexam-item-card .healthexam-inner-list .chk-label > span {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		font-weight: 300;
 		color: #494949;
@@ -11154,6 +11252,7 @@ RV-02-003_1
 .chkup-ctg-accordion .info-title-field .sub-txt {
 		padding-left: 16px;
 		font-size: 12px;
+		font-weight: 300;
 		line-height: 2;
 		color: #a4a4a4;
 }
@@ -11173,6 +11272,7 @@ RV-02-003_1
 }
 .chkup-ctg-accordion .info-title-field .select-list ul > li {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		color: #777676;
 }
@@ -11194,6 +11294,7 @@ RV-02-003_1
 		display: flex;
 		align-items: center;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .chkup-ctg-accordion .per-surcharges > em {
@@ -11266,6 +11367,7 @@ RV-02-003_1
 
 .account-list > li {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2;
 		margin-top: 20px;
 }
@@ -11495,6 +11597,7 @@ RV-02-003_1
 #container .login-wrapper .contents-field-02 .btm-info {
 		margin-top: 24px;
 		font-size: 18px;
+		font-weight: 300;
 		line-height: 1.3333333333;
 		color: #253981;
 }
@@ -11602,12 +11705,14 @@ RV-02-003_1
 .terms-tab-wrap .c-terms-section > p {
 		margin-top: 4px;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .terms-tab-wrap .c-terms-section p,
 .terms-tab-wrap .c-terms-section ol,
 .terms-tab-wrap .c-terms-section ul {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		color: #777676;
 }
@@ -11632,6 +11737,7 @@ RV-02-003_1
 		list-style: none;
 		padding-left: 19px;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .terms-tab-wrap .terms-ord-list li span:first-child {
@@ -11647,6 +11753,7 @@ RV-02-003_1
 }
 .c-terms-section .c-terms-link {
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		line-height: 1.4;
 		color: #253981;
@@ -11656,6 +11763,7 @@ RV-02-003_1
 .policy-list {
 		margin-top: 20px;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 }
 .policy-list > li ~ li {
@@ -11847,6 +11955,7 @@ RV-02-003_1
 		display: block;
 		padding: 8px 20px;
 		font-size: 14px;
+		font-weight: 300;
 		line-height: 2.1428571429;
 		color: #777676;
 		border-radius: 8px;
@@ -12359,5 +12468,8 @@ p ~ .jobstress-list-cont {
 		100% {
 				background-position: 16px 16px;
 		}
+}
+.ui-datepicker.hide {
+		display: none !important;
 }
 /*# sourceMappingURL=maps/style.css.map */

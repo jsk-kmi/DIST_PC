@@ -1690,8 +1690,18 @@ textarea,
     }
     .ui-datepicker-month {
       text-align: center;
-      margin: {
-        top: 1px;
+    }
+
+    .ui-datepicker-year,
+    .ui-datepicker-month {
+      margin-top: 2px;
+      line-height: 1;
+    }
+    .ui-datepicker-year {
+      margin-right: 3px;
+      & + .ui-datepicker-month {
+        position: relative;
+        margin-left: 3px;
       }
     }
   }

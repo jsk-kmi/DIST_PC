@@ -279,16 +279,19 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
   bottom: 0;
   right: 0;
   background: rgba(255, 255, 255, 0.75);
-  z-index: 3000;
+  z-index: 6000;
 
   .is-loading {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex: 1 1 auto;
     > div {
-      display: block;
+      display: flex;
       text-align: center;
       position: relative;
+      flex: 1 1 100%;
+      justify-content: center;
     }
     img {
       display: block;

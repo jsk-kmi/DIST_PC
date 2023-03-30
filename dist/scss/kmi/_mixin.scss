@@ -294,17 +294,11 @@ $scrollbarRadius: 12px;
   }
 }
 
-@mixin fontStyle($font-size, $line-height, $font-weight) {
+@mixin fontStyle($font-size, $line-height, $font-weight: 300, $letter-spacing: null) {
   $calc-line-height: calc($line-height / $font-size);
-  @if ($font-weight == 300) {
-    font: {
-      size: $font-size;
-    }
-  } @else {
-    font: {
-      size: $font-size;
-      weight: $font-weight;
-    }
+  font : {
+    size: $font-size;
+    weight: $font-weight;
   }
   line-height: #{$calc-line-height};
 }
