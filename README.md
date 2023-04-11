@@ -16,7 +16,7 @@
 - 인코딩 : UTF-8
 - Build System: Gulp
 - 웹 호환성 : IE11 이상, Edge, Chrome, Firefox (Cross Broswing Check Done)
-- 웹 접근성 : Ma
+- 웹 접근성 : Markup 부분 대응
 - 해상도 : 1920px ~
 
 ## 배포용 소스
