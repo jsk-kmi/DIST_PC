@@ -6,7 +6,7 @@
 
 ## 개요
 
-- VitaBridge PC UI Develop Source
+- WITHKMI PC UI Develop Source
 
 - index 페이지 접속 후 파일 목록과 작업 전달사항 파악 : index 페이지 경로(dist/coding_list/index.html)
 
