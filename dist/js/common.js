@@ -606,8 +606,18 @@ var jobProgressbar = function jobProgressbar() {
 
     progressCall(index);
   });
-}; // = Function()
+}; // copy Control
 
+
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+document.addEventListener('dragstart', function (e) {
+  e.preventDefault();
+});
+document.addEventListener('selectstart', function (e) {
+  e.preventDefault();
+}); // = Function()
 
 openUserControl();
 goToTop();

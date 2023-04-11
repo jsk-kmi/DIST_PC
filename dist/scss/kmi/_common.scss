@@ -37,6 +37,10 @@ a.co-link-lined,
   text-decoration: underline;
 }
 
+// + style
+.fw-bold {
+  font-weight: 700;
+}
 // = color
 // + font
 .is-white-1 {
@@ -377,6 +381,7 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
     }
   }
 
+  // + number02
   &.number02 {
     > li {
       list-style: none;
@@ -400,6 +405,7 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
     }
   }
 
+  // sequence-k
   &.sequence-k {
     > li {
       position: relative;

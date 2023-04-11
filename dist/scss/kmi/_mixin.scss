@@ -200,11 +200,6 @@
 
 // = Scroll
 
-$scrollbarWidth: 8px;
-$scrollbarHeight: 8px;
-$scrollbarColor: $color-gray-5;
-$scrollbarRadius: 12px;
-
 // + scrollDefault
 @mixin scrollStyle($bgColor, $barColor: $scrollbarColor) {
   &::-webkit-scrollbar {
@@ -268,16 +263,34 @@ $scrollbarRadius: 12px;
   }
   // @include ieScroll;
 }
+// + scrollTypeSm
+@mixin scrollTypeSm {
+  &::-webkit-scrollbar {
+    opacity: 0;
 
-// + scrollType02
-/*
-	terms scroll
-*/
-
-@mixin scrollType02 {
-  &:hover {
-    //@include isScrollHover;
+    height: $scrollbarHeightSm;
+    width: $scrollbarWidthSm;
+    background-color: $color-white-1;
+    &:hover {
+      opacity: 1;
+    }
   }
+
+  ::-webkit-scrollbar-track {
+    background-color: $color-white-1;
+  }
+  &::-webkit-scrollbar-thumb {
+    opacity: 0;
+    background: $color-gray-5;
+    border-radius: 50px;
+    background-clip: padding-box;
+  }
+
+  &::-webkit-scrollbar-corner {
+    opacity: 0;
+    background-color: transparent;
+  }
+  // @include ieScroll;
 }
 
 // + scrollType03

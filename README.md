@@ -1,10 +1,12 @@
 # KMI 재단법인 한국의학연구소
 
-## HealthCare Platform Service UI Develop PC Repositiory (DEV_DIST)
+## WITHKMI UI Develop PC Repositiory (DEV_DIST)
+
+## ※ Source Code 외부 반출 불가 ※
 
 ## 개요
 
-- KMI HealthCare Platform Service PC UI Develop Source
+- VitaBridge PC UI Develop Source
 
 - index 페이지 접속 후 파일 목록과 작업 전달사항 파악 : index 페이지 경로(dist/coding_list/index.html)
 
@@ -14,7 +16,7 @@
 - 인코딩 : UTF-8
 - Build System: Gulp
 - 웹 호환성 : IE11 이상, Edge, Chrome, Firefox (Cross Broswing Check Done)
-- 웹 접근성 : Markup 부분 대응
+- 웹 접근성 : Ma
 - 해상도 : 1920px ~
 
 ## 배포용 소스

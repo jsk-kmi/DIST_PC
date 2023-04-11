@@ -2,9 +2,6 @@
 /*
 	button
 */
-/*
-	terms scroll
-*/
 html,
 body,
 div,
@@ -304,9 +301,6 @@ em {
 
 /*
 	button
-*/
-/*
-	terms scroll
 */
 /*
 	button
@@ -3396,6 +3390,51 @@ textarea.type02,
 		background-color: #fff;
 }
 
+.tbl-useagree {
+		width: -moz-max-content;
+		width: max-content;
+		width: 100%;
+		text-align: center;
+		border-top: 1px solid #e9e9e9;
+		border-bottom: 1px solid #e9e9e9;
+}
+.tbl-useagree thead th {
+		text-align: center;
+		border-bottom: 1px solid #e9e9e9;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 2;
+		vertical-align: middle;
+		padding: 8px;
+		color: #494949;
+}
+.tbl-useagree tbody {
+		border-top: 1px solid #d2d2d1;
+}
+.tbl-useagree tbody th {
+		font-weight: 300;
+}
+.tbl-useagree th,
+.tbl-useagree td {
+		word-break: keep-all;
+		vertical-align: middle;
+		padding: 8px;
+		border-bottom: 1px solid #e9e9e9;
+}
+.tbl-useagree.type01 thead th,
+.tbl-useagree.type01 tbody th {
+		text-align: center;
+}
+.tbl-useagree.type01 tbody td {
+		text-align: left;
+}
+
+.c-t-cont-type01 {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 2;
+}
+
 .t-i-help01 {
 		background-position: 0 0px;
 }
@@ -4521,6 +4560,10 @@ a.co-link,
 a.co-link-lined,
 .co-link-lined {
 		text-decoration: underline;
+}
+
+.fw-bold {
+		font-weight: 700;
 }
 
 .is-white-1 {
@@ -12471,5 +12514,83 @@ p ~ .jobstress-list-cont {
 }
 .ui-datepicker.hide {
 		display: none !important;
+}
+
+.co-consent-form-field .cont-detail-body {
+		margin-top: 10px;
+		margin-bottom: 10px;
+}
+
+.resexam-agreeuse-cont {
+		padding: 20px 10px 20px 20px;
+		height: 600px;
+		border-radius: 12px;
+		border: 1px solid #e9e9e9;
+}
+.resexam-agreeuse-cont .inner {
+		padding-right: 20px;
+		overflow-y: auto;
+		max-height: 100%;
+}
+.resexam-agreeuse-cont .inner::-webkit-scrollbar {
+		opacity: 0;
+		height: 6px;
+		width: 6px;
+		background-color: #fff;
+}
+.resexam-agreeuse-cont .inner::-webkit-scrollbar:hover {
+		opacity: 1;
+}
+.resexam-agreeuse-cont .inner ::-webkit-scrollbar-track {
+		background-color: #fff;
+}
+.resexam-agreeuse-cont .inner::-webkit-scrollbar-thumb {
+		opacity: 0;
+		background: #e9e9e9;
+		border-radius: 50px;
+		background-clip: padding-box;
+}
+.resexam-agreeuse-cont .inner::-webkit-scrollbar-corner {
+		opacity: 0;
+		background-color: transparent;
+}
+.resexam-agreeuse-cont .co-list-card > li:before {
+		font-weight: 500;
+}
+.resexam-agreeuse-cont .co-list-card > li ~ li {
+		margin-top: 20px;
+}
+.resexam-agreeuse-cont .co-list-card .title {
+		font-size: 15px;
+		font-weight: 500;
+		line-height: 2;
+}
+.resexam-agreeuse-cont .messrs {
+		margin-top: 20px;
+		text-align: center;
+		font-size: 15px;
+		font-weight: 500;
+		line-height: 2;
+}
+
+.consent-personal-info {
+		margin-top: 4px;
+		text-align: center;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 2;
+}
+.consent-personal-info .date {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+}
+.consent-personal-info .date > span ~ span {
+		padding-left: 4px;
+}
+.consent-personal-info .chk-list {
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
 }
 /*# sourceMappingURL=maps/style.css.map */

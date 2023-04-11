@@ -550,3 +550,56 @@
     }
   }
 }
+
+// = 활용 동의서 테이블
+// + tbl-useagree
+.tbl-useagree {
+  width: max-content;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid $color-gray-5;
+  border-bottom: 1px solid $color-gray-5;
+
+  thead {
+    th {
+      text-align: center;
+      border-bottom: 1px solid $color-gray-5;
+      @include fontStyle(14px, 28px, 400);
+      vertical-align: middle;
+      padding: 8px;
+      color: $color-gray-1;
+    }
+  }
+  tbody {
+    border-top: 1px solid $color-gray-6;
+    th {
+      font-weight: 300;
+    }
+  }
+  th,
+  td {
+    word-break: keep-all;
+    vertical-align: middle;
+    padding: 8px;
+    border-bottom: 1px solid $color-gray-5;
+  }
+
+  // + type01
+  &.type01 {
+    thead,
+    tbody {
+      th {
+        text-align: center;
+      }
+    }
+    tbody {
+      td {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.c-t-cont-type01 {
+  @include fontStyle(16px, 32px, 400);
+}

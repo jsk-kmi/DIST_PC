@@ -6677,3 +6677,70 @@ $jo-padding: 20px;
     display: none !important;
   }
 }
+
+// + 검진 정보 활용 동의서
+.co-consent-form-field {
+  .cont-detail-body {
+    margin: {
+      top: 10px;
+      bottom: 10px;
+    }
+  }
+}
+
+.resexam-agreeuse-cont {
+  padding: 20px 10px 20px 20px;
+  height: 600px;
+  border-radius: $radius-12;
+  border: 1px solid $color-gray-5;
+  .inner {
+    padding-right: 20px;
+    @include scrollTypeSm;
+    overflow-y: auto;
+    max-height: 100%;
+  }
+
+  .co-list-card {
+    > li {
+      &:before {
+        font-weight: 500;
+      }
+      & ~ li {
+        margin-top: 20px;
+      }
+    }
+    .title {
+      @include fontStyle(15px, 30px, 500);
+    }
+  }
+
+  .messrs {
+		margin-top:20px;
+    text-align: center;
+    @include fontStyle(15px, 30px, 500);
+  }
+}
+
+.consent-personal-info {
+  margin-top: $gap-4;
+  text-align: center;
+  @include fontStyle(15px, 30px, 400);
+  .date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > span {
+      & ~ span {
+        padding-left: 4px;
+      }
+    }
+  }
+
+  .chk-list {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+}
