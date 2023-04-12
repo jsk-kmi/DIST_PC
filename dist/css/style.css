@@ -1516,6 +1516,10 @@ label + .c-m-input-list {
 		padding: 0;
 		min-height: initial;
 }
+.in-input-row .chkup-info-detail {
+		margin-top: 2px;
+		margin-left: -2px;
+}
 
 .c-input-file-group {
 		position: relative;
@@ -10854,6 +10858,9 @@ RV-02-003_1
 .final-confirm-article .final-confirm-row .in-input-row ~ .in-input-row {
 		margin-top: 12px;
 }
+.final-confirm-article .final-confirm-row .in-input-group ~ .in-input-group {
+		margin-top: 50px;
+}
 .final-confirm-article ~ .final-confirm-article {
 		padding-top: 40px;
 		border-top: 1px solid rgba(28, 28, 27, 0.1);
@@ -10897,6 +10904,9 @@ RV-02-003_1
 }
 .final-confirm-article .c-input-unit-field.type02 input[type=text] {
 		background-color: #f8f9fb;
+}
+.final-confirm-article .c-input-unit-field .c-input-unit-field {
+		margin-top: 2px;
 }
 .final-confirm-article.choice-chkup > .final-confirm-row:not(:last-child) {
 		padding-bottom: 12px;

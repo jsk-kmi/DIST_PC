@@ -4640,6 +4640,12 @@
         margin-top: 12px;
       }
     }
+
+    .in-input-group {
+      & ~ .in-input-group {
+        margin-top: 50px;
+      }
+    }
   }
   & ~ .final-confirm-article {
     padding-top: 40px;
@@ -4704,6 +4710,10 @@
       input[type='text'] {
         background-color: $color-white-3;
       }
+    }
+
+    .c-input-unit-field {
+      margin-top: 2px;
     }
   }
   // + choice-chkup
@@ -6715,7 +6725,7 @@ $jo-padding: 20px;
   }
 
   .messrs {
-		margin-top:20px;
+    margin-top: 20px;
     text-align: center;
     @include fontStyle(15px, 30px, 500);
   }
@@ -6742,5 +6752,4 @@ $jo-padding: 20px;
     align-items: flex-end;
     justify-content: flex-end;
   }
-
 }
