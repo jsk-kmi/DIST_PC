@@ -4598,7 +4598,20 @@
   .title-field {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     justify-content: space-between;
+
+    .price-subtitle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 40px;
+      width: 428px;
+      .title {
+        font-weight: 500;
+        @include coBodyBtn;
+      }
+    }
   }
   .title {
     @include coSubTitle;

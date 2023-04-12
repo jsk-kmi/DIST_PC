@@ -10828,7 +10828,21 @@ RV-02-003_1
 .final-confirm-article .title-field {
 		display: flex;
 		align-items: center;
+		justify-content: flex-end;
 		justify-content: space-between;
+}
+.final-confirm-article .title-field .price-subtitle {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 40px;
+		width: 428px;
+}
+.final-confirm-article .title-field .price-subtitle .title {
+		font-weight: 500;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 2.1428571429;
 }
 .final-confirm-article .title {
 		font-size: 16px;
