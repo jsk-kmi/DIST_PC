@@ -6046,6 +6046,9 @@ a.co-link-lined,
 .co-location-wrap .co-title-field {
 		margin-top: 12px;
 }
+.co-location-wrap .co-ref-txt {
+		margin-top: 12px;
+}
 
 .co-location,
 .co-location > ol {
