@@ -1443,13 +1443,9 @@ label + .c-m-input-list {
 		display: flex;
 		justify-content: space-between;
 }
-.row.c-input-date-group > [class*=col-] {
+.row.c-input-date-group [class*=col-] {
 		padding-left: 12px;
 		padding-right: 12px;
-}
-.row.c-input-date-group > [class*=col-] > {
-		padding-left: 15px;
-		padding-right: 15px;
 }
 .row.c-input-date-group .input-email-01 {
 		position: relative;
