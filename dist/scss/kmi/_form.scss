@@ -464,15 +464,10 @@ label {
       right: -$gap;
     }
     @include justify-row;
-    > [class*='col-'] {
+    [class*='col-'] {
       padding: {
         left: $gap;
         right: $gap;
-      }
-      > {
-        & {
-          @include paddingH(15px);
-        }
       }
     }
     .input-email-01 {

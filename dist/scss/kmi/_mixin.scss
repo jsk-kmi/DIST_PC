@@ -401,7 +401,7 @@
       @content;
     }
   } @else if($device == 'laptopHigh') {
-    @media screen and(max-width: 1440px) {
+    @media screen and (max-width: 1440px) {
       @content;
     }
   }

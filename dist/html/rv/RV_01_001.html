@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="refresh" content="300">
 
 
@@ -28,7 +25,6 @@
     <!-- 수정예정 -->
 
     <meta name="og:image" content="../../images/kmi_info_img.jpg">
-    <!-- <meta property="og:image" content="https://menu.test.co.kr/vitabridge_meta_230331.png"> -->
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="400">
     <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
@@ -59,7 +55,7 @@
                 <h1 class="skip">KMI 한국의학연구소</h1>
                 <div class="top-logo">
                     <!-- <h2 class="logo">
-        <a href="javascript:;"><img src="../../images/dummy/dummy_logo_kt02.png" alt="KT" /></a>
+        <a href="javascript:;"><img src="../../images/dummy/dummy_logo_kt02.png" alt="KT"></a>
       </h2> -->
                     <!-- [Comment]
 				- 로고영역 흰배경 설정 시 클래스 추가 : type-color
@@ -284,7 +280,7 @@
                                         <li class="card-list">
                                             <div class="client-card">
                                                 <div class="none-data">
-                                                    <div class="img"><img src="../../images/logo/kmi/kmi_06.svg" alt="" /></div>
+                                                    <div class="img"><img src="../../images/logo/kmi/kmi_06.svg" alt=""></div>
                                                     <p class="co-none-txt">검진 대상자가 없습니다.</p>
                                                 </div>
                                             </div>
@@ -417,20 +413,24 @@
 
                                 </div>
                             </div>
+
+                            <!-- [ mod(230419) ]
+							 - 대상자 수정 버튼 추가
+							-->
                             <div class="resevation-btmbar-wrap">
                                 <div class="resevation-btm-bar type01">
                                     <div class="buttons">
                                         <div class="left">
-
-                                            <a href="javascript:;" class="co-btn btn-reservation-prev"><span>이전</span></a>
+                                            <a href="javascript:;" class="co-btn btn-reservation-prev is-active"><span>이전</span></a>
                                         </div>
                                         <div class="right">
-
-                                            <a href="javascript:;" class="co-btn btn-reservation-next"><span>다음</span></a>
+                                            <button type="button" class="co-btn is-outline-navy-1"><span>대상자 수정</span></button>
+                                            <a href="javascript:;" class="co-btn bg-navy-1 btn-reservation-next"><span>다음</span></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- [ // mod(230419) ] -->
                         </div>
                     </div>
                 </section>
