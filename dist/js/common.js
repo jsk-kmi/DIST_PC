@@ -138,28 +138,61 @@ var rollingTxtBanner = function rollingTxtBanner() {
       $nowFirstRow.hide(duration, listRow);
     }
   });
-}; // + sideMenuToggle
+};
 
+var mainCont = document.querySelector('#container');
+var menuHamburger = document.querySelector('.logo ');
+var titMenu = document.querySelectorAll('.s-menu');
+menuHamburger.addEventListener('click', function () {
+  if (!mainCont.classList.contains('is-active')) {
+    mainCont.classList.add('is-active');
+    titMenu.forEach(function (item) {
+      item.classList.add('is-blind');
+    });
+    document.querySelectorAll('.sidebar-menu > li > a').forEach(function (e) {
+      e.classList.remove('on');
+    });
+    document.querySelectorAll('.sidebar-sub-menu').forEach(function (e) {
+      e.style.display = 'none';
+    });
+  } else {
+    mainCont.classList.remove('is-active');
+    titMenu.forEach(function (item) {
+      item.classList.remove('is-blind');
+    });
+  }
+}); // + sideMenuToggle
+
+var sideMenuList = $('.sidebar-menu > li'),
+    selectedSideLink = sideMenuList.children('a'),
+    sidebarSubMenuList = $('.sidebar-menu ul'),
+    slideDuration = 300;
 
 var sideMenuToggle = function sideMenuToggle() {
   $('.sidebar-menu > li').on('click', '> a', function (e) {
     e.preventDefault();
-    var seletedMenu = $(e.currentTarget),
-        sideMenuList = $('.sidebar-menu > li'),
-        selectedSideLink = sideMenuList.children('a'),
-        sidebarSubMenuList = $('.sidebar-menu ul'),
-        slideDuration = 300; // 활성화 사이드바 컨트롤
+    var containClass = mainCont.classList.contains('is-active'),
+        el = $(e.currentTarget);
 
-    if (seletedMenu.hasClass('on') && seletedMenu.next().is(':visible')) {
-      seletedMenu.removeClass('on');
-      seletedMenu.next().stop().slideUp(slideDuration);
-    } else if (!(seletedMenu.hasClass('on') && seletedMenu.next().is(':visible'))) {
-      selectedSideLink.removeClass('on');
-      sidebarSubMenuList.stop().slideUp(slideDuration);
-      seletedMenu.addClass('on');
-      seletedMenu.next().stop().slideDown(slideDuration);
+    if (containClass) {
+      return;
+    } else {
+      return subMenuSlideToggle(el);
     }
   });
+};
+
+var subMenuSlideToggle = function subMenuSlideToggle(seletedMenu) {
+  // 활성화 사이드바 컨트롤
+  if (seletedMenu.hasClass('on') && seletedMenu.next().is(':visible')) {
+    seletedMenu.removeClass('on');
+    seletedMenu.next().stop().slideUp(slideDuration);
+  } else if (!(seletedMenu.hasClass('on') && seletedMenu.next().is(':visible'))) {
+    selectedSideLink.removeClass('on');
+    sidebarSubMenuList.stop().slideUp(slideDuration);
+    seletedMenu.addClass('on');
+    seletedMenu.next().stop().slideDown(slideDuration);
+  }
 }; // + 검진예약 Sidebar Floating
 
 

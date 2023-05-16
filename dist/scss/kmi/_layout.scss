@@ -5,6 +5,12 @@
   flex: 1 0 auto;
   height: 100%;
 
+  &.is-active {
+    #sideNav {
+      width: 80px;
+    }
+  }
+
   // + login
   &.login-container {
     min-height: 100%;

@@ -401,3 +401,26 @@ $ico-chkbox-list01: (is-default, is-white, is-main, is-sub, is-red, is-full);
   display: inline-block;
   background: url($image-ico-path + 'ico_chk_01.svg') center/100% auto no-repeat;
 }
+
+// + 결과 수치
+
+.c-res-txt-type01 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > i {
+    margin-left: 6px;
+  }
+}
+
+[class^='ico-res-arrow'] {
+  @include icoResArrowColor($color-navy-1);
+}
+
+.ico-res-arrow-up {
+  transform: rotate(-180deg);
+}
+
+.ico-res-arrow-down {
+  transform: rotate(0);
+}

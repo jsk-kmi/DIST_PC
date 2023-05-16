@@ -3948,11 +3948,38 @@ textarea.type02,
 		background: url("../images/ico/ico_chk_01.svg") center/100% auto no-repeat;
 }
 
+.c-res-txt-type01 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+}
+.c-res-txt-type01 > i {
+		margin-left: 6px;
+}
+
+[class^=ico-res-arrow] {
+		border-color: #253981;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 10px solid #253981;
+}
+
+.ico-res-arrow-up {
+		transform: rotate(-180deg);
+}
+
+.ico-res-arrow-down {
+		transform: rotate(0);
+}
+
 #container {
 		min-height: 100%;
 		display: flex;
 		flex: 1 0 auto;
 		height: 100%;
+}
+#container.is-active #sideNav {
+		width: 80px;
 }
 #container.login-container {
 		min-height: 100%;
@@ -10700,6 +10727,14 @@ RV-02-003_1
 }
 .result-article .cont-field .cont > em {
 		font-weight: 700;
+}
+
+.co-accrodion-list.medical-chkup-result-list [class^=ico-res-arrow] {
+		border-color: #ff6633;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 10px solid #ff6633;
+		margin-top: 1px;
 }
 
 .chkup-result-cont.type01 > .row {

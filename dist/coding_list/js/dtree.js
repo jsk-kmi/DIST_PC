@@ -242,7 +242,7 @@ dTree.prototype.node = function (node, nodeId) {
       node.icon = this.icon.root;
       node.iconOpen = this.icon.root;
     }
-    str += '<img id="i' + this.obj + nodeId + '" src="' + (node._io ? node.iconOpen : node.icon) + '" alt="" />';
+    str += '<img id="i' + this.obj + nodeId + '" src="' + (node._io ? node.iconOpen : node.icon) + '" alt="">';
   }
   var color = '';
   if (node.title) {
@@ -303,14 +303,14 @@ dTree.prototype.node = function (node, nodeId) {
 dTree.prototype.indent = function (node, nodeId) {
   var str = '';
   if (this.root.id != node.pid) {
-    for (var n = 0; n < this.aIndent.length; n++) str += '<img src="' + (this.aIndent[n] == 1 && this.config.useLines ? this.icon.line : this.icon.empty) + '" alt="" />';
+    for (var n = 0; n < this.aIndent.length; n++) str += '<img src="' + (this.aIndent[n] == 1 && this.config.useLines ? this.icon.line : this.icon.empty) + '" alt="">';
     node._ls ? this.aIndent.push(0) : this.aIndent.push(1);
     if (node._hc) {
       str += '<a href="javascript: ' + this.obj + '.o(' + nodeId + ');"><img id="j' + this.obj + nodeId + '" src="';
       if (!this.config.useLines) str += node._io ? this.icon.nlMinus : this.icon.nlPlus;
       else str += node._io ? (node._ls && this.config.useLines ? this.icon.minusBottom : this.icon.minus) : node._ls && this.config.useLines ? this.icon.plusBottom : this.icon.plus;
-      str += '" alt="" /></a>';
-    } else str += '<img src="' + (this.config.useLines ? (node._ls ? this.icon.joinBottom : this.icon.join) : this.icon.empty) + '" alt="" />';
+      str += '" alt=""></a>';
+    } else str += '<img src="' + (this.config.useLines ? (node._ls ? this.icon.joinBottom : this.icon.join) : this.icon.empty) + '" alt="">';
   }
   return str;
 };
@@ -432,14 +432,7 @@ dTree.prototype.clearCookie = function () {
 
 // [Cookie] Sets value in a cookie
 dTree.prototype.setCookie = function (cookieName, cookieValue, expires, path, domain, secure) {
-  document.cookie =
-    escape(cookieName) +
-    '=' +
-    escape(cookieValue) +
-    (expires ? '; expires=' + expires.toGMTString() : '') +
-    (path ? '; path=' + path : '') +
-    (domain ? '; domain=' + domain : '') +
-    (secure ? '; secure' : '');
+  document.cookie = escape(cookieName) + '=' + escape(cookieValue) + (expires ? '; expires=' + expires.toGMTString() : '') + (path ? '; path=' + path : '') + (domain ? '; domain=' + domain : '') + (secure ? '; secure' : '');
 };
 
 // [Cookie] Gets a value from a cookie
