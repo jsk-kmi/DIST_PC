@@ -138,30 +138,32 @@ var rollingTxtBanner = function rollingTxtBanner() {
       $nowFirstRow.hide(duration, listRow);
     }
   });
-};
+}; // # Menu Toggle hamburger
+// + menu-hamburger
+
 
 var mainCont = document.querySelector('#container');
-var menuHamburger = document.querySelector('.logo ');
-var titMenu = document.querySelectorAll('.s-menu');
-menuHamburger.addEventListener('click', function () {
-  if (!mainCont.classList.contains('is-active')) {
-    mainCont.classList.add('is-active');
-    titMenu.forEach(function (item) {
-      item.classList.add('is-blind');
-    });
-    document.querySelectorAll('.sidebar-menu > li > a').forEach(function (e) {
-      e.classList.remove('on');
-    });
-    document.querySelectorAll('.sidebar-sub-menu').forEach(function (e) {
-      e.style.display = 'none';
-    });
-  } else {
-    mainCont.classList.remove('is-active');
-    titMenu.forEach(function (item) {
-      item.classList.remove('is-blind');
-    });
-  }
-}); // + sideMenuToggle
+var menuHamburger = document.querySelector('.menu-hamburger');
+var titMenu = document.querySelectorAll('.s-menu'); // menuHamburger.addEventListener('click', function () {
+//   if (!mainCont.classList.contains('is-active')) {
+//     mainCont.classList.add('is-active');
+//     titMenu.forEach((item) => {
+//       item.classList.add('is-blind');
+//     });
+//     document.querySelectorAll('.sidebar-menu > li > a').forEach((e) => {
+//       e.classList.remove('on');
+//     });
+//     document.querySelectorAll('.sidebar-sub-menu').forEach((e) => {
+//       e.style.display = 'none';
+//     });
+//   } else {
+//     mainCont.classList.remove('is-active');
+//     titMenu.forEach((item) => {
+//       item.classList.remove('is-blind');
+//     });
+//   }
+// });
+// + sideMenuToggle
 
 var sideMenuList = $('.sidebar-menu > li'),
     selectedSideLink = sideMenuList.children('a'),
@@ -180,10 +182,16 @@ var sideMenuToggle = function sideMenuToggle() {
       return subMenuSlideToggle(el);
     }
   });
-};
+}; // 활성화 사이드바 컨트롤
 
-var subMenuSlideToggle = function subMenuSlideToggle(seletedMenu) {
-  // 활성화 사이드바 컨트롤
+
+var subMenuSlideToggle = function subMenuSlideToggle(el) {
+  var seletedMenu = el,
+      sideMenuList = $('.sidebar-menu > li'),
+      selectedSideLink = sideMenuList.children('a'),
+      sidebarSubMenuList = $('.sidebar-menu ul'),
+      slideDuration = 300;
+
   if (seletedMenu.hasClass('on') && seletedMenu.next().is(':visible')) {
     seletedMenu.removeClass('on');
     seletedMenu.next().stop().slideUp(slideDuration);
