@@ -39,6 +39,7 @@
         <p><a href="#container" tabindex="1">본문 바로가기</a></p>
         <p><a href="#sideNav" tabindex="1">주메뉴 바로가기</a></p>
     </div>
+
     <div id="container" class="resevation-container">
         <!-- Side Navigation -->
         <nav id="sideNav">
@@ -127,7 +128,6 @@
                 </div>
             </div>
         </nav>
-
         <!-- Content-Wrapper -->
         <div class="content-wrapper">
             <!-- Header-->
@@ -162,17 +162,14 @@
             </header>
             <!-- // Header-->
             <div class="contents-wrap">
-
                 <!-- Contents -->
                 <section class="contents">
                     <div class="cont-wrap">
-
                         <!-- reservation-sidebar -->
                         <div class="reservation-sidebar">
                             <div class="inner-wrap">
                                 <em class="top-title">대상자 선택</em>
                                 <div class="reservation-step-field">
-
                                     <!-- [comment]
 																	- side list 상태별 스타일 제어 class
 																	- is-now : 현재
@@ -230,7 +227,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- // reservation-sidebar -->
                         <div class="contents-area reserve-contents-area">
                             <div class="co-location-wrap">
@@ -254,7 +250,6 @@
                                         <div class="col-4">
                                             <div class="co-title-field">
                                                 <h2 class="sub-title">1차 희망 신청일자</h2>
-
                                                 <!-- [Comment] 옵션 삭제(10/29)
                           <!-- <div class="c-chkbox">
                             <input type="checkbox" id="chkOnlyMorningDate01_01">
@@ -263,7 +258,6 @@
                                             </div>
                                             <div class="co-cont-article input-cont-article">
                                                 <div class="c-input-list-basic input-cont">
-
                                                     <!-- [ mod(221029)]
 														- 옵션 추가
 														-->
@@ -310,15 +304,6 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col label-input">
-                                                            <label for="rsvHopeDate01_01">예약일자</label>
-                                                            <div class="c-input-date">
-                                                                <input type="text" class="c-input btn-date-picker" id="rsvHopeDate02_01" placeholder="YYYY-MM-DD" autocomplete="off">
-                                                                <span><i class="date-btn"></i></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col label-input">
                                                             <label for="rsvHopeDate02_01">예약일자</label>
                                                             <div class="c-input-date">
                                                                 <input type="text" class="c-input" id="rsvHopeDate02_01" placeholder="YYYY-MM-DD" autocomplete="off">
@@ -348,7 +333,6 @@
                                             </div>
                                             <div class="co-cont-article input-cont-article">
                                                 <div class="c-input-list-basic input-cont">
-
                                                     <!-- [ mod(221029)]
 														- 옵션 추가
 														-->
@@ -437,17 +421,10 @@
                         </div>
                     </div>
                 </section>
-                <div class="c-loading-wrapper" style="display:none;">
-                    <section class="is-loading">
-                        <div>
-                            <img src="../../images/logo/kmi/loading_kmi.gif" alt="">
-                            <p class="txt">로딩중 . . .</p>
-                        </div>
-                    </section>
-                </div>
-
                 <!-- // Contents -->
-            </div> <!-- Footer -->
+            </div>
+
+            <!-- Footer -->
             <footer class="footer">
                 <div class="container">
                     <div class="logo">
@@ -485,95 +462,17 @@
                 </div>
             </footer>
         </div>
-
         <!-- // Content-Wrapper -->
     </div>
     <script src="../../lib/swiper/js/swiper.js"></script>
     <script src="../../js/common.js"></script>
-    <link rel="stylesheet" href="../../lib/jquery-ui/css/jquery-ui.min.css" />
-    <link rel="stylesheet" href="../../css/style.css" />
-    <script src="../../lib/jquery/jquery.min.js"></script>
-    <script src="../../lib/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
-    <script src="../../js/date.js"></script>
     <script>
-        $(function() {
-            // $('.btn-date-picker').datepicker({
-            // 	beforeShowDay: disableAllTheseDays,
-            // 	beforeShow: function (input) {
-            // 		datepickerBtmBar(input);
-            // 	},
-            // 	onChangeMonthYear: function (input) {
-            // 		datepickerBtmBar(input);
-            // 	},
-            // });
-            // // 특정날짜 disabled List
-            var disabledDays = ['2022-7-9', '2022-7-26', '2022-7-26', '2022-8-1'];
-
-            function disableAllTheseDays(date) {
-                var m = date.getMonth(),
-                    d = date.getDate(),
-                    y = date.getFullYear();
-
-                for (i = 0; i < disabledDays.length; i++) {
-                    if ($.inArray(y + '-' + (m + 1) + '-' + d, disabledDays) != -1) {
-                        return [false];
-                    }
-                }
-                return [date.getDay() != 0, '']; // 일요일 제어
-                return [true];
-            }
-
-            //예약일자1
-
-
-            $('.btn-date-picker').on('click', function() {
-
-                // $('.btn-date-picker').datepicker('destroy');
-
-                console.log('test');
-
-
-
-            });
-
-
-            // setTimeout(function () {
-            // 	$('.ui-datepicker-div').css('z-index', 0);
-            // }, 1000)
-
-            $('.btn-date-picker').datepicker({
-                beforeShowDay: function(d) {
-                    $('.ui-datepicker').css('opacity', 0);
-                    $(".c-loading-wrapper").show();
-                    setTimeout(function() {
-                        $(".c-loading-wrapper").hide();
-                    }, 500);
-                    return disableAllTheseDays(d);
-                },
-                beforeShow: function(input) {
-                    datepickerBtmBar(input);
-                    setTimeout(function() {
-                        $('.ui-datepicker').css('z-index', 100);
-
-                    }, 0);
-                },
-                onSelect: function() {
-                    getTime();
-                },
-                onChangeMonthYear: function(input) {
-                    datepickerBtmBar(input);
-                },
-                afterShow: function() {
-                    setTimeout(function() {
-                        $(".c-loading-wrapper").hide();
-                    }, 500);
-                },
-            });
+        $(window).on('load resize', function() {
+            reservationSideBarFloating();
         });
-
-        setTimeout(function() {
-            $('.ui-datepicker').css('opacity', 1);
-        }, 4000)
+        $(window).on('load resize scroll', function() {
+            reservationBtmBarFixed();
+        });
     </script>
 </body>
 
