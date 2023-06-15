@@ -13,7 +13,7 @@ $.datepicker.setDefaults({
   yearSuffix: '.',
   dateFormat: 'yy-mm-dd',
   showMonthAfterYear: true,
-  showOtherMonths: true,
+  showOtherMonths: false,
   showButtonPanel: true,
   autoSize: true,
   changeMonth: true,

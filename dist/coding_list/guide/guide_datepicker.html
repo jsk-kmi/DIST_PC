@@ -20,7 +20,7 @@
 		<!-- [Tab - 페이지 이동 ] -->
 		<div class="title-box">
 			<h2 class="h2_guide">Date</h2>
-	</div>
+		</div>
 		<div class="guide_descbox">
 			<h3 class="g-title"></h3>
 			<div class="inner_desc">
@@ -89,6 +89,14 @@
 							return [true];
 						}
 					});
+
+					$(document).click(function (e) {
+						var $target = $(event.target);
+						if (!$target.is(".ui-datepicker") || !$target.is('.btn-date-picker')) {
+							$(".ui-datepicker").css('display', 'block');
+						}
+					});
+
 				</script>
 			</xmp>
 
@@ -108,7 +116,6 @@
 			$('.btn-date-picker').datepicker({
 
 				beforeShowDay: disableAllTheseDays,
-
 				beforeShow: function (input) {
 					$('.c-datepicker-layer').addClass('show');
 
