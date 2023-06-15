@@ -4387,10 +4387,6 @@
 // + medical-chkup-result-list
 .co-accrodion-list {
   &.medical-chkup-result-list {
-    [class^='ico-res-arrow'] {
-      @include icoResArrowColor($color-orange-3);
-      margin-top: 1px;
-    }
   }
 }
 
@@ -4477,7 +4473,6 @@
     }
   }
 }
-
 
 // 검진 결과 비교
 .tbl-chkresult-compare {

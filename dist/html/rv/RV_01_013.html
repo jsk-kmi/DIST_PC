@@ -39,7 +39,6 @@
         <p><a href="#container" tabindex="1">본문 바로가기</a></p>
         <p><a href="#sideNav" tabindex="1">주메뉴 바로가기</a></p>
     </div>
-
     <div id="container" class="resevation-container">
         <!-- Side Navigation -->
         <nav id="sideNav">
@@ -128,6 +127,7 @@
                 </div>
             </div>
         </nav>
+
         <!-- Content-Wrapper -->
         <div class="content-wrapper">
             <!-- Header-->
@@ -162,14 +162,17 @@
             </header>
             <!-- // Header-->
             <div class="contents-wrap">
+
                 <!-- Contents -->
                 <section class="contents">
                     <div class="cont-wrap">
+
                         <!-- reservation-sidebar -->
                         <div class="reservation-sidebar">
                             <div class="inner-wrap">
                                 <em class="top-title">대상자 선택</em>
                                 <div class="reservation-step-field">
+
                                     <!-- [comment]
 																	- side list 상태별 스타일 제어 class
 																	- is-now : 현재
@@ -227,6 +230,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- // reservation-sidebar -->
                         <div class="contents-area reserve-contents-area">
                             <div class="co-location-wrap">
@@ -250,6 +254,7 @@
                                         <div class="col-4">
                                             <div class="co-title-field">
                                                 <h2 class="sub-title">1차 희망 신청일자</h2>
+
                                                 <!-- [Comment] 옵션 삭제(10/29)
                           <!-- <div class="c-chkbox">
                             <input type="checkbox" id="chkOnlyMorningDate01_01">
@@ -258,6 +263,7 @@
                                             </div>
                                             <div class="co-cont-article input-cont-article">
                                                 <div class="c-input-list-basic input-cont">
+
                                                     <!-- [ mod(221029)]
 														- 옵션 추가
 														-->
@@ -306,7 +312,7 @@
                                                         <div class="col label-input">
                                                             <label for="rsvHopeDate01_01">예약일자</label>
                                                             <div class="c-input-date">
-                                                                <input type="text" class="c-input" id="rsvHopeDate01_01" placeholder="YYYY-MM-DD" autocomplete="off">
+                                                                <input type="text" class="c-input btn-date-picker" id="rsvHopeDate01_01" placeholder="YYYY-MM-DD" autocomplete="off">
                                                                 <span><i class="date-btn"></i></span>
                                                             </div>
                                                         </div>
@@ -333,6 +339,7 @@
                                             </div>
                                             <div class="co-cont-article input-cont-article">
                                                 <div class="c-input-list-basic input-cont">
+
                                                     <!-- [ mod(221029)]
 														- 옵션 추가
 														-->
@@ -407,6 +414,7 @@
                                                 <h2 class="sub-title">연기검사 신청 일자</h2>
                                             </div>
                                             <div class="co-cont-article input-cont-article">
+
                                                 <!-- [ mod(221029) ]
 														- 신청 내역 1개만 표시
 														-->
@@ -463,10 +471,9 @@
                         </div>
                     </div>
                 </section>
-                <!-- // Contents -->
-            </div>
 
-            <!-- Footer -->
+                <!-- // Contents -->
+            </div> <!-- Footer -->
             <footer class="footer">
                 <div class="container">
                     <div class="logo">
@@ -504,16 +511,80 @@
                 </div>
             </footer>
         </div>
+
         <!-- // Content-Wrapper -->
     </div>
     <script src="../../lib/swiper/js/swiper.js"></script>
     <script src="../../js/common.js"></script>
+    <script src="../../js/date.js"></script>
     <script>
         $(window).on('load resize', function() {
             reservationSideBarFloating();
         });
         $(window).on('load resize scroll', function() {
             reservationBtmBarFixed();
+        });
+
+        $(function() {
+
+            $('#container').prepend('<div class="c-datepicker-layer"></div>');
+            $('.btn-date-picker').datepicker({
+
+                beforeShowDay: disableAllTheseDays,
+
+                beforeShow: function(input) {
+                    $('.c-datepicker-layer').addClass('show');
+                    window.addEventListener('click', function(e) {
+                        var $nowTarget = e.target.classList;
+
+                        if (!$nowTarget.contains('.ui-datepicker')) {
+
+                            document.querySelector('.ui-datepicker').style.display = 'block'
+                        }
+                    });
+
+
+                    datepickerBtmBar(input)
+                },
+                onChangeMonthYear: function(input) {
+                    datepickerBtmBar(input)
+                },
+                onClose: function() {
+                    $(this).data('datepicker').inline = false;
+
+                },
+                onSelect: function() {
+                    $(this).data('datepicker').inline = false;
+
+
+                }
+            })
+            // 특정날짜 disabled List
+            var disabledDays = ['2022-7-9', '2022-7-26', '2022-7-26', '2022-8-1']
+
+            function disableAllTheseDays(date) {
+                var m = date.getMonth(),
+                    d = date.getDate(),
+                    y = date.getFullYear()
+
+                for (i = 0; i < disabledDays.length; i++) {
+                    date
+                    if ($.inArray(y + '-' + (m + 1) + '-' + d, disabledDays) != -1) {
+                        return [false]
+                    }
+                }
+                return [date.getDay() != 0, ''] // 일요일 제어
+                return [true]
+            }
+        });
+
+        $(document).click(function(e) {
+            var $nowTarget = $(e.target);
+            console.log($nowTarget);
+
+            if (!$nowTarget.is(".ui-datepicker") || !$nowTarget.is('.btn-date-picker')) {
+                $(".ui-datepicker").css('display', 'block');
+            }
         });
     </script>
 </body>

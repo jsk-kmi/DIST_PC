@@ -982,9 +982,10 @@ st .c-panel.tab-panel + .c-panel {
 		padding-bottom: 20px;
 }
 .c-modal-body .c-sub-title {
-		font-size: 16px;
+		font-size: 20px;
 		font-weight: 500;
-		line-height: 2;
+		line-height: 1.8;
+		color: #253981;
 }
 .c-modal-body .c-modal-middle {
 		margin-bottom: 30px;
@@ -10727,14 +10728,6 @@ RV-02-003_1
 }
 .result-article .cont-field .cont > em {
 		font-weight: 700;
-}
-
-.co-accrodion-list.medical-chkup-result-list [class^=ico-res-arrow] {
-		border-color: #ff6633;
-		border-left: 5px solid transparent;
-		border-right: 5px solid transparent;
-		border-top: 10px solid #ff6633;
-		margin-top: 1px;
 }
 
 .chkup-result-cont.type01 > .row {
