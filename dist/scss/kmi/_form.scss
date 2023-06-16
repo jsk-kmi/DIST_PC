@@ -502,6 +502,42 @@ label {
   }
 }
 
+.c-inquiry-date-group {
+  display: flex;
+  margin: {
+    left: -6px;
+    right: -6px;
+  }
+  .c-input-date,
+  .buttons {
+    padding: {
+      left: 6px;
+      right: 6px;
+    }
+  }
+  > .col {
+    flex: {
+      grow: 1;
+      shrink: 1;
+      basis: 100%;
+    }
+  }
+  .buttons {
+    flex: {
+      shrink: 0;
+      basis: auto;
+    }
+    width: auto;
+    @supports (min-width: fit-content) {
+      min-width: fit-content;
+    }
+    .co-btn {
+      min-width: auto;
+      @include coTxtCaption;
+    }
+  }
+}
+
 .c-article {
   &.input-list {
     .input-date-group {

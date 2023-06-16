@@ -1478,6 +1478,39 @@ label + .c-m-input-list {
 		padding-right: 4px;
 }
 
+.c-inquiry-date-group {
+		display: flex;
+		margin-left: -6px;
+		margin-right: -6px;
+}
+.c-inquiry-date-group .c-input-date,
+.c-inquiry-date-group .buttons {
+		padding-left: 6px;
+		padding-right: 6px;
+}
+.c-inquiry-date-group > .col {
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: 100%;
+}
+.c-inquiry-date-group .buttons {
+		flex-shrink: 0;
+		flex-basis: auto;
+		width: auto;
+}
+@supports ((min-width: -moz-fit-content) or (min-width: fit-content)) {
+		.c-inquiry-date-group .buttons {
+				min-width: -moz-fit-content;
+				min-width: fit-content;
+		}
+}
+.c-inquiry-date-group .buttons .co-btn {
+		min-width: auto;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 2;
+}
+
 .c-article.input-list .input-date-group [class*=col-] {
 		padding-top: 0;
 		padding-bottom: 0;

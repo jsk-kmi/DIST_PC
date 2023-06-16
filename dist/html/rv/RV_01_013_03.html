@@ -39,7 +39,6 @@
         <p><a href="#container" tabindex="1">본문 바로가기</a></p>
         <p><a href="#sideNav" tabindex="1">주메뉴 바로가기</a></p>
     </div>
-
     <div id="container" class="resevation-container">
         <!-- Side Navigation -->
         <nav id="sideNav">
@@ -128,6 +127,7 @@
                 </div>
             </div>
         </nav>
+
         <!-- Content-Wrapper -->
         <div class="content-wrapper">
             <!-- Header-->
@@ -162,14 +162,17 @@
             </header>
             <!-- // Header-->
             <div class="contents-wrap">
+
                 <!-- Contents -->
                 <section class="contents">
                     <div class="cont-wrap">
+
                         <!-- reservation-sidebar -->
                         <div class="reservation-sidebar">
                             <div class="inner-wrap">
                                 <em class="top-title">대상자 선택</em>
                                 <div class="reservation-step-field">
+
                                     <!-- [comment]
 																	- side list 상태별 스타일 제어 class
 																	- is-now : 현재
@@ -227,6 +230,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- // reservation-sidebar -->
                         <div class="contents-area reserve-contents-area">
                             <div class="co-location-wrap">
@@ -250,7 +254,9 @@
                                         <div class="col-4">
                                             <div class="co-title-field">
                                                 <h2 class="sub-title">희망 신청일자</h2>
+
                                                 <!-- [Comment] 옵션 삭제(10/29)-->
+
                                                 <!-- <div class="c-chkbox">
                             <input type="checkbox" id="chkOnlyMorningDate04_01">
                             <label for="chkOnlyMorningDate04_01" class="chk-label"><i></i><span>오전 예약 가능일만 보기</span></label>
@@ -258,6 +264,7 @@
                                             </div>
                                             <div class="co-cont-article input-cont-article">
                                                 <div class="c-input-list-basic input-cont">
+
                                                     <!-- [ mod(221029)]
 														- 옵션 추가
 														-->
@@ -302,15 +309,26 @@
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    <!-- [ mod(230616) ]
+														- 조회 버튼 추가
+													-->
                                                     <div class="row">
                                                         <div class="col label-input">
                                                             <label for="rsvHopeDate04_01">예약일자</label>
-                                                            <div class="c-input-date">
-                                                                <input type="text" class="c-input" id="rsvHopeDate04_01" placeholder="YYYY-MM-DD" autocomplete="off">
-                                                                <span><i class="date-btn"></i></span>
+                                                            <div class="c-inquiry-date-group">
+                                                                <div class="c-input-date">
+                                                                    <input type="text" class="c-input btn-date-picker" id="rsvHopeDate04_01" placeholder="YYYY-MM-DD" autocomplete="off">
+                                                                    <span><i class="date-btn"></i></span>
+                                                                </div>
+                                                                <div class="buttons">
+                                                                    <button type="button" class="co-btn bg-navy-1"><span>조희</span></button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    <!-- [ // mod(230616) ] -->
                                                     <div class="row">
                                                         <div class="col label-input">
                                                             <label for="rsvHopeTime04_02">예약시간</label>
@@ -346,10 +364,9 @@
                         </div>
                     </div>
                 </section>
-                <!-- // Contents -->
-            </div>
 
-            <!-- Footer -->
+                <!-- // Contents -->
+            </div> <!-- Footer -->
             <footer class="footer">
                 <div class="container">
                     <div class="logo">
@@ -387,6 +404,7 @@
                 </div>
             </footer>
         </div>
+
         <!-- // Content-Wrapper -->
     </div>
     <script src="../../lib/swiper/js/swiper.js"></script>
