@@ -25,4 +25,4 @@
 
   - IE 호환성 대응 완료
     - SCSS → CSS/CSS3 컴파일 (Gulp)
-    - ES6 → ES2015 컴파일 (Babel)
+    - ES6 → ES5 컴파일 (Babel)
