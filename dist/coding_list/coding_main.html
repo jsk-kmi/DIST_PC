@@ -26,23 +26,35 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>공통</td>
+						<th>공통</th>
 						<td>
 							<ul class="cont-list">
 								<li>
-									<em class="fc-red">※ 퍼블리싱 원본 파일 수정 및 git push X ※<br>(해당 소스는 퍼블리싱 gulp setting를 통해 Complie된 소스로,
-										<br>수정 할 경우
-										퍼블리싱 파일의 code 및 language 변환 과정에서 충돌 발생)</em>
+									<em class="fc-red">※ UI개발 원본 파일 수정 및 git push X ※<br />(해당 소스는 UI개발 gulp setting를 통해 Complie된 소스로,
+										<br />수정 할 경우 UI개발 파일의 code 및 language 변환 과정에서 충돌 발생)</em>
 								</li>
 								<li>
-									<p>
-										퍼블리싱 원본 파일의 수정 및 추가 작업이 필요할 경우 별도의 파일을 생성하여 제어하여 원본 소스에 영향이 없도록 함
+									<p>퍼블리싱 원본 파일의 수정 및 추가 작업이 필요할 경우 별도의 파일을 생성하여 제어하여 원본 소스에 영향이 없도록 함 <br /></p>
+								</li>
+								<li>
+									<div> 퍼블리싱 파일 내에 class명을 제외한 수정이 필요한 속성값은 작업 페이지에 맞게 <em class="fc-red"> <u>반드시 네이밍 변경하여 사용</u></em>
+									</div>
+								</li>
+								<li>
+									<div>작업 전달 사항 및 Info &gt; Guide 목록 확인 후 작업 진행 필요</div>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>작업방식</th>
+						<td>
+							<ul class="cont-list">
+								<li>
+									<p>퍼블리싱 Coding Guide의 Component Source를 조합하거나 <br />기존 목록 내 페이지 유사한 UI를 참고소스로 하여 개발자가 페이지 Markup 진행 중
 									</p>
 								</li>
-								<li>
-									<p>수정이 필요한 파일(*.js, *.html) 의 경우 퍼블리싱/개발 소스 별도 관리 요망</p>
-								</li>
-								<li>작업 전달 사항 및 Info &gt; Guide 목록 확인 후 작업 진행 필요</li>
+								<li>기존 페이지에 없는 UI화면 또는 개발 요청 시 직접 UI개발 작업 후 소스 전달</li>
 							</ul>
 						</td>
 					</tr>
@@ -50,15 +62,12 @@
 						<th>작업 환경</th>
 						<td>
 							<ul class="cont-list">
-								<li>문서 및 버전 : HTML5, SCSS, ES6 &amp; ES2015, jQuery</li>
+								<li>문서 및 버전 : HTML5, SCSS, ES6 &amp; ES5, jQuery</li>
 								<li>인코딩 : UTF-8</li>
 								<li>Build System: Gulp</li>
-								<li>웹 호환성 : <em style="color: blue; padding-left:5px; padding-right:5px;">IE11 이상, Edge, Chrome, Firefox
-										(Cross Broswing Check Done)</em></li>
-								<li>IE 호환성 대응 완료
-									<br>- SCSS → CSS/CSS3 컴파일 (Gulp)
-									<br>- ES6 → ES2015 컴파일 (Babel)
-								</li>
+								<li>웹 호환성 : <em style="color: blue; padding-left: 5px; padding-right: 5px">IE11 이상, Edge, Chrome,
+										Firefox (Cross Broswing Check Done)</em></li>
+								<li>IE 호환성 대응 완료 <br />- SCSS → CSS/CSS3 컴파일 (Gulp) <br />- ES6 → ES5 컴파일 (Babel)</li>
 								<li>웹 접근성 : Markup 부분 대응</li>
 								<li>해상도 : 1920px ~</li>
 							</ul>
@@ -73,19 +82,19 @@
 								</li>
 								<li>Source Diff 후 Markup Source 일괄 반영</li>
 								<li>
-									<div>
-										소스 내 전달사항 및 수정 부분 주석 표기방식
-										<div class="exam">ex) type1</div>
+									<div> 소스 내 전달사항 및 수정 부분 주석 표기방식 <div class="exam">ex) type1</div>
 										<span class="code">&lt;!-- [ mod(220602) ] --&gt;</span>
 										<div class="exam">ex) type2</div>
-										<div class="code" style="display: inline-block">
-											&lt;!-- [ mod(220602) ] <br>
-											<span class="space"></span>- 수정사항] <br>--&gt;
+										<div class="code" style="display: inline-block"> &lt;!-- [ mod(220602) ] <br />
+											<span class="space"></span>- 수정사항] <br />--&gt;
 										</div>
 									</div>
 								</li>
-								<li>퍼블리싱 소스 내 <em class="fc-red" style="padding-left:5px; padding-right:5px;"> Guide comment 주석은 개발
+								<li>UI개발 소스 내 <em class="fc-red" style="padding-left: 5px; padding-right: 5px"> Guide comment 주석은 개발
 										소스에서 삭제</em>후 작업 요망</li>
+								<li style="display:block"> 팝업 등 일부 소스 응용 시 <u class="fc-red">소스 파악 후 해당 부분의 소스만 Copy&Paste 사용 (html 소스 전체 Copy X)</u><br>
+									<em class="fc-red">* html, title 등 마크업 소스 중복 선언 절대 사용 X (Web Standard Error)</em>
+								</li>
 							</ul>
 						</td>
 					</tr>
