@@ -12,7 +12,7 @@
 
 ## 작업환경
 
-- 문서 및 버전 : HTML5, SCSS, ES6 & ES2015, jQuery
+- 문서 및 버전 : HTML5, SCSS, ES6-, jQuery
 - 인코딩 : UTF-8
 - Build System: Gulp
 - 웹 호환성 : IE11 이상, Edge, Chrome, Firefox (Cross Broswing Check Done)
