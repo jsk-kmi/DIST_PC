@@ -596,8 +596,7 @@ function useGuideTabInitScroll(target) {
   var scrollContent = $('tab-content.on');
   $('.tab-content.on').find('.right-wrap').on('scroll', function (e) {
     var target = e.currentTarget,
-        // nowSideTabList = e.closest().find('.useguide-field');
-    nowSideTabList = $(this).closest('.useguide-field').find('.btn-guide-list'),
+        nowSideTabList = $(this).closest('.useguide-field').find('.btn-guide-list'),
         nowScrollY = $(this).scrollTop();
     nowSideTabList.css('bacckground-color', '#ddd');
     $(this).find('.c-guide-section').each(function (index, node) {
