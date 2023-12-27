@@ -21,7 +21,6 @@ $.datepicker.setDefaults({
   buttonImageOnly: true,
   minDate: 0
 });
-
 function datepickerBtmBar(input) {
   setTimeout(function () {
     var buttonPane = $(input).datepicker('widget').find('.ui-datepicker-buttonpane');
